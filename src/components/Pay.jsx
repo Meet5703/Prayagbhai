@@ -7,7 +7,6 @@ import { v4 as uuidv4 } from "uuid";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
 const Pay = () => {
-  const rUrl = "http://localhost:3000";
   const router = useRouter();
   const { user, error, isLoading } = useUser(); // Retrieve user information
 
@@ -34,9 +33,9 @@ const Pay = () => {
       merchantTransactionId: transactionid,
       merchantUserId: user.sub, // Use user's unique identifier
       amount: 10000,
-      redirectUrl: `http://localhost:3000/api/status/${transactionid}`,
+      redirectUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
       redirectMode: "POST",
-      callbackUrl: `http://localhost:3000/api/status/${transactionid}`,
+      callbackUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
       mobileNumber: "9999999999",
       paymentInstrument: {
         type: "PAY_PAGE"
