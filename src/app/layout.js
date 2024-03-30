@@ -23,8 +23,17 @@ export default function RootLayout({ children }) {
         <meta name="title" content="Data Skills Hub" />
         <meta
           name="description"
-          content="Data skills hub provides data skills for students"
+          content="Data Skills Hub: Your premier destination to master data science & analytics. Explore tutorials, resources & projects."
         />
+        <meta
+          name="keywords"
+          content="Data Skills Hub, Data Science, Data Analytics , Data Analytics Tutorials, Projects"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="1/2 days" />
+        <meta name="author" content="Prayagraj" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"

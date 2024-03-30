@@ -9,7 +9,8 @@ const Contact = () => {
     try {
       const response = await submitContact({
         name: formData.get("name"),
-        email: formData.get("email")
+        email: formData.get("email"),
+        message: formData.get("message")
       });
       if (response.status === 200) {
         setStatus("success");
