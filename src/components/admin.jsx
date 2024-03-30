@@ -36,6 +36,22 @@ const AdminPage = () => {
     setFilteredData(filtered);
   }, [searchTerm, formData]);
 
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`/api/deleteFormData/${id}`, {
+        method: "DELETE"
+      });
+      if (response.ok) {
+        const newFormData = formData.filter((entry) => entry._id !== id);
+        setFormData(newFormData);
+        setFilteredData(newFormData);
+      } else {
+        console.error("Error deleting form data");
+      }
+    } catch (error) {
+      console.error("Error deleting form data", error);
+    }
+  };
   const handleSortChange = (columnName) => {
     if (sortColumn === columnName) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
@@ -126,6 +142,7 @@ const AdminPage = () => {
               <th className="px-4 py-2">Date</th>
               <th className="px-4 py-2">Time</th>
               <th className="px-4 py-2">Message</th>
+              <th className="px-4 py-2">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -141,6 +158,14 @@ const AdminPage = () => {
                   {new Date(entry.time).toLocaleTimeString()}
                 </td>
                 <td className="px-4 py-2">{entry.message}</td>
+                <td className="px-4 py-2">
+                  <button
+                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    onClick={() => handleDelete(entry._id)}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
