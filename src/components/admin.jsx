@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 
 const AdminPage = () => {
   const [formData, setFormData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortColumn, setSortColumn] = useState(null);
-  const [sortDirection, setSortDirection] = useState("asc");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,7 +11,6 @@ const AdminPage = () => {
         if (response.ok) {
           const data = await response.json();
           setFormData(data);
-          setFilteredData(data);
         } else {
           console.error("Error fetching form data");
         }
@@ -26,25 +22,14 @@ const AdminPage = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const filtered = formData.filter(
-      (entry) =>
-        entry.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        entry.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        entry.message.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredData(filtered);
-  }, [searchTerm, formData]);
-
   const handleDelete = async (id) => {
     try {
       const response = await fetch(`/api/deleteFormData/${id}`, {
         method: "DELETE"
       });
       if (response.ok) {
-        const newFormData = formData.filter((entry) => entry._id !== id);
-        setFormData(newFormData);
-        setFilteredData(newFormData);
+        const updatedFormData = formData.filter((entry) => entry._id !== id);
+        setFormData(updatedFormData);
       } else {
         console.error("Error deleting form data");
       }
@@ -52,45 +37,21 @@ const AdminPage = () => {
       console.error("Error deleting form data", error);
     }
   };
-  const handleSortChange = (columnName) => {
-    if (sortColumn === columnName) {
-      setSortDirection(sortDirection === "asc" ? "desc" : "asc");
-    } else {
-      setSortColumn(columnName);
-      setSortDirection("asc");
-    }
-  };
-
-  const sortedData = [...filteredData].sort((a, b) => {
-    if (sortColumn === "name") {
-      return sortDirection === "asc"
-        ? a.name.localeCompare(b.name)
-        : b.name.localeCompare(a.name);
-    } else if (sortColumn === "email") {
-      return sortDirection === "asc"
-        ? a.email.localeCompare(b.email)
-        : b.email.localeCompare(a.email);
-    } else if (sortColumn === "number") {
-      return sortDirection === "asc"
-        ? a.number - b.number
-        : b.number - a.number;
-    } else if (sortColumn === "date") {
-      return sortDirection === "asc"
-        ? new Date(a.date) - new Date(b.date)
-        : new Date(b.date) - new Date(a.date);
-    } else if (sortColumn === "time") {
-      return sortDirection === "asc"
-        ? new Date(a.time) - new Date(b.time)
-        : new Date(b.time) - new Date(a.time);
-    } else {
-      return 0;
-    }
-  });
+  useEffect(() => {
+    const filteredData = formData.filter((entry) =>
+      Object.values(entry).some(
+        (value) =>
+          typeof value === "string" &&
+          value.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
+    setFormData(filteredData);
+  }, [searchTerm]);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">Form Data</h1>
-      <div className="flex items-center mb-4">
+      <div className="mb-4">
         <input
           type="text"
           placeholder="Search..."
@@ -98,39 +59,6 @@ const AdminPage = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="border border-gray-300 px-4 py-2 rounded-md mr-4 focus:outline-none"
         />
-        <span>Sort by:</span>
-        <div className="flex space-x-4 ml-4">
-          <button
-            onClick={() => handleSortChange("name")}
-            className="text-blue-500 hover:text-blue-700 focus:outline-none"
-          >
-            Name
-          </button>
-          <button
-            onClick={() => handleSortChange("email")}
-            className="text-blue-500 hover:text-blue-700 focus:outline-none"
-          >
-            Email
-          </button>
-          <button
-            onClick={() => handleSortChange("number")}
-            className="text-blue-500 hover:text-blue-700 focus:outline-none"
-          >
-            Number
-          </button>
-          <button
-            onClick={() => handleSortChange("date")}
-            className="text-blue-500 hover:text-blue-700 focus:outline-none"
-          >
-            Date
-          </button>
-          <button
-            onClick={() => handleSortChange("time")}
-            className="text-blue-500 hover:text-blue-700 focus:outline-none"
-          >
-            Time
-          </button>
-        </div>
       </div>
       <div className="overflow-x-auto">
         <table className="table-auto w-full border-collapse border border-gray-300">
@@ -146,28 +74,36 @@ const AdminPage = () => {
             </tr>
           </thead>
           <tbody>
-            {sortedData.map((entry) => (
-              <tr key={entry._id} className="border-t border-gray-300">
-                <td className="px-4 py-2">{entry.name}</td>
-                <td className="px-4 py-2">{entry.email}</td>
-                <td className="px-4 py-2">{entry.number}</td>
-                <td className="px-4 py-2">
-                  {new Date(entry.date).toLocaleDateString()}
-                </td>
-                <td className="px-4 py-2">
-                  {new Date(entry.time).toLocaleTimeString()}
-                </td>
-                <td className="px-4 py-2">{entry.message}</td>
-                <td className="px-4 py-2">
-                  <button
-                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    onClick={() => handleDelete(entry._id)}
-                  >
-                    Delete
-                  </button>
+            {Array.isArray(formData) && formData.length > 0 ? (
+              formData.map((entry) => (
+                <tr key={entry._id} className="border-t border-gray-300">
+                  <td className="px-4 py-2">{entry.name}</td>
+                  <td className="px-4 py-2">{entry.email}</td>
+                  <td className="px-4 py-2">{entry.number}</td>
+                  <td className="px-4 py-2">
+                    {new Date(entry.date).toLocaleDateString()}
+                  </td>
+                  <td className="px-4 py-2">
+                    {new Date(entry.time).toLocaleTimeString()}
+                  </td>
+                  <td className="px-4 py-2">{entry.message}</td>
+                  <td className="px-4 py-2">
+                    <button
+                      className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      onClick={() => handleDelete(entry._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="7" className="text-center">
+                  No data available
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

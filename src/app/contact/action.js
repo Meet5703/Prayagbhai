@@ -14,3 +14,14 @@ const submitContact = async (data) => {
 };
 
 export default submitContact;
+
+const getData = async () => {
+  try {
+    await dbConnect();
+    const data = await ContactData.find();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+export { getData };
