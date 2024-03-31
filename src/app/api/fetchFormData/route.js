@@ -19,6 +19,7 @@ export async function POST(req, res) {
     const email = data.get("email");
     const number = data.get("number");
     const message = data.get("message");
+    const time = data.get("time");
 
     // Create a new document in the database with the form data
     const newdata = await ContactData.create({
@@ -27,7 +28,7 @@ export async function POST(req, res) {
       number,
       message,
       date: new Date(),
-      time: new Date().toLocaleTimeString()
+      time
     });
 
     // Send a success response back to the client
