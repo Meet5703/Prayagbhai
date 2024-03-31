@@ -76,7 +76,7 @@ const CourseCard = () => {
             href="/explore"
             data-aos="flip-down"
             data-aos-duration="1000"
-            className="px-6 py-3 md:px-8 md:py-4 bg-[rgb(83,15,184)] hover:bg-[rgb(103,19,230)] text-gray-50 rounded-xl"
+            className="px-6 mr-8 py-3 md:px-8 md:py-4 bg-[rgb(83,15,184)] hover:bg-[rgb(103,19,230)] text-gray-50 rounded-xl"
           >
             Enroll Now
           </button>

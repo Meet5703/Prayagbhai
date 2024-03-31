@@ -10,9 +10,10 @@ import Cirtificate from "@/components/cirtificateCard";
 import PriceCard from "@/components/PriceCard";
 import FAQ from "@/components/Faq";
 import Testimonial from "@/components/testimonialCrousel";
+import Card from "@/components/card";
 const page = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <DataScience />
       <CompniesCard />
       <Card2 />
@@ -21,9 +22,10 @@ const page = () => {
       <Curriculum />
       <Cirtificate />
       <PriceCard />
+      <Card />
       <Testimonial />
       <FAQ />
-    </>
+    </div>
   );
 };
 

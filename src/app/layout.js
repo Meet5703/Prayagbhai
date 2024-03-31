@@ -44,7 +44,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <UserProvider>
-        <body className={` ${inter.className}  bg-[#f7f2f8] scroll-smooth`}>
+        <body
+          className={` ${inter.className}  bg-[#f7f2f8] scroll-smooth overflow-x-hidden m-0 p-0 box-border`}
+        >
           <NavbarByMe />
           <ChakraProvider>{children}</ChakraProvider>
           <Footer />

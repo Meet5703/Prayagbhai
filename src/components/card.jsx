@@ -10,7 +10,7 @@ import Aos from "aos";
 
 const Card = () => {
   return (
-    <section className="py-16 hidden md:block ">
+    <section className="py-16 ">
       <h1
         className="text-center text-[#ffa83c] font-bold uppercase"
         data-aos="fade-down"
@@ -36,14 +36,14 @@ const Card = () => {
         is looking for!
       </p>
       <br />
-      <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
-        <div className="p-20 grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-4">
+      <div className="container m-auto px-2 text-gray-500 md:px-12 xl:px-0">
+        <div className="md:p-20 grid-rows-4 md:grid-rows-1 grid grid-cols-1 gap-6 md:w-3/4 lg:w-full lg:grid-cols-4">
           <div
-            className="col-span-1   bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8 mb-20 relative h-full"
+            className="row-span-1 col-span-1 px-4  bg-white rounded-2xl shadow-xl py-12 sm:px-12 lg:px-8 md:mb-20 relative h-full"
             data-aos="fade-up"
             data-aos-duration="400"
           >
-            <div className="mb-12 space-y-4 bg-white">
+            <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
                 Mentored by the industry's top 1%
               </h3>
@@ -53,7 +53,7 @@ const Card = () => {
             </div>
             <Image
               src={img}
-              className="w-2/4 ml-auto -mb-12 absolute bg-transparent -bottom-4"
+              className="w-2/4 hidden md:block ml-auto -mb-12 absolute bg-transparent -bottom-4"
               alt="illustration"
               loading="lazy"
               width={900}
@@ -63,11 +63,11 @@ const Card = () => {
             />
           </div>
           <div
-            className="col-span-1  bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8 mt-20 relative h-full"
+            className="row-span-1 col-span-1  bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8 md:mt-20 relative h-full"
             data-aos="fade-down"
             data-aos-duration="400"
           >
-            <div className="mb-12 space-y-4 bg-white">
+            <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
                 Learn in live classes
               </h3>
@@ -77,7 +77,7 @@ const Card = () => {
             </div>
             <Image
               src={img2}
-              className="w-2/4 ml-auto -mb-14 absolute bg-transparent -bottom-8"
+              className="w-2/4 hidden md:block ml-auto -mb-14 absolute bg-transparent -bottom-8"
               alt="illustration"
               loading="lazy"
               width={900}
@@ -87,11 +87,11 @@ const Card = () => {
             />
           </div>
           <div
-            className="col-span-1  bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8 mb-20 relative h-full"
+            className="row-span-1 col-span-1  bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8 md:mb-20 relative h-full"
             data-aos="fade-up"
             data-aos-duration="400"
           >
-            <div className="mb-12 space-y-4 bg-white">
+            <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
                 Level up your resume
               </h3>
@@ -102,7 +102,7 @@ const Card = () => {
             </div>
             <Image
               src={img3}
-              className="w-2/4 ml-auto -mb-14 absolute bg-transparent -bottom-5"
+              className="w-2/4 hidden md:block ml-auto md:-mb-14 absolute bg-transparent md:-bottom-5"
               alt="illustration"
               loading="lazy"
               width={900}
@@ -112,11 +112,11 @@ const Card = () => {
             />
           </div>
           <div
-            className="col-span-1  bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8 mt-20 relative h-full"
+            className="row-span-1 col-span-1  bg-white rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8 md:mt-20 relative h-full"
             data-aos="fade-down"
             data-aos-duration="400"
           >
-            <div className="mb-12 space-y-4 bg-white">
+            <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
                 Secure a job in a dream company
               </h3>
@@ -126,7 +126,7 @@ const Card = () => {
             </div>
             <Image
               src={img4}
-              className="w-2/4 ml-auto -mb-14 absolute bg-transparent -bottom-5"
+              className="w-2/4 hidden md:block ml-auto -mb-14 absolute bg-transparent -bottom-5"
               alt="illustration"
               loading="lazy"
               width={900}
