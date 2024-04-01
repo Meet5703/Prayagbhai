@@ -47,11 +47,11 @@ const Herosection = () => {
           </button>
         </div>
         <div className="bg-white">
-          <section className="w-full flex">
+          <section className="w-full  flex">
             <div
               data-aos="fade-right"
               data-aos-duration="1000"
-              className="flex w-full md:w-1/2 bg-white py-6 px-8 items-center gap-4 border-r pr-6"
+              className="flex w-full justify-center md:w-1/2 bg-white py-6 px-3 items-center gap-4 border-r border-gray-600 lg:ml-6"
             >
               <span>
                 <img
@@ -59,19 +59,19 @@ const Herosection = () => {
                   alt="HeroImg"
                 />
               </span>
-              <span className="bg-white flex flex-col items-center justify-center">
-                <h3 className="text-xl md:text-2xl text-center md:text-left bg-white font-bold">
+              <span className="bg-white w-full lg:w-1/2 lg:ml-6 ">
+                <h3 className="text-base md:text-2xl text-center md:text-left bg-white font-bold">
                   92%
                 </h3>
-                <h3 className="text-[11px] md:text-base bg-white text-gray-500 text-center md:text-left">
-                  Job Placements
+                <h3 className="text-[10px] md:text-base bg-white text-gray-500 text-center md:text-left">
+                  Placements
                 </h3>
               </span>
             </div>
             <div
               data-aos="fade-left"
               data-aos-duration="600"
-              className="flex w-full md:w-1/2 bg-white py-6 px-8 items-center gap-4"
+              className="flex w-full justify-center md:w-1/2 bg-white py-6 px-3 items-center gap-4"
             >
               <span>
                 <img
@@ -79,8 +79,8 @@ const Herosection = () => {
                   alt="HeroImg"
                 />
               </span>
-              <span className="bg-white">
-                <h3 className="text-sm md:text-2xl text-center md:text-left bg-white font-bold">
+              <span className="bg-white w-full xl:w-1/2 lg:ml-6">
+                <h3 className="text-base md:text-2xl text-center md:text-left bg-white font-bold">
                   30 Lac
                 </h3>
                 <h3 className="text-[10px] md:text-base bg-white text-gray-500 text-center md:text-left">
