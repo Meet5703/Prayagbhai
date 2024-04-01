@@ -1,19 +1,43 @@
-"use client";
-import Image from "next/image";
 import React, { useState } from "react";
+import submitContact from "@/app/action";
+import Image from "next/image";
 import img1 from "../assets/contact.png";
 
 const Contact = () => {
   const [status, setStatus] = useState(null);
+  const [isPhoneFieldTouched, setIsPhoneFieldTouched] = useState(false);
+  const [inputValues, setInputValues] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: ""
+  });
 
-  const handleSubmit = async (formData) => {
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setInputValues((prevValues) => ({
+      ...prevValues,
+      [name]: value
+    }));
+
+    if (name === "number") {
+      setIsPhoneFieldTouched(true);
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
-      const response = await submitContact({
-        name: formData.get("name"),
-        email: formData.get("email")
-      });
+      const response = await submitContact(inputValues);
       if (response.status === 200) {
         setStatus("success");
+        setInputValues({
+          name: "",
+          email: "",
+          number: "",
+          message: ""
+        });
+        setIsPhoneFieldTouched(false); // Reset phone field touch state after successful submission
       } else {
         setStatus("error");
       }
@@ -44,53 +68,100 @@ const Contact = () => {
               sagittis velit eget nisi lobortis dignissim.
             </p>
             <form
-              action={handleSubmit}
-              className="bg-white bg-transparent  rounded-lg px-6 py-8 shadow-md"
+              onSubmit={handleSubmit}
+              className="bg-white bg-transparent shadow-purple-500 rounded-lg px-6 py-8 shadow-md"
             >
-              <div className="mb-4 bg-transparent ">
+              <h1 className="text-3xl text-center mb-5 text-purple-500 bg-transparent font-[900]">
+                Contact Us
+              </h1>
+              <div className="mb-4 bg-white relative flex">
+                <input
+                  name="name"
+                  className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
+                  id="name"
+                  type="text"
+                  value={inputValues.name}
+                  onChange={handleInputChange}
+                />
                 <label
-                  className="block bg-transparent  text-gray-700 font-bold mb-2"
                   htmlFor="name"
+                  className={`absolute cursor-text bg-transparent top-3 ${
+                    inputValues.name
+                      ? "hidden"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                  }`}
                 >
                   Name
                 </label>
-                <input
-                  name="name"
-                  className="appearance-none bg-transparent  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="name"
-                  type="text"
-                  placeholder="Enter your name"
-                />
               </div>
-              <div className="mb-4 bg-transparent ">
+              <div className="mb-4 relative flex bg-transparent">
+                <input
+                  name="number"
+                  className="border-2 pl-10 rounded-md peer p-2 bg-transparent w-full focus:border-purple-500 focus:outline-none"
+                  id="number"
+                  type="number"
+                  value={inputValues.number}
+                  onChange={handleInputChange}
+                />
+                <p
+                  className={`absolute top-[25%] bg-transparent peer-focus-visible:block left-2 ${
+                    isPhoneFieldTouched || inputValues.number
+                      ? "peer-focus:block"
+                      : "hidden"
+                  }`}
+                >
+                  +91
+                </p>
                 <label
-                  className="block bg-transparent  text-gray-700 font-bold mb-2"
+                  htmlFor="number"
+                  className={`absolute cursor-text bg-transparent top-3 ${
+                    inputValues.number
+                      ? "hidden"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                  }`}
+                >
+                  Mobile Number
+                </label>
+              </div>
+              <div className="mb-4 bg-transparent relative flex ">
+                <input
+                  name="email"
+                  className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
+                  id="email"
+                  type="email"
+                  value={inputValues.email}
+                  onChange={handleInputChange}
+                />
+                <label
                   htmlFor="email"
+                  className={`absolute cursor-text bg-transparent top-3 ${
+                    inputValues.email
+                      ? "hidden"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                  }`}
                 >
                   Email
                 </label>
-                <input
-                  name="email"
-                  className=" bg-transparent appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                />
               </div>
-              <div className="mb-4 bg-transparent ">
+              <div className="mb-4 bg-transparent relative flex ">
+                <textarea
+                  name="message"
+                  className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
+                  id="message"
+                  rows="6"
+                  value={inputValues.message}
+                  onChange={handleInputChange}
+                ></textarea>
                 <label
-                  className="block bg-transparent  text-gray-700 font-bold mb-2"
+                  className={`absolute cursor-text bg-transparent top-3 ${
+                    inputValues.message
+                      ? "hidden"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                  }`}
                   htmlFor="message"
                 >
                   Message
                 </label>
-                <textarea
-                  name="message"
-                  className=" bg-transparent appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="message"
-                  rows="6"
-                  placeholder="Enter your message"
-                ></textarea>
               </div>
               <div className="flex bg-transparent  justify-center">
                 <button

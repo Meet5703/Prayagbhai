@@ -4,7 +4,7 @@ import React from "react";
 const Herosection = () => {
   return (
     <main className="flex flex-col md:flex-row mt-10">
-      <section className="md:ml-40 md:w-[40%] flex flex-col justify-center gap-16 px-8">
+      <section className="md:ml-40 md:w-[40%] lg:w-full  lg:ml-8 flex flex-col justify-center gap-16 px-8">
         <div className="md:mt-24 flex flex-col gap-5">
           <strong className="flex items-center text-2xl gap-4 text-green-500">
             <span
@@ -60,10 +60,10 @@ const Herosection = () => {
                 />
               </span>
               <span className="bg-white flex flex-col items-center justify-center">
-                <h3 className="text-xl md:text-3xl text-center md:text-left bg-white font-bold">
+                <h3 className="text-xl md:text-2xl text-center md:text-left bg-white font-bold">
                   92%
                 </h3>
-                <h3 className="text-[11px] md:text-lg bg-white text-gray-500 text-center md:text-left">
+                <h3 className="text-[11px] md:text-base bg-white text-gray-500 text-center md:text-left">
                   Job Placements
                 </h3>
               </span>
@@ -80,10 +80,10 @@ const Herosection = () => {
                 />
               </span>
               <span className="bg-white">
-                <h3 className="text-sm md:text-3xl text-center md:text-left bg-white font-bold">
+                <h3 className="text-sm md:text-2xl text-center md:text-left bg-white font-bold">
                   30 Lac
                 </h3>
-                <h3 className="text-[10px] md:text-lg bg-white text-gray-500 text-center md:text-left">
+                <h3 className="text-[10px] md:text-base bg-white text-gray-500 text-center md:text-left">
                   Packages upto
                 </h3>
               </span>
@@ -91,11 +91,10 @@ const Herosection = () => {
           </section>
         </div>
       </section>
-      <section className="w-full md:w-[60%] pt-20 pl-10 md:pl-20 hidden md:block">
+      <section className="w-full lg:w-full md:w-[60%] pt-20 pl-10 md:pl-20 hidden md:block">
         <img
           data-aos="fade-left"
           data-aos-duration="1000"
-          className="w-full"
           src="https://static-artifacts-assets.skillovilla.com/assets/backgrounds/homepage/md/banner-2x.png?auto=format&q=35&cs=srgb"
           alt="main-2"
         />

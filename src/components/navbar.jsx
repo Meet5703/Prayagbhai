@@ -69,9 +69,6 @@ const NavbarByMe = () => {
                       width={40}
                       height={40}
                     />
-                    <p className="text-gray-800 text-lg font-semibold hover:text-purple-600">
-                      {user.name}
-                    </p>
                   </div>
                   <Link
                     href="/api/auth/logout"

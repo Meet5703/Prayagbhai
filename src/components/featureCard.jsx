@@ -3,7 +3,7 @@ import React from "react";
 const HighlightedFeatures = () => {
   return (
     <div className="bg-[#f7f2f8] w-full">
-      <div className="md:ml-16 md:mr-16 mx-auto py-8 px-4 lg:py-16 lg:px-6">
+      <div className="md:ml-16 md:mr-16 mx-auto py-8 px-4 xl:ml-16 xl:mr-16 lg:py-16 lg:px-6 lg:ml-4 lg:mr-4">
         <div className="ml-5 mb-10">
           <div className="text-4xl tracking-tight font-bold text-primary-800">
             <span
@@ -29,8 +29,8 @@ const HighlightedFeatures = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-evenly">
-          <div className="md:hidden block mr-0 md:mr-8 mb-6 md:mb-0 w-full">
+        <div className="flex flex-col md:flex-row justify-evenly xl:justify-evenly lg:justify-between">
+          <div className="md:hidden block mr-0 md:mr-8 xl:mr-8 lg:mr-0 mb-6 md:mb-0 w-full">
             <img
               data-aos="fade-right"
               data-aos-duration="1000"
@@ -136,53 +136,53 @@ const HighlightedFeatures = () => {
           </div>
         </div>
       </div>
-      <div className="w-full px-10  md:w-1/2 md:ml-[26%] shadow-xl shadow-gray-200   md:bg-white md:border-2 gap-4 md:gap-0 md:border-gray-400 grid grid-cols-1 md:grid-cols-3">
+      <div className="w-full px-10 lg:ml-[15%] lg:w-[70%]  md:w-1/2 md:ml-[26%] shadow-xl shadow-gray-200   md:bg-white md:border-2 gap-4 md:gap-0 md:border-gray-400 grid grid-cols-1 md:grid-cols-3">
         <div
-          className="flex border-2 md:border-0 border-gray-400 py-4 px-6 md:px-0 md:ml-12  gap-4 bg-white col-span-1"
+          className="flex border-2 md:border-0 border-gray-400 py-4 lg:py-2 px-6 md:px-0 md:ml-12 lg:-ml-1 lg:mb-3  lg:mr-4 lg:items-center gap-4 bg-white col-span-1"
           data-aos="fade-right"
           data-aos-duration="1000"
         >
           <img
-            className="ml-4 md:w-1/5 md:ml-0 bg-transparent"
+            className="ml-4 md:w-1/5 lg:w-1/5 md:ml-0 bg-transparent"
             src="https://images.skillovilla.com/tracks/description-page/2023-08-10_19-19-06_bJGpHHJfMRiuexXnoyC4Qo.svg?auto=format&q=35&cs=srgb"
           ></img>
           <div className="ml-3 md:ml-0 bg-transparent">
-            <h2 className="text-3xl bg-transparent font-bold text-[#530fb8]">
+            <h2 className="text-3xl lg:text-2xl bg-transparent font-bold text-[#530fb8]">
               1 Lac+
             </h2>
-            <span className="bg-transparent">Job openings</span>
+            <span className="bg-transparent lg:text-sm">Job openings</span>
           </div>
         </div>
         <div
           data-aos="fade-left"
           data-aos-duration="1000"
-          className="flex py-4  gap-4 bg-white col-span-1 border-x-2 md:border-y-0 border-y-2 md:border-x-2 border-gray-400 px-6 "
+          className="flex py-4 lg:px-4 lg:py-2  gap-4 bg-white col-span-1 border-x-2 md:border-y-0 border-y-2 md:border-x-2 border-gray-400 px-6 "
         >
           <img
             className="md:w-1/5 ml-4 bg-transparent"
             src="https://images.skillovilla.com/tracks/description-page/2023-08-10_19-19-06_bJGpHHJfMRiuexXnoyC4Qo.svg?auto=format&q=35&cs=srgb"
           ></img>
           <div className="ml-3 bg-transparent">
-            <h2 className="text-3xl bg-transparent font-bold text-[#530fb8]">
+            <h2 className="text-3xl lg:text-2xl  bg-transparent font-bold text-[#530fb8]">
               1 Lac+
             </h2>
-            <span className="bg-transparent">Job openings</span>
+            <span className="bg-transparent lg:text-sm">Job openings</span>
           </div>
         </div>
         <div
+          className="flex border-2 md:border-0 border-gray-400 py-4 lg:py-2 px-6 md:px-0 md:ml-12 lg:-mr-4  lg:mb-3 lg:items-center gap-4 bg-white col-span-1"
           data-aos="fade-right"
           data-aos-duration="1000"
-          className="flex border-2 md:border-0 border-gray-400 py-4 px-6 md:px-0 md:ml-12  gap-4 bg-white col-span-1"
         >
           <img
-            className="md:w-1/5 ml-4 md:ml-0 bg-transparent"
+            className="ml-4 md:w-1/5 lg:w-1/5 md:ml-0 bg-transparent"
             src="https://images.skillovilla.com/tracks/description-page/2023-08-10_19-19-06_bJGpHHJfMRiuexXnoyC4Qo.svg?auto=format&q=35&cs=srgb"
           ></img>
           <div className="ml-3 md:ml-0 bg-transparent">
-            <h2 className="text-3xl bg-transparent font-bold text-[#530fb8]">
+            <h2 className="text-3xl lg:text-2xl bg-transparent font-bold text-[#530fb8]">
               1 Lac+
             </h2>
-            <span className="bg-transparent">Job openings</span>
+            <span className="bg-transparent lg:text-sm">Job openings</span>
           </div>
         </div>
       </div>

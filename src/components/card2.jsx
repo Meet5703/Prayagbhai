@@ -20,7 +20,7 @@ const Card2 = () => {
         />
       </div>
 
-      <div className="cardSection__content col-span-1 mt-14">
+      <div className="cardSection__content col-span-2 px-4 mt-14">
         <h2
           className="md:text-lg font-bold text-[#ffa83c] "
           data-aos="fade-right"

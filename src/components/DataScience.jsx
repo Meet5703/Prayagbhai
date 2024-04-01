@@ -4,10 +4,10 @@ import React from "react";
 const DataScience = () => {
   return (
     <main className="flex flex-col md:flex-row mt-0 relative">
-      <section className="md:ml-40 md:w-[40%] flex flex-col justify-center gap-16 px-8">
+      <section className="lg:mx-20 md:w-[40%] flex flex-col justify-center gap-16 px-8">
         <div className="md:mt-24 items-center md:items-start flex flex-col gap-5">
           <strong
-            className="text-2xl lg:text-5xl font-[900] text-center md:text-left"
+            className="text-2xl lg:text-4xl font-[900] text-center md:text-left"
             data-aos="fade-right"
             data-aos-duration="2000"
           >

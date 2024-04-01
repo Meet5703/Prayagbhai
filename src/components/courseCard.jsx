@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const CourseCard = () => {
   return (
-    <div className="flex flex-col md:flex-row md:bg-white p-8 rounded-lg shadow-lg mt-20">
+    <div className="flex flex-col md:flex-row  p-8 rounded-lg shadow-lg mt-20">
       <div className="md:w-1/2 mb-4 md:mb-0">
         <div
-          className="w-full h-full rounded-lg overflow-hidden shadow-md"
+          className="w-full h-full rounded-lg overflow-hidden "
           data-aos="fade-left"
           data-aos-duration="1000"
         >
