@@ -1,8 +1,9 @@
 const { default: mongoose } = require("mongoose");
 
 const ContactDataSkillsSchema = new mongoose.Schema({
-  name: String,
-  email: String,
+  name: { type: String, required: true },
+  number: { type: String, required: true },
+  email: { type: String, required: true },
   message: String,
   date: {
     type: Date,

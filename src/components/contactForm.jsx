@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import submitContact from "@/app/action";
 import Image from "next/image";
@@ -80,6 +81,7 @@ const Contact = () => {
                   className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
                   id="name"
                   type="text"
+                  required
                   value={inputValues.name}
                   onChange={handleInputChange}
                 />
@@ -100,6 +102,7 @@ const Contact = () => {
                   className="border-2 pl-10 rounded-md peer p-2 bg-transparent w-full focus:border-purple-500 focus:outline-none"
                   id="number"
                   type="number"
+                  required
                   value={inputValues.number}
                   onChange={handleInputChange}
                 />
@@ -129,6 +132,7 @@ const Contact = () => {
                   className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
                   id="email"
                   type="email"
+                  required
                   value={inputValues.email}
                   onChange={handleInputChange}
                 />

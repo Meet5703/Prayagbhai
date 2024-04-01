@@ -9,6 +9,7 @@ import Testimonial from "@/components/testimonialCrousel";
 import Aos from "aos";
 import ContactForm from "@/components/contactForm";
 import FAQ from "@/components/Faq";
+import VerticalTabs from "@/components/verticalTabs";
 const faqData = [
   {
     question: "Question 1",
@@ -34,6 +35,7 @@ const Home = () => {
         <Card />
         <Card2 />
         <CourseCard />
+        <VerticalTabs />
         <Testimonial />
         <ContactForm />
         <FAQ />
