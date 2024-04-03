@@ -1,17 +1,62 @@
-"use client";
-import React, { useState } from "react";
-import img1 from "../assets/dslogo1.png";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
 import Link from "next/link";
-import { useUser } from "@auth0/nextjs-auth0/client";
+import axios from "axios";
+import img1 from "../assets/dslogo1.png";
 
 const NavbarByMe = () => {
-  const { user, error, isLoading } = useUser();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [shouldReload, setShouldReload] = useState(false); // Add shouldReload state
+
+  const getUserDetails = async () => {
+    setIsLoading(true);
+    try {
+      const response = await axios.post("/api/users/profile");
+      console.log(response.data);
+      setData(response.data);
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.log(error.message);
+      setData(null);
+      setIsLoggedIn(false);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getUserDetails();
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading && shouldReload) {
+      setShouldReload(false); // Reset shouldReload
+      window.location.reload(); // Reload the page
+    }
+  }, [isLoading, shouldReload]);
+
+  const handleLogout = async () => {
+    setIsLoading(true);
+    try {
+      await axios.get("/api/users/logout");
+      setIsLoggedIn(false);
+      setShouldReload(true); // Set shouldReload to true on logout
+    } catch (error) {
+      console.error("Error logging out:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLoginSignup = () => {
+    getUserDetails();
   };
 
   return (
@@ -26,61 +71,51 @@ const NavbarByMe = () => {
             </div>
 
             <div className="hidden sm:flex sm:items-center sm:gap-8">
-              <Link
-                href="/"
-                className="text-gray-800 text-lg font-semibold hover:text-purple-600 mr-4"
-              >
+              <Link href="/" className="nav-link">
                 Home
               </Link>
-              <Link
-                href="/Jobs"
-                className="text-gray-800 text-lg font-semibold hover:text-purple-600 mr-4"
-              >
+              <Link href="/jobs" className="nav-link">
                 Jobs
               </Link>
-              <Link
-                href="/explore"
-                className="text-gray-800 text-lg font-semibold hover:text-purple-600 mr-4"
-              >
+              <Link href="/explore" className="nav-link">
                 Explore
               </Link>
-              <Link
-                href="/about"
-                className="text-gray-800 text-lg font-semibold hover:text-purple-600"
-              >
+              <Link href="/about" className="nav-link">
                 About
               </Link>
-              <Link
-                href="/contact"
-                className="text-gray-800 text-lg font-semibold hover:text-purple-600"
-              >
+              <Link href="/contact" className="nav-link">
                 Contact
               </Link>
             </div>
 
             <div className="hidden sm:flex sm:items-center">
-              {user ? (
+              {isLoading ? (
+                <p>Loading...</p>
+              ) : isLoggedIn ? (
                 <div className="flex items-center gap-4">
-                  <div className="flex flex-col items-center ">
-                    <Image
-                      className="rounded-full"
-                      src={user.picture}
-                      alt="user"
-                      width={40}
-                      height={40}
-                    />
+                  <div className="flex flex-col items-center">
+                    {data && (
+                      <a
+                        className="bg-violet-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-6"
+                        href="/profile"
+                      >
+                        {" "}
+                        {data.user.username.charAt(0).toUpperCase()}
+                      </a>
+                    )}
                   </div>
-                  <Link
-                    href="/api/auth/logout"
-                    className="text-white  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
+                  <button
+                    onClick={handleLogout}
+                    className=" hidden btn btn-primary"
                   >
                     Logout
-                  </Link>
+                  </button>
                 </div>
               ) : (
                 <Link
-                  href="/api/auth/login"
-                  className="text-white  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
+                  href="/login"
+                  className="btn btn-primary"
+                  onClick={handleLoginSignup}
                 >
                   Sign up / Login
                 </Link>
@@ -95,71 +130,52 @@ const NavbarByMe = () => {
             </div>
           </div>
 
-          {/* Mobile Menu */}
           <div
             className={`${
               isMobileMenuOpen ? "block" : "hidden"
             } sm:hidden bg-transparent border-t-2 py-2 transition-all ease-in-out duration-500`}
           >
             <div className="flex flex-col gap-y-4 items-center">
-              <Link
-                href="/"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
-              >
+              <Link href="/" className="nav-link">
                 Home
               </Link>
-              <Link
-                href="/Jobs"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
-              >
+              <Link href="/jobs" className="nav-link">
                 Jobs
               </Link>
-              <Link
-                href="/explore"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
-              >
+              <Link href="/explore" className="nav-link">
                 Explore
               </Link>
-              <Link
-                href="/about"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
-              >
+              <Link href="/about" className="nav-link">
                 About
               </Link>
-              <Link
-                href="/contact"
-                className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1"
-              >
+              <Link href="/contact" className="nav-link">
                 Contact
               </Link>
-              <div className="flex justify-between items-center border-t-2 w-full pt-2">
-                {user ? (
-                  <div className="flex items-center justify-between w-full">
-                    <div className="flex items-center gap-4">
-                      <Image
-                        className="rounded-full"
-                        src={user.picture}
-                        alt="user"
-                        width={40}
-                        height={40}
-                      />
-                    </div>
-                    <Link
-                      className="text-gray-800 text-sm font-semibold border px-4 py-1 rounded-lg hover:text-purple-600 hover:border-purple-600"
-                      href="/api/auth/logout"
-                    >
-                      Logout
-                    </Link>
+              {isLoading ? (
+                <p>Loading...</p>
+              ) : isLoggedIn ? (
+                <div className="flex items-center gap-4">
+                  <div className="flex flex-col items-center">
+                    {data && (
+                      <a href="/profile"> {data.user.username.charAt(0)}</a>
+                    )}
                   </div>
-                ) : (
-                  <Link
-                    className="text-gray-800 text-sm font-semibold border px-4 py-1 rounded-lg hover:text-purple-600 hover:border-purple-600"
-                    href="/api/auth/login"
+                  <button
+                    onClick={handleLogout}
+                    className="hidden btn btn-primary"
                   >
-                    Sign up / Login
-                  </Link>
-                )}
-              </div>
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                <Link
+                  href="/login"
+                  className="btn btn-primary"
+                  onClick={handleLoginSignup}
+                >
+                  Sign up / Login
+                </Link>
+              )}
             </div>
           </div>
         </div>

@@ -2,7 +2,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarByMe from "@/components/navbar";
-import { UserProvider } from "@auth0/nextjs-auth0/client";
 import Aos from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
@@ -43,19 +42,18 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,300,0,0"
         />
       </head>
-      <UserProvider>
-        <body
-          className={` ${inter.className}  bg-[#f7f2f8] scroll-smooth overflow-x-hidden m-0 p-0 box-border`}
-        >
-          <NavbarByMe />
-          <ChakraProvider>{children}</ChakraProvider>
-          <Footer />
-          <script
-            src="https://unpkg.com/alpinejs@3.13.7/dist/cdn.min.js"
-            defer
-          ></script>
-        </body>
-      </UserProvider>
+
+      <body
+        className={` ${inter.className}  bg-[#f7f2f8] scroll-smooth overflow-x-hidden m-0 p-0 box-border`}
+      >
+        <NavbarByMe />
+        <ChakraProvider>{children}</ChakraProvider>
+        <Footer />
+        <script
+          src="https://unpkg.com/alpinejs@3.13.7/dist/cdn.min.js"
+          defer
+        ></script>
+      </body>
     </html>
   );
 }

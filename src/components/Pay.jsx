@@ -4,38 +4,38 @@ import { useRouter } from "next/navigation";
 import sha256 from "crypto-js/sha256";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-import { useUser } from "@auth0/nextjs-auth0/client";
 
 const Pay = () => {
   const router = useRouter();
-  const { user, error, isLoading } = useUser(); // Retrieve user information
+
+  const [data, setData] = useState(null); // Initialize data as null
+  const getUserDetails = async () => {
+    try {
+      const response = await axios.post("/api/users/profile");
+      console.log(response.data);
+      setData(response.data); // Update data with fetched user details
+    } catch (error) {
+      console.log(error.message);
+      toast.error(error.message);
+    }
+  };
 
   useEffect(() => {
-    // Check if user is not logged in or user data is still loading
-    if (!user && !isLoading) {
-      // Redirect user to the login page
-      router.push("/api/auth/login");
-    }
-  }, [user, isLoading]);
-
+    getUserDetails(); // Fetch user details when component mounts
+  }, []); // Empty dependency array to ensure it runs only once
   const makePayment = async (e) => {
     e.preventDefault();
-
-    if (!user || isLoading) {
-      // Handle case where user is not logged in or user data is still loading
-      return;
-    }
 
     const transactionid = "Tr-" + uuidv4().toString(36).slice(-6);
 
     const payload = {
       merchantId: "PGTESTPAYUAT",
       merchantTransactionId: transactionid,
-      merchantUserId: user.sub, // Use user's unique identifier
+      merchantUserId: data, // Use user's unique identifier
       amount: 10000,
-      redirectUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
+      redirectUrl: `http://localhost:3000/api/status/${transactionid}`,
       redirectMode: "POST",
-      callbackUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
+      callbackUrl: `http://localhost:3000/api/status/${transactionid}`,
       mobileNumber: "9999999999",
       paymentInstrument: {
         type: "PAY_PAGE"
@@ -90,7 +90,7 @@ const Pay = () => {
               <input
                 id="Name"
                 name="Name"
-                value={user ? user.name : ""}
+                value={data && data.user.username ? data.user.username : ""}
                 readOnly
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -107,7 +107,7 @@ const Pay = () => {
               <input
                 id="Email"
                 name="Email"
-                value={user ? user.email : ""}
+                value={data ? data.user.email : ""}
                 readOnly
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />

@@ -1,10 +1,31 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import masterclassGif from "../assets/10780490_19197131-Photoroom.png-Photoroom.png";
 import Image from "next/image";
-import img2 from "../assets/logocarduser.png";
 import Link from "next/link";
+import axios from "axios";
 
 const PriceCard = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const getUserDetails = async () => {
+      try {
+        const response = await axios.post("/api/users/profile");
+        if (response.data) {
+          setData(response.data);
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        console.log(error.message);
+        setData(null);
+        setIsLoggedIn(false);
+      }
+    };
+    getUserDetails();
+  }, []); // Empty dependency array to ensure it runs only once
+
   return (
     <section className="px-8">
       <div className=" mt-10 w-full rounded-2xl bg-gradient-to-br from-[#5012B4] to-[#6832bd] flex flex-col justify-center gap-4  md:gap-0 md:grid md:grid-cols-4 pb-10">
@@ -57,10 +78,11 @@ const PriceCard = () => {
               </h1>
             </div>
           </div>
+
           <Link
             data-aos="fade-down"
             data-aos-duration="1000"
-            href="/pay"
+            href={isLoggedIn ? "/pay" : "/login"} // Redirect based on login state
             className="ov-btn-slide-left scale-75 md:scale-0 "
           >
             <div className="flex items-center gap-2 bg-transparent">

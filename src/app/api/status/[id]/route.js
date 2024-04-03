@@ -29,11 +29,11 @@ export async function POST(req, res) {
 
     // Use the updateFormDataStatus function
     if (response.data.code === "PAYMENT_SUCCESS") {
-      return NextResponse.redirect(`https://prayagbhai.vercel.app/success`, {
+      return NextResponse.redirect(`/success`, {
         status: 301
       });
     } else {
-      return NextResponse.redirect(`https://prayagbhai.vercel.app/failure`, {
+      return NextResponse.redirect(`/failure`, {
         status: 301
       });
     }
