@@ -23,14 +23,16 @@ const Page = () => {
     getUserDetails(); // Fetch user details when component mounts
   }, []); // Empty dependency array to ensure it runs only once
 
-  const logout = async () => {
+  const handleLogout = async () => {
+    setIsLoading(true);
     try {
       await axios.get("/api/users/logout");
-      toast.success("Logged out successfully");
-      router.push("/login");
+      setIsLoggedIn(false);
+      setShouldReload(true); // Set shouldReload to true on logout
     } catch (error) {
-      console.log(error.message);
-      toast.error(error.message);
+      console.error("Error logging out:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
