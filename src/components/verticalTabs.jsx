@@ -17,7 +17,7 @@ const VerticalTabs = () => {
   };
 
   return (
-    <div className="px-4 md:px-10 mt-20">
+    <div className="px-4 md:px-10 mt-12">
       <div className="flex flex-col gap-2 py-10">
         <h1 className="text-sm text-orange-500 font-bold md:text-base">
           DATA SKILLS HUB'S PROGRAM IN DETAIL

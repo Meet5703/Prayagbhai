@@ -1,9 +1,38 @@
 import { NextResponse } from "next/server";
 import sha256 from "crypto-js/sha256";
 import axios from "axios";
+import { dbConnect } from "@/DB/dbconnect";
+import PaymentForm from "@/DB/Model/payment";
 
 // Define updateFormDataStatus function outside of the POST function
+async function updateFormDataStatus(data, status, merchantId, transactionId) {
+  try {
+    await dbConnect();
+    await PaymentForm.findOneAndUpdate(
+      { merchantId, transactionId },
+      { status },
+      { new: true }
+    );
+  } catch (error) {
+    console.error("Error updating form data status:", error);
+  }
+}
 
+// export const updateFormdata = async function PUT(request) {
+//   try {
+//     const { id } = await request.json();
+//     const payment = await PaymentForm.findById(id);
+//     payment.status = "success";
+//     const result = await payment.save();
+//     return NextResponse.json({
+//       message: "Form data updated successfully",
+//       success: true,
+//       result
+//     });
+//   } catch (error) {
+//     return NextResponse.json({ error: error.message }, { status: 500 });
+//   }
+// };
 export async function POST(req, res) {
   try {
     const data = await req.formData();
@@ -29,19 +58,20 @@ export async function POST(req, res) {
 
     // Use the updateFormDataStatus function
     if (response.data.code === "PAYMENT_SUCCESS") {
-      return NextResponse.redirect(`https://prayagbhai.vercel.app/success`, {
+      await updateFormDataStatus(data, "success", merchantId, transactionId);
+      console.log("success", data);
+      return NextResponse.redirect(`http://localhost:3000/success`, {
         status: 301
       });
     } else {
-      return NextResponse.redirect(`https://prayagbhai.vercel.app/failure`, {
+      await updateFormDataStatus(data, "failed", merchantId, transactionId);
+      console.log("failure", data);
+      return NextResponse.redirect(`http://localhost:3000/failure`, {
         status: 301
       });
     }
   } catch (error) {
     console.error("Error in /api/payment:", error);
-    return NextResponse.json({
-      success: false,
-      message: "Internal server error"
-    });
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

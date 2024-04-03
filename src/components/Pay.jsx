@@ -1,3 +1,4 @@
+// Pay.js
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -8,34 +9,37 @@ import { v4 as uuidv4 } from "uuid";
 const Pay = () => {
   const router = useRouter();
 
-  const [data, setData] = useState(null); // Initialize data as null
-  const getUserDetails = async () => {
-    try {
-      const response = await axios.post("/api/users/profile");
-      console.log(response.data);
-      setData(response.data); // Update data with fetched user details
-    } catch (error) {
-      console.log(error.message);
-      toast.error(error.message);
-    }
-  };
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    number: "",
+    course: "",
+    status: "failed"
+  });
 
-  useEffect(() => {
-    getUserDetails(); // Fetch user details when component mounts
-  }, []); // Empty dependency array to ensure it runs only once
+  const onChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
   const makePayment = async (e) => {
     e.preventDefault();
+    const response = axios.post("/api/payment", user);
+    console.log("submit success", response);
 
-    const transactionid = "Tr-" + uuidv4().toString(36).slice(-6);
+    if (!user) {
+      console.error("User data is not available.");
+      return;
+    }
+
+    const transactionId = "Tr-" + uuidv4().toString(36).slice(-6);
 
     const payload = {
       merchantId: "PGTESTPAYUAT",
-      merchantTransactionId: transactionid,
-      merchantUserId: data, // Use user's unique identifier
+      merchantTransactionId: transactionId,
+      merchantUserId: user.sub, // Use user's unique identifier
       amount: 10000,
-      redirectUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
+      redirectUrl: `http://localhost:3000/api/status/${transactionId}`,
       redirectMode: "POST",
-      callbackUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
+      callbackUrl: `http://localhost:3000/api/status/${transactionId}`,
       mobileNumber: "9999999999",
       paymentInstrument: {
         type: "PAY_PAGE"
@@ -66,11 +70,12 @@ const Pay = () => {
         }
       );
 
+      console.log("Payment response:", response.data.data.instrumentResponse);
       const redirectUrl =
         response.data.data.instrumentResponse.redirectInfo.url;
       router.push(redirectUrl);
     } catch (error) {
-      console.error("Payment error:", error);
+      console.error("Payment error:", error.message);
       // Handle payment error
     }
   };
@@ -81,38 +86,78 @@ const Pay = () => {
         <form className="space-y-6" action="#" method="POST">
           <div>
             <label
-              htmlFor="Name"
+              htmlFor="name"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
               Name
             </label>
             <div className="mt-2">
               <input
-                id="Name"
-                name="Name"
-                value={data && data.user.username ? data.user.username : ""}
-                readOnly
+                id="name"
+                name="name"
+                value={user.name}
+                onChange={onChange}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
           <div>
             <label
-              htmlFor="Email"
+              htmlFor="email"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
               Email
             </label>
             <div className="mt-2">
               <input
-                id="Email"
-                name="Email"
-                value={data ? data.user.email : ""}
-                readOnly
+                id="email"
+                name="email"
+                value={user.email}
+                onChange={onChange}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
+          <div>
+            <label
+              htmlFor="number"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Number
+            </label>
+            <div className="mt-2">
+              <input
+                id="number"
+                name="number"
+                onChange={onChange}
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              htmlFor="course"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Course
+            </label>
+            <div className="mt-2">
+              <select
+                id="course"
+                name="course"
+                onChange={onChange}
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                value={user.course} // Set the value attribute to user.course
+              >
+                <option value="">Select your course</option>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="Data Scientist">Data Scientist</option>
+
+                {/* Add other options here */}
+              </select>
+            </div>
+          </div>
+
           <div>
             <button
               onClick={(e) => makePayment(e)}
@@ -126,5 +171,4 @@ const Pay = () => {
     </div>
   );
 };
-
 export default Pay;

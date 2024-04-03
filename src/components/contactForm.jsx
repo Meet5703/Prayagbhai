@@ -78,7 +78,7 @@ const Contact = () => {
               <div className="mb-4 bg-white relative flex">
                 <input
                   name="name"
-                  className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
+                  className="border-2 rounded-md peer py-4 px-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
                   id="name"
                   type="text"
                   required
@@ -87,7 +87,7 @@ const Contact = () => {
                 />
                 <label
                   htmlFor="name"
-                  className={`absolute cursor-text bg-transparent top-3 ${
+                  className={`absolute cursor-text bg-transparent top-5 ${
                     inputValues.name
                       ? "hidden"
                       : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"

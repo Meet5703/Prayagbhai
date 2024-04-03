@@ -27,7 +27,7 @@ const Page = () => {
     try {
       await axios.get("/api/users/logout");
       toast.success("Logged out successfully");
-      router.push("/login");
+      router.push("/");
     } catch (error) {
       console.log(error.message);
       toast.error(error.message);

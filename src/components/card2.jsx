@@ -5,7 +5,7 @@ import img2 from "../assets/logocarduser.png";
 
 const Card2 = () => {
   return (
-    <div className="-mt-10 w-full flex flex-col items-center gap-4 ml-1 mr-6 md:gap-0 md:grid md:grid-cols-4 pb-10">
+    <div className="-mt-28 md:mt-0 w-full flex flex-col items-center gap-4 ml-1 mr-6 md:gap-1 md:grid md:grid-cols-4 pb-10">
       <div
         data-aos="fade-right"
         data-aos-duration="1000"
@@ -26,7 +26,7 @@ const Card2 = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          MASTERCLASS
+          LIVE MASTERCLASS
         </h2>
         <p
           className="font-bold text-3xl w-full"
@@ -35,7 +35,7 @@ const Card2 = () => {
         >
           Level up your skills, learn from the best
         </p>
-        <br />
+        <br className="md:hidden" />
         <div
           className="flex md:grid md:grid-cols-4 items-center"
           data-aos="fade-right"
@@ -49,14 +49,15 @@ const Card2 = () => {
             />
           </span>
           <span className="md:col-span-3 space-y-4">
-            <p className="text-xl font-bold w-full">
+            <h1 className="text-xl font-bold w-full">
               Experience the masterclass
-            </p>
+            </h1>
             <p className="text-sm">Learn with the best</p>
           </span>
         </div>
-        <br />
-        <br />
+        <br className="md:hidden" />
+        <br className="md:hidden" />
+
         <span
           className="flex items-center gap-2"
           data-aos="fade-right"
@@ -65,7 +66,7 @@ const Card2 = () => {
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>
-          <p>Learn core concepts from experts in masterclass</p>
+          <p>Engage in Real-time Learning Experiences with Live Master Class</p>
         </span>
         <br />
         <span
@@ -76,7 +77,7 @@ const Card2 = () => {
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>
-          <p>Get a headstart and kickoff your career</p>
+          <p>Start from Scratch and Gain In-Demand Industry Skills</p>
         </span>
         <br />
         <span
@@ -87,7 +88,9 @@ const Card2 = () => {
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>
-          <p>Solve a real-life case study, live with the experts</p>
+          <p>
+            Experience Real-life Case Studies Solved Live with Industry Experts
+          </p>
         </span>
         <br />
         <span
@@ -98,7 +101,9 @@ const Card2 = () => {
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>
-          <p>Interact with mentors, ask your doubts away</p>
+          <p>
+            Interact with mentors, one to one doubts sessions also available
+          </p>
         </span>
       </div>
     </div>

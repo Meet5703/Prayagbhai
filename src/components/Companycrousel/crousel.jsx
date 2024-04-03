@@ -37,9 +37,9 @@ const CarouselAds = () => {
   }, []);
 
   return (
-    <section className="mt-8">
-      <p className="text-lg text-center font-sans text-gray-500">
-        These companies are waiting for you! (300+ Companies)
+    <section className="w-full mt-12 md:mt-20">
+      <p className="    text-lg text-center  font-sans text-gray-500">
+        Exciting opportunities await you with these companies! (500+ Companies)
       </p>
       <div className="w-full flex carousel mt-3 py-4">
         <div

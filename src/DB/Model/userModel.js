@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   isAdmin: { type: Boolean, default: false },
   forgotPasswordToken: { type: String },
   forgotPasswordExpiry: { type: Date },
+  status: { type: Boolean, default: false },
   verifyToken: { type: String },
   verifyTokenExpiry: { type: Date },
   date: { type: Date, default: Date.now },

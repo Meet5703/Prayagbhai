@@ -60,7 +60,7 @@ const NavbarByMe = () => {
   };
 
   return (
-    <nav className="bg-gray-100 font-sans w-full m-0">
+    <nav className="bg-gray-100 font-sans w-full m-0 sticky top-0 z-50">
       <div className="bg-white shadow">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">

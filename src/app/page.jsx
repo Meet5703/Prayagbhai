@@ -38,7 +38,6 @@ const Home = () => {
         <VerticalTabs />
         <Testimonial />
         <ContactForm />
-        <FAQ />
       </div>
     </main>
   );

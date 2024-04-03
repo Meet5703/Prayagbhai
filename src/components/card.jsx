@@ -10,30 +10,30 @@ import Aos from "aos";
 
 const Card = () => {
   return (
-    <section className="py-16 ">
+    <section className="md:py-16 mt-12 md:mt-20">
       <h1
-        className="text-center text-[#ffa83c] font-bold uppercase"
+        className="text-center  text-[#ffa83c] font-bold uppercase"
         data-aos="fade-down"
         data-aos-duration="1200"
       >
         Why Data Skills Hub
       </h1>
       <br />
-      <h2
-        className="text-center text-4xl font-bold"
+      <h1
+        className="text-center text-2xl md:text-4xl font-bold"
         data-aos="fade-down"
         data-aos-duration="800"
       >
-        From learning to earning
-      </h2>
+        From learning to earning With Our{" "}
+        <span className="text-[#ffa83c] font-bold">Pay After Placement</span>
+      </h1>
       <br />
       <p
-        className="text-center text-sm text-gray-500"
+        className="text-center  text-sm text-gray-500"
         data-aos="fade-down"
         data-aos-duration="400"
       >
-        Take our courses and we’ll prepare you to be a talent that the industry
-        is looking for!
+        Join us, learn, get hired, and pay later!
       </p>
       <br />
       <div className="container m-auto px-2 text-gray-500 md:px-12 xl:px-0">
@@ -45,10 +45,13 @@ const Card = () => {
           >
             <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
-                Mentored by the industry's top 1%
+                Top-notch Industry Expert Mentors
               </h3>
+              <br className="md:hidden" />
               <p className="mb-6 bg-white">
-                Learn exclusive insights on things you didn't learn in school
+                Receive personalized guidance and insights from our team of
+                top-notch industry experts to propel your learning journey
+                forward.
               </p>
             </div>
             <Image
@@ -69,10 +72,13 @@ const Card = () => {
           >
             <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
-                Learn in live classes
+                Learn in Interactive Live Classes
               </h3>
+              <br className="md:hidden" />
               <p className="mb-6 bg-white">
-                Solve real-life problems, learn how to hack it with the experts!
+                Experience dynamic learning through interactive live classes,
+                where engagement and collaboration fuel your educational
+                journey.
               </p>
             </div>
             <Image
@@ -93,11 +99,13 @@ const Card = () => {
           >
             <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
-                Level up your resume
+                ATS Friendly Resume & Interview Mock call
               </h3>
+              <br className="md:hidden" />
               <p className="mb-6 bg-white">
-                Shines out your resume in a sea of candidates. Ace the
-                interview!
+                Craft resumes optimized for Applicant Tracking Systems and hone
+                interview skills through realistic mock calls, ensuring
+                readiness for career advancement.
               </p>
             </div>
             <Image
@@ -118,15 +126,18 @@ const Card = () => {
           >
             <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
-                Secure a job in a dream company
+                Get A Dream Job
               </h3>
+              <br className="md:hidden" />
               <p className="mb-6 bg-white">
-                We'll help you get shortlisted by top recruiters, effortlessly!
+                Empower your career journey with our personalized support and
+                expert resources, guiding you towards your dream job. Elevate
+                your job search and secure your ideal role today.
               </p>
             </div>
             <Image
               src={img4}
-              className="w-2/4 xl:w-2/4 lg:w-2/3 hidden md:block ml-auto -mb-14 absolute bg-transparent -bottom-5"
+              className="w-2/4 xl:w-[60%] lg:w-2/3 hidden md:block ml-auto -mb-14 absolute bg-transparent -bottom-5"
               alt="illustration"
               loading="lazy"
               width={900}
