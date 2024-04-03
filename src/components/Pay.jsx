@@ -33,9 +33,9 @@ const Pay = () => {
       merchantTransactionId: transactionid,
       merchantUserId: data, // Use user's unique identifier
       amount: 10000,
-      redirectUrl: `http://localhost:3000/api/status/${transactionid}`,
+      redirectUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
       redirectMode: "POST",
-      callbackUrl: `http://localhost:3000/api/status/${transactionid}`,
+      callbackUrl: `https://prayagbhai.vercel.app/api/status/${transactionid}`,
       mobileNumber: "9999999999",
       paymentInstrument: {
         type: "PAY_PAGE"
