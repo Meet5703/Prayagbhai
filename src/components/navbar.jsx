@@ -10,6 +10,10 @@ const NavbarByMe = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [shouldReload, setShouldReload] = useState(false); // Add shouldReload state
+  const [activeTab, setActiveTab] = useState("/");
+  const handleSetActiveTab = (tab) => {
+    setActiveTab(tab);
+  };
 
   const getUserDetails = async () => {
     setIsLoading(true);
@@ -69,21 +73,50 @@ const NavbarByMe = () => {
                 <Image src={img1} alt="logo" width={200} height={200} />
               </Link>
             </div>
-
-            <div className="hidden sm:flex sm:items-center sm:gap-8">
-              <Link href="/" className="nav-link">
+            <div className="hidden sm:flex sm:items-center sm:gap-4 bg-transparent">
+              <Link
+                href="/"
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  activeTab === "/" && "bg-violet-900 text-white"
+                }`}
+                onClick={() => handleSetActiveTab("/")}
+              >
                 Home
               </Link>
-              <Link href="/jobs" className="nav-link">
+              <Link
+                href="/jobs"
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  activeTab === "/jobs" && "bg-violet-900 text-white"
+                }`}
+                onClick={() => handleSetActiveTab("/jobs")}
+              >
                 Jobs
               </Link>
-              <Link href="/explore" className="nav-link">
+              <Link
+                href="/explore"
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  activeTab === "/explore" && "bg-violet-900 text-white"
+                }`}
+                onClick={() => handleSetActiveTab("/explore")}
+              >
                 Explore
               </Link>
-              <Link href="/about" className="nav-link">
+              <Link
+                href="/about"
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  activeTab === "/about" && "bg-violet-900 text-white"
+                }`}
+                onClick={() => handleSetActiveTab("/about")}
+              >
                 About
               </Link>
-              <Link href="/contact" className="nav-link">
+              <Link
+                href="/contact"
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  activeTab === "/contact" && "bg-violet-900 text-white"
+                }`}
+                onClick={() => handleSetActiveTab("/contact")}
+              >
                 Contact
               </Link>
             </div>
@@ -136,19 +169,34 @@ const NavbarByMe = () => {
             } sm:hidden bg-transparent border-t-2 py-2 transition-all ease-in-out duration-500`}
           >
             <div className="flex flex-col gap-y-4 items-center">
-              <Link href="/" className="nav-link">
+              <Link
+                href="/"
+                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+              >
                 Home
               </Link>
-              <Link href="/jobs" className="nav-link">
+              <Link
+                href="/jobs"
+                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+              >
                 Jobs
               </Link>
-              <Link href="/explore" className="nav-link">
+              <Link
+                href="/explore"
+                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+              >
                 Explore
               </Link>
-              <Link href="/about" className="nav-link">
+              <Link
+                href="/about"
+                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+              >
                 About
               </Link>
-              <Link href="/contact" className="nav-link">
+              <Link
+                href="/contact"
+                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+              >
                 Contact
               </Link>
               {isLoading ? (

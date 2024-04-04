@@ -48,10 +48,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex items-center md:mx-20 justify-evenly ">
-      <div className="md:block hidden">
+    <div className="flex items-center md:mx-20 justify-center ">
+      <div className="md:block hidden  w-1/2 ">
         <Image
-          className="w-3/4"
+          className=" bg-transparent"
           width={1000}
           height={1000}
           src={img1}
@@ -90,7 +90,7 @@ const Contact = () => {
                   className={`absolute cursor-text bg-transparent top-5 ${
                     inputValues.name
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                 >
                   Name
@@ -99,7 +99,7 @@ const Contact = () => {
               <div className="mb-4 relative flex bg-transparent">
                 <input
                   name="number"
-                  className="border-2 pl-10 rounded-md peer p-2 bg-transparent w-full focus:border-purple-500 focus:outline-none"
+                  className="border-2 pl-10 rounded-md peer py-4 px-2 bg-transparent w-full focus:border-purple-500 focus:outline-none"
                   id="number"
                   type="number"
                   required
@@ -107,7 +107,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                 />
                 <p
-                  className={`absolute top-[25%] bg-transparent peer-focus-visible:block left-2 ${
+                  className={`absolute top-[28%] bg-transparent peer-focus-visible:block left-2 ${
                     isPhoneFieldTouched || inputValues.number
                       ? "peer-focus:block"
                       : "hidden"
@@ -117,10 +117,10 @@ const Contact = () => {
                 </p>
                 <label
                   htmlFor="number"
-                  className={`absolute cursor-text bg-transparent top-3 ${
+                  className={`absolute cursor-text bg-transparent top-[17px] ${
                     inputValues.number
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                 >
                   Mobile Number
@@ -129,7 +129,7 @@ const Contact = () => {
               <div className="mb-4 bg-transparent relative flex ">
                 <input
                   name="email"
-                  className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
+                  className="border-2 rounded-md peer py-4 bg-transparent px-2 w-full focus:border-purple-500 focus:outline-none"
                   id="email"
                   type="email"
                   required
@@ -138,10 +138,10 @@ const Contact = () => {
                 />
                 <label
                   htmlFor="email"
-                  className={`absolute cursor-text bg-transparent top-3 ${
+                  className={`absolute cursor-text bg-transparent top-5 ${
                     inputValues.email
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                 >
                   Email
@@ -157,10 +157,10 @@ const Contact = () => {
                   onChange={handleInputChange}
                 ></textarea>
                 <label
-                  className={`absolute cursor-text bg-transparent top-3 ${
+                  className={`absolute cursor-text bg-transparent top-5 ${
                     inputValues.message
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[5px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                   htmlFor="message"
                 >

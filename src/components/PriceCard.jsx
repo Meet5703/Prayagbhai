@@ -28,7 +28,7 @@ const PriceCard = () => {
 
   return (
     <section className="px-8">
-      <div className=" mt-10 w-full rounded-2xl bg-gradient-to-br from-[#5012B4] to-[#6832bd] flex flex-col justify-center gap-4  md:gap-0 md:grid md:grid-cols-4 pb-10">
+      <div className=" mt-10 w-full rounded-2xl  flex flex-col justify-center gap-4  md:gap-0 md:grid md:grid-cols-4 pb-10">
         <div className=" bg-transparent cardSection__content space-y-10 col-span-2 ml-1 md:ml-[25%] md:mr-[10%] mt-14">
           <div className="space-y-2 bg-transparent">
             <h2

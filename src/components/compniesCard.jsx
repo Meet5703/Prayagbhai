@@ -10,8 +10,8 @@ import img7 from "../assets/adobe.png";
 const CompniesCard = () => {
   return (
     <section className="bg-transparent p-4  md:p-8 relative mt-20">
-      <span className="absolute left-[30%] -top-4 md:left-[43%] md:-top-1 flex items-center gap-2 md:text-lg  shadow-xl shadow-gray-300 rounded-full px-4  py-2 bg-white">
-        <h1 className=" text-2xl font-bold text-[#5210B6] bg-white">4000+</h1>
+      <span className="absolute left-[30%] -top-4 md:left-[43%] md:-top-1 flex items-center gap-2 md:text-lg  shadow-xl shadow-gray-300 rounded-full px-6  py-3 bg-white">
+        <h1 className=" text-2xl font-bold text-[#5210B6] bg-white">7000+</h1>
         jobs
       </span>
       <div className=" md:px-4 pb-8 mx-auto lg:pb-16 py-4">

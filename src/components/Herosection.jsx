@@ -37,20 +37,21 @@ const Herosection = () => {
           </span>
         </div>
         <div>
-          <button
-            data-aos="zoom-out "
-            data-aos-duration="1000"
-            className="px-6 py-3 md:px-8 md:py-4 bg-[rgb(83,15,184)] hover:bg-[rgb(103,19,230)] text-gray-50 rounded-xl"
+          <Link
+            href="/explore"
+            className="text-white  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
+            data-aos="flip-up"
+            data-aos-duration="800"
           >
-            <Link href="/explore">Explore Courses</Link>
-          </button>
+            Explore Programmes
+          </Link>
         </div>
         <div className="bg-white">
-          <section className="w-full  flex">
+          <section className="w-full bg-white  flex">
             <div
               data-aos="fade-right"
               data-aos-duration="1000"
-              className="flex w-full justify-center md:w-1/2 bg-white py-6 px-3 items-center gap-4 border-r border-gray-600 lg:ml-6"
+              className="flex w-full justify-center md:w-1/2 bg-white py-6 px-2 items-center gap-4 border-r border-gray-600 lg:ml-1"
             >
               <span>
                 <img
@@ -58,7 +59,7 @@ const Herosection = () => {
                   alt="HeroImg"
                 />
               </span>
-              <span className="bg-white w-full lg:w-1/2 lg:ml-6 ">
+              <span className="bg-white w-full lg:w-1/2 lg:ml-1 ">
                 <h3 className="text-base md:text-2xl text-center md:text-left bg-white font-bold">
                   90%
                 </h3>
@@ -70,15 +71,16 @@ const Herosection = () => {
             <div
               data-aos="fade-left"
               data-aos-duration="600"
-              className="flex w-full justify-center md:w-1/2 bg-white py-6 px-3 items-center gap-4"
+              className="flex w-full lg:ml-3 justify-center md:w-1/2 bg-white py-6 px-3 items-center gap-4"
             >
               <span>
                 <img
+                  className="lg:scale-125 xl:scale-100"
                   src="https://static-artifacts-assets.skillovilla.com/assets/icons/rupee-colored.svg?auto=format&q=35&cs=srgb"
                   alt="HeroImg"
                 />
               </span>
-              <span className="bg-white w-full xl:w-1/2 lg:ml-6">
+              <span className="bg-white w-full xl:w-1/2 lg:ml-1">
                 <h3 className="text-base md:text-2xl text-center md:text-left bg-white font-bold">
                   35 Lac
                 </h3>

@@ -87,10 +87,34 @@ a {
   flex-shrink: 0;
 }
 
-/* Testimonial card styles */
+/* Testimonial card styles
 .testimonial-card {
   min-width: 300px;
   max-width: 400px;
+} */
+
+.testimonial-slider {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.testimonial-author {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {

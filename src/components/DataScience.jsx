@@ -7,17 +7,24 @@ const DataScience = () => {
       <section className="lg:mx-20 md:w-[40%] flex flex-col justify-center gap-16 px-8">
         <div className="md:mt-24 items-center md:items-start flex flex-col gap-5">
           <strong
-            className="text-2xl lg:text-4xl font-[900] text-center md:text-left"
+            className=" font-[900] text-center md:text-left"
             data-aos="fade-right"
             data-aos-duration="2000"
           >
-            <p style={{ lineHeight: 1.3 }}>Data Science & Machine Learning</p>
+            <p
+              className="text-2xl lg:text-[40px] xl:text-6xl"
+              style={{ lineHeight: 1.3 }}
+            >
+              Data Science &{" "}
+              <span className="text-[#ffa72d]"> Generative AI</span>
+            </p>
           </strong>
           <div className="w-16 rounded lg:w-32 h-1 bg-gradient-to-r from-[#530fb8] via-[#7328e3] to-[#8343e3]"></div>
           <span data-aos="fade-right" data-aos-duration="3000">
             <p className="text-lg text-gray-500">
-              Grasp the math behind data science and learn advanced algorithms
-              for Machine Learning.
+              Welcome to our Data Science and Generative AI Course! Our
+              comprehensive course, designed to equip you with cutting-edge
+              skills for real-world applications.
             </p>
           </span>
           <span data-aos="fade-right" data-aos-duration="3000">
@@ -37,6 +44,8 @@ const DataScience = () => {
               <span className="bg-transparent">Enroll Now</span>
             </div>
           </Link>
+          <span className="text-sm line-through italic">10000 ₹</span>
+          <span className="text-lg">8000 ₹</span>
           <Link
             data-aos="fade-left"
             data-aos-duration="1000"

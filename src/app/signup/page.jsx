@@ -102,6 +102,12 @@ const page = () => {
                   </svg>
                   <span className="ml-3 bg-transparent">Sign Up</span>
                 </button>
+
+                <a href="/forgotpassword">
+                  <span className="text-blue-900 font-semibold">
+                    Forgot Password?
+                  </span>
+                </a>
                 <p className="mt-6 text-xs text-gray-600 text-center">
                   Already have an account?{" "}
                   <a href="/login">

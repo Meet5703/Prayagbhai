@@ -11,18 +11,17 @@ import PriceCard from "@/components/PriceCard";
 import FAQ from "@/components/Faq";
 import Testimonial from "@/components/testimonialCrousel";
 import Card from "@/components/card";
+import Placement from "@/components/placement";
 const page = () => {
   return (
     <div className="overflow-x-hidden">
       <DataScience />
       <CompniesCard />
+      <Placement />
       <Card2 />
-      <HighlightedFeatures />
       <JournyCard />
       <Curriculum />
       <Cirtificate />
-      <PriceCard />
-      <Card />
       <Testimonial />
       <FAQ />
     </div>

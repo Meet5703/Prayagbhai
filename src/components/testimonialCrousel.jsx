@@ -1,205 +1,213 @@
 "use client";
-import React, { useState } from "react";
-import Marquee from "react-fast-marquee";
-import times from "lodash/times";
+import React, { useEffect } from "react";
+import Glide from "@glidejs/glide";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "John Doe",
-    testimonial:
-      "Amazing course! It helped me improve my skills significantly.",
-    image: "https://i.ibb.co/8x9xK4H/team.jpg" // Example image URL
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    testimonial:
-      "Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That's how I would describe Jeramy and his team at The Lorem Ipsum Company. When it comes to content marketing, you'll definitely get the 5-star treatment from the Lorem Ipsum Company!",
-    image: "https://www.isme.in/wp-content/uploads/2017/10/user9.jpg" // Example image URL
-  },
-  {
-    id: 3,
-    name: "Emily Johnson",
-    testimonial:
-      "I'm extremely satisfied with the services provided. The team has been incredibly helpful and professional throughout the process.",
-    image: "https://i.ibb.co/8x9xK4H/team.jpg" // Using image from the first entry
-  },
-  {
-    id: 4,
-    name: "David Brown",
-    testimonial:
-      "The Lorem Ipsum Company exceeded my expectations. Their attention to detail and commitment to delivering quality results are commendable.",
-    image: "https://www.isme.in/wp-content/uploads/2017/10/user9.jpg" // Using image from the second entry
-  },
-  {
-    id: 5,
-    name: "Sarah Wilson",
-    testimonial:
-      "I've worked with several agencies before, but The Lorem Ipsum Company stands out for their exceptional customer service and innovative solutions.",
-    image: "https://i.ibb.co/8x9xK4H/team.jpg" // Using image from the first entry
-  },
-  {
-    id: 6,
-    name: "Michael Davis",
-    testimonial:
-      "Impressive work! The Lorem Ipsum Company helped us boost our online presence and attract more customers.",
-    image: "https://www.isme.in/wp-content/uploads/2017/10/user9.jpg" // Using image from the second entry
-  },
-  {
-    id: 7,
-    name: "Emma Thompson",
-    testimonial:
-      "Highly recommended! The Lorem Ipsum Company's team is dedicated, knowledgeable, and always ready to go the extra mile.",
-    image: "https://i.ibb.co/8x9xK4H/team.jpg" // Using image from the first entry
-  },
-  {
-    id: 8,
-    name: "Chris Roberts",
-    testimonial:
-      "Working with The Lorem Ipsum Company was a game-changer for our business. Their expertise and creativity brought our vision to life.",
-    image: "https://www.isme.in/wp-content/uploads/2017/10/user9.jpg" // Using image from the second entry
-  },
-  {
-    id: 9,
-    name: "Olivia Martinez",
-    testimonial:
-      "Thank you, Lorem Ipsum Company, for your outstanding service. Your team's professionalism and talent are unmatched.",
-    image: "https://i.ibb.co/8x9xK4H/team.jpg" // Using image from the first entry
-  },
-  {
-    id: 10,
-    name: "Daniel Clark",
-    testimonial:
-      "We've seen a significant improvement in our online engagement since partnering with The Lorem Ipsum Company. Truly remarkable!",
-    image: "https://www.isme.in/wp-content/uploads/2017/10/user9.jpg" // Using image from the second entry
-  }
-  // Add more testimonials as needed
-];
+export default function CarouselCard() {
+  useEffect(() => {
+    const slider = new Glide(".glide-06", {
+      type: "carousel",
+      focusAt: "center",
+      perView: 3,
+      autoplay: 3000,
+      animationDuration: 700,
+      gap: 24,
+      classNames: {
+        nav: {
+          active: "[&>*]:bg-wuiSlate-700"
+        }
+      },
+      breakpoints: {
+        1024: {
+          perView: 2
+        },
+        640: {
+          perView: 1
+        }
+      }
+    }).mount();
 
-const getRandomInt = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-const shuffleArray = (array) => {
-  const shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-  }
-  return shuffledArray;
-};
-
-const Testimonial = () => {
-  const shuffledTestimonials = shuffleArray(testimonials);
-
-  // Split shuffledTestimonials into two parts: topTestimonials and bottomTestimonials
-  const midpoint = Math.ceil(shuffledTestimonials.length / 2);
-  const topTestimonials = shuffledTestimonials.slice(0, midpoint);
-  const bottomTestimonials = shuffledTestimonials.slice(midpoint);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+    return () => {
+      slider.destroy();
+    };
+  }, []);
 
   return (
-    <div>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        className="flex flex-col ml-[10%] mt-10"
-      >
-        <h1 className=" font-bold text-[#ffa83c]">TESTIMONIALS</h1>
-        <p className="text-2xl w-full font-bold">
-          Read what our alumni are saying{" "}
-        </p>
-      </div>
-      <div className="w-full h-full md:p-12 flex flex-col gap-10">
-        <Marquee
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          pauseOnHover
-          velocity={12}
-          minScale={0.7}
-          className="py-4 flex-grow "
+    <div className="w-full mt-20 h-full bg-white">
+      <h1 className="text-center">Testimonial</h1>
+      {/*<!-- Component: Card Carousel --> */}
+      <div className="glide-06 h-full  relative w-full overflow-hidden rounded bg-white shadow-xl shadow-slate-200">
+        {/*    <!-- Slides --> */}
+        <div
+          className="overflow-hidden px-4  bg-white h-full"
+          data-glide-el="track"
         >
-          {bottomTestimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className={`p-4 m-6 bg-white rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400  `}
-              style={{
-                width: `${getRandomInt(300, 500)}px`,
-                minWidth: "300px"
-              }}
-            >
-              <div className="flex items-center mb-2 bg-white ">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full mr-4 bg-white"
-                />
-                <div>
-                  <p className="font-bold text-gray-800 bg-white">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-gray-500 bg-white">
-                    - {testimonial.name}
-                  </p>
-                </div>
+          <ul className="whitespace-no-wrap bg-white flex-no-wrap ml-0 px-5 [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-3 ">
+            <li className="bg-white mb-10 px-4 py-2 rounded-lg mt-10 border border-black">
+              <div className=" bg-white">
+                <p className="flex bg-white items-center gap-4">
+                  <img
+                    src="https://i.ibb.co/8x9xK4H/team.jpg"
+                    className="rounded-full bg-white w-20"
+                    alt="1"
+                  />
+                  <span className="bg-white">Jon doe</span>
+                </p>
+                <p className="text-lg bg-white text-gray-800 font-semibold mb-2">
+                  "I'm extremely satisfied with the service provided by Data
+                  Skills Hub."
+                </p>
               </div>
-              <p className="text-gray-800 bg-white">
-                {testimonial.testimonial}
-              </p>
-            </div>
-          ))}
-        </Marquee>
-        <Marquee
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          direction="right"
-          pauseOnHover
-          velocity={12}
-          minScale={0.7}
-          className="py-4 flex-grow"
+            </li>
+            <li className="bg-white mb-10 px-4 py-2 rounded-lg mt-10 border border-black">
+              <div className=" bg-white">
+                <p className="flex bg-white items-center gap-4">
+                  <img
+                    src="https://i.ibb.co/8x9xK4H/team.jpg"
+                    className="rounded-full bg-white w-20"
+                    alt="1"
+                  />
+                  <span className="bg-white">Jon doe</span>
+                </p>
+                <p className="text-lg bg-white text-gray-800 font-semibold mb-2">
+                  "I'm extremely satisfied with the service provided by Data
+                  Skills Hub."
+                </p>
+              </div>
+            </li>
+            <li className="bg-white mb-10 px-4 py-2 rounded-lg mt-10 border border-black">
+              <div className=" bg-white">
+                <p className="flex bg-white items-center gap-4">
+                  <img
+                    src="https://i.ibb.co/8x9xK4H/team.jpg"
+                    className="rounded-full bg-white w-20"
+                    alt="1"
+                  />
+                  <span className="bg-white">Jon doe</span>
+                </p>
+                <p className="text-lg bg-white text-gray-800 font-semibold mb-2">
+                  "I'm extremely satisfied with the service provided by Data
+                  Skills Hub."
+                </p>
+              </div>
+            </li>
+            <li className="bg-white mb-10 px-4 py-2 rounded-lg mt-10 border border-black">
+              <div className=" bg-white">
+                <p className="flex bg-white items-center gap-4">
+                  <img
+                    src="https://i.ibb.co/8x9xK4H/team.jpg"
+                    className="rounded-full bg-white w-20"
+                    alt="1"
+                  />
+                  <span className="bg-white">Jon doe</span>
+                </p>
+                <p className="text-lg bg-white text-gray-800 font-semibold mb-2">
+                  "I'm extremely satisfied with the service provided by Data
+                  Skills Hub."
+                </p>
+              </div>
+            </li>
+            <li className="bg-white mb-10 px-4 py-2 rounded-lg mt-10 border border-black">
+              <div className=" bg-white">
+                <p className="flex bg-white items-center gap-4">
+                  <img
+                    src="https://i.ibb.co/8x9xK4H/team.jpg"
+                    className="rounded-full bg-white w-20"
+                    alt="1"
+                  />
+                  <span className="bg-white">Jon doe</span>
+                </p>
+                <p className="text-lg bg-white text-gray-800 font-semibold mb-2">
+                  "I'm extremely satisfied with the service provided by Data
+                  Skills Hub."
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        {/*    <!-- Controls --> */}
+        <div
+          className="absolute left-0 bg-white top-1/2 flex h-0 w-full items-center justify-between px-4 "
+          data-glide-el="controls"
         >
-          {topTestimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className={`p-4 m-6 bg-white rounded-lg shadow-md hover:shadow-lg hover:shadow-gray-400  `}
-              style={{
-                width: `${getRandomInt(300, 500)}px`,
-                minWidth: "300px"
-              }}
+          <button
+            className="inline-flex mt-[124px] md:mt-0 h-8 w-8 items-center justify-center rounded-full border border-slate-700 bg-white text-slate-700 transition duration-300 hover:border-slate-900 hover:text-slate-900 focus-visible:outline-none lg:h-12 lg:w-12"
+            data-glide-dir="<"
+            aria-label="prev slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-5 w-5 bg-white"
             >
-              <div className="flex items-center mb-2 bg-white">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full mr-4 bg-white"
-                />
-                <div>
-                  <p className="font-bold text-gray-800 bg-white">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-gray-500 bg-white">
-                    - {testimonial.name}
-                  </p>
-                </div>
-              </div>
-              <p className="text-gray-800 bg-white">
-                {testimonial.testimonial}
-              </p>
-            </div>
-          ))}
-        </Marquee>
+              <title className="bg-white">prev slide</title>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+              />
+            </svg>
+          </button>
+          <button
+            className="inline-flex mt-[124px] md:mt-0 h-8 w-8 items-center justify-center rounded-full border border-slate-700 bg-white text-slate-700 transition duration-300 hover:border-slate-900 hover:text-slate-900 focus-visible:outline-none lg:h-12 lg:w-12"
+            data-glide-dir=">"
+            aria-label="next slide"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-5 w-5 bg-white"
+            >
+              <title className="bg-white">next slide</title>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </button>
+        </div>
+        {/*    <!-- Indicators --> */}
+        <div
+          className="absolute bg-white bottom-0 flex w-full items-center justify-center gap-2"
+          data-glide-el="controls[nav]"
+        >
+          <button
+            className="group p-4"
+            data-glide-dir="=0"
+            aria-label="goto slide 1"
+          >
+            <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>
+          </button>
+          <button
+            className="group p-4"
+            data-glide-dir="=1"
+            aria-label="goto slide 2"
+          >
+            <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>
+          </button>
+          <button
+            className="group p-4"
+            data-glide-dir="=2"
+            aria-label="goto slide 3"
+          >
+            <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>
+          </button>
+          <button
+            className="group p-4"
+            data-glide-dir="=3"
+            aria-label="goto slide 4"
+          >
+            <span className="block h-2 w-2 rounded-full bg-white/20 ring-1 ring-slate-700 transition-colors duration-300 focus:outline-none"></span>
+          </button>
+        </div>
       </div>
+      {/*<!-- End Card Carousel --> */}
     </div>
   );
-};
-
-export default Testimonial;
+}

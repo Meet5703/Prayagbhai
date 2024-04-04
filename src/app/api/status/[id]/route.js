@@ -4,8 +4,7 @@ import axios from "axios";
 import { dbConnect } from "@/DB/dbconnect";
 import PaymentForm from "@/DB/Model/payment";
 
-// Define updateFormDataStatus function outside of the POST function
-async function updateFormDataStatus(data, status, merchantId, transactionId) {
+async function updateFormDataStatus(merchantId, transactionId, status) {
   try {
     await dbConnect();
     await PaymentForm.findOneAndUpdate(
@@ -15,34 +14,29 @@ async function updateFormDataStatus(data, status, merchantId, transactionId) {
     );
   } catch (error) {
     console.error("Error updating form data status:", error);
+    // Handle error appropriately, e.g., return an error response
+    return NextResponse.json(
+      { error: "Error updating form data status" },
+      { status: 500 }
+    );
   }
 }
 
-// export const updateFormdata = async function PUT(request) {
-//   try {
-//     const { id } = await request.json();
-//     const payment = await PaymentForm.findById(id);
-//     payment.status = "success";
-//     const result = await payment.save();
-//     return NextResponse.json({
-//       message: "Form data updated successfully",
-//       success: true,
-//       result
-//     });
-//   } catch (error) {
-//     return NextResponse.json({ error: error.message }, { status: 500 });
-//   }
-// };
 export async function POST(req, res) {
   try {
+    // Parse form data
     const data = await req.formData();
-    const status = data.get("code");
+
+    // Extract necessary data from form
+    const code = data.get("code");
     const merchantId = data.get("merchantId");
     const transactionId = data.get("transactionId");
 
+    // Generate checksum for verification
     const st = `/pg/v1/status/${merchantId}/${transactionId}099eb0cd-02cf-4e2a-8aca-3e6c6aff0399`;
     const checksum = sha256(st) + "###" + "1";
 
+    // Configure API request options
     const options = {
       method: "GET",
       url: `https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/${merchantId}/${transactionId}`,
@@ -50,28 +44,26 @@ export async function POST(req, res) {
         accept: "application/json",
         "Content-Type": "application/json",
         "X-VERIFY": checksum,
-        "X-MERCHANT-ID": `${merchantId}`
+        "X-MERCHANT-ID": merchantId
       }
     };
 
+    // Make API request
     const response = await axios.request(options);
 
-    // Use the updateFormDataStatus function
-    if (response.data.code === "PAYMENT_SUCCESS") {
-      await updateFormDataStatus(data, "success", merchantId, transactionId);
-      console.log("success", data);
-      return NextResponse.redirect(`http://localhost:3000/success`, {
-        status: 301
-      });
-    } else {
-      await updateFormDataStatus(data, "failed", merchantId, transactionId);
-      console.log("failure", data);
-      return NextResponse.redirect(`http://localhost:3000/failure`, {
-        status: 301
-      });
-    }
+    // Update form data status based on payment status
+    const status =
+      response.data.code === "PAYMENT_SUCCESS" ? "success" : "failed";
+    await updateFormDataStatus(merchantId, transactionId, status);
+
+    // Redirect user based on payment status
+    const redirectUrl = status === "success" ? "/success" : "/failure";
+    return NextResponse.redirect(`http://localhost:3000${redirectUrl}`, {
+      status: 301
+    });
   } catch (error) {
     console.error("Error in /api/payment:", error);
+    // Handle error appropriately, e.g., return an error response
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

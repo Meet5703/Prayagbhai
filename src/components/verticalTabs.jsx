@@ -42,7 +42,7 @@ const VerticalTabs = () => {
                 height={100}
               />
               <h2 className="text-sm md:text-lg font-bold bg-transparent">
-                Learn skills that matter
+                Learn from Industry Expert in Live class
               </h2>
             </button>
             <button
@@ -59,7 +59,7 @@ const VerticalTabs = () => {
                 height={100}
               />
               <h2 className="text-sm md:text-lg font-bold bg-transparent">
-                Learn from the experts in live classes
+                Interview Training
               </h2>
             </button>
             <button
@@ -76,7 +76,7 @@ const VerticalTabs = () => {
                 height={100}
               />
               <h2 className="text-sm md:text-lg font-bold bg-transparent">
-                Have a structured career plan
+                Get A Dream Job
               </h2>
             </button>
             <button
@@ -93,7 +93,7 @@ const VerticalTabs = () => {
                 height={100}
               />
               <h2 className="text-sm md:text-lg font-bold bg-transparent">
-                Secure a job in your dream company
+                Pay after Placement
               </h2>
             </button>
           </div>
@@ -104,7 +104,7 @@ const VerticalTabs = () => {
           {activeTab === 0 && (
             <div className="bg-white space-y-6 mt-8 px-3 md:ml-20">
               <h2 className="text-4xl bg-transparent font-bold">
-                Learn skills that matter
+                Learn from Industry Expert in Live class
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 bg-transparent">
                 <div className="col-span-1 bg-transparent space-y-4">
@@ -128,10 +128,7 @@ const VerticalTabs = () => {
                     <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
-                    <p className="bg-transparent">
-                      Structured courses to help you master skills from the
-                      basics
-                    </p>
+                    <p className="bg-transparent">One to One Doubt Session</p>
                   </span>
                   <span
                     className="flex items-center gap-2 bg-transparent"
@@ -142,7 +139,7 @@ const VerticalTabs = () => {
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">
-                      Hands-on industry projects under guidance of experts
+                      Hands on Industry Projects cover in Live class
                     </p>
                   </span>
                   <span
@@ -153,9 +150,7 @@ const VerticalTabs = () => {
                     <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
-                    <p className="bg-transparent">
-                      Apply what you learn in real-life case studies
-                    </p>
+                    <p className="bg-transparent">Support Channel</p>
                   </span>
                 </div>
                 <div className="col-span-1 bg-transparent">
@@ -173,7 +168,7 @@ const VerticalTabs = () => {
           {activeTab === 1 && (
             <div className="bg-white space-y-6 mt-8 px-3 md:ml-20">
               <h2 className="text-4xl bg-transparent font-bold">
-                Learn skills that matter
+                Interview Training
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 bg-transparent">
                 <div className="col-span-1 bg-transparent space-y-4">
@@ -185,9 +180,17 @@ const VerticalTabs = () => {
                     <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
-                    <p className="bg-transparent">
-                      Specifically designed curriculum by industry experts
-                    </p>
+                    <p className="bg-transparent">Resume Building support</p>
+                  </span>
+                  <span
+                    className="flex items-center gap-2 bg-transparent"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                  >
+                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                      arrow_right_alt
+                    </span>
+                    <p className="bg-transparent">Placement Training</p>
                   </span>
                   <span
                     className="flex items-center gap-2 bg-transparent"
@@ -198,32 +201,7 @@ const VerticalTabs = () => {
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">
-                      Structured courses to help you master skills from the
-                      basics
-                    </p>
-                  </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
-                      arrow_right_alt
-                    </span>
-                    <p className="bg-transparent">
-                      Hands-on industry projects under guidance of experts
-                    </p>
-                  </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
-                      arrow_right_alt
-                    </span>
-                    <p className="bg-transparent">
-                      Apply what you learn in real-life case studies
+                      Interview Mock call Practice
                     </p>
                   </span>
                 </div>
@@ -242,7 +220,7 @@ const VerticalTabs = () => {
           {activeTab === 2 && (
             <div className="bg-white space-y-6 mt-8 px-3 md:ml-20">
               <h2 className="text-4xl bg-transparent font-bold">
-                Learn skills that matter
+                Get A Dream Job
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 bg-transparent">
                 <div className="col-span-1 bg-transparent space-y-4">
@@ -254,9 +232,7 @@ const VerticalTabs = () => {
                     <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
-                    <p className="bg-transparent">
-                      Specifically designed curriculum by industry experts
-                    </p>
+                    <p className="bg-transparent">Interview referance</p>
                   </span>
                   <span
                     className="flex items-center gap-2 bg-transparent"
@@ -266,34 +242,7 @@ const VerticalTabs = () => {
                     <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
-                    <p className="bg-transparent">
-                      Structured courses to help you master skills from the
-                      basics
-                    </p>
-                  </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
-                      arrow_right_alt
-                    </span>
-                    <p className="bg-transparent">
-                      Hands-on industry projects under guidance of experts
-                    </p>
-                  </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
-                      arrow_right_alt
-                    </span>
-                    <p className="bg-transparent">
-                      Apply what you learn in real-life case studies
-                    </p>
+                    <p className="bg-transparent">Direct Interviews</p>
                   </span>
                 </div>
                 <div className="col-span-1 bg-transparent">
@@ -311,7 +260,7 @@ const VerticalTabs = () => {
           {activeTab === 3 && (
             <div className="bg-white space-y-6 mt-8 px-3 md:ml-20">
               <h2 className="text-4xl bg-transparent font-bold">
-                Learn skills that matter
+                Pay after Placement
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 bg-transparent">
                 <div className="col-span-1 bg-transparent space-y-4">
@@ -324,7 +273,7 @@ const VerticalTabs = () => {
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">
-                      Specifically designed curriculum by industry experts
+                      Pay main fees after getting job
                     </p>
                   </span>
                   <span
@@ -335,34 +284,7 @@ const VerticalTabs = () => {
                     <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
-                    <p className="bg-transparent">
-                      Structured courses to help you master skills from the
-                      basics
-                    </p>
-                  </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
-                      arrow_right_alt
-                    </span>
-                    <p className="bg-transparent">
-                      Hands-on industry projects under guidance of experts
-                    </p>
-                  </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
-                      arrow_right_alt
-                    </span>
-                    <p className="bg-transparent">
-                      Apply what you learn in real-life case studies
-                    </p>
+                    <p className="bg-transparent">Minimum package 5 LPA</p>
                   </span>
                 </div>
                 <div className="col-span-1 bg-transparent">

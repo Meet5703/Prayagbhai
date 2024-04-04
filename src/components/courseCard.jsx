@@ -27,16 +27,16 @@ const CourseCard = () => {
           data-aos="fade-left"
           data-aos-duration="1000"
         >
-          Data Analyst Course
+          Data Science and Generative AI course
         </h2>
         <p
           className="text-lg text-gray-800  mb-4"
           data-aos="fade-left"
           data-aos-duration="1000"
         >
-          Welcome to our Data Analyst Course! This interactive course will equip
-          you with the skills and knowledge needed to thrive in the field of
-          data analysis.
+          Welcome to our Data Science and Generative AI Course! Our
+          comprehensive course, designed to equip you with cutting-edge skills
+          for real-world applications.
         </p>
         <div className="mb-4">
           <h3
@@ -48,19 +48,25 @@ const CourseCard = () => {
           </h3>
           <ul className="list-disc list-inside text-lg text-gray-800 ">
             <li data-aos="fade-left" data-aos-duration="1000">
-              Hands-on projects
+              Interactive Live Classes
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              Interactive learning materials
-            </li>
-            <li data-aos="fade-left" data-aos-duration="1000">
-              Expert-led sessions
+              One to One Doubt Session
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
               Real-world case studies
             </li>
             <li data-aos="fade-left" data-aos-duration="1000">
-              Supportive community
+              Pay after Placement
+            </li>
+            <li data-aos="fade-left" data-aos-duration="1000">
+              Resume Building
+            </li>
+            <li data-aos="fade-left" data-aos-duration="1000">
+              Interview Mock call Practice
+            </li>
+            <li data-aos="fade-left" data-aos-duration="1000">
+              Support community
             </li>
           </ul>
         </div>
@@ -72,14 +78,14 @@ const CourseCard = () => {
           >
             Limited Seats available
           </p>
-          <button
-            href="/explore"
-            data-aos="flip-down"
-            data-aos-duration="1000"
-            className="px-6 mr-8 py-3 md:px-8 md:py-4 bg-[rgb(83,15,184)] hover:bg-[rgb(103,19,230)] text-gray-50 rounded-xl"
+          <Link
+            href="/pay"
+            className="text-white text-center  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
+            data-aos="flip-up"
+            data-aos-duration="800"
           >
             Enroll Now
-          </button>
+          </Link>
         </div>
         <div className="flex mt-4 gap-8 md:justify-around">
           <Link

@@ -8,18 +8,23 @@ import CourseCard from "@/components/courseCard";
 import Testimonial from "@/components/testimonialCrousel";
 import Aos from "aos";
 import ContactForm from "@/components/contactForm";
-import FAQ from "@/components/Faq";
 import VerticalTabs from "@/components/verticalTabs";
-const faqData = [
+const testimonials = [
   {
-    question: "Question 1",
-    answer: "Answer 1"
+    id: 1,
+    text: "I'm extremely satisfied with the service!",
+    author: "John Doe"
   },
   {
-    question: "Question 2",
-    answer: "Answer 2"
+    id: 2,
+    text: "Amazing experience! Highly recommended.",
+    author: "Jane Smith"
+  },
+  {
+    id: 3,
+    text: "The best decision I've made for my business!",
+    author: "Michael Johnson"
   }
-  // Add more FAQ items as needed
 ];
 
 const Home = () => {
