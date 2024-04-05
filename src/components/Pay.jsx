@@ -10,20 +10,39 @@ const Pay = () => {
   const router = useRouter();
 
   const [user, setUser] = useState({
-    name: "",
+    username: "",
     email: "",
     number: "",
-    course: "",
+    courses: [],
     status: "failed"
   });
+
+  useEffect(() => {
+    getUserDetails();
+  }, []);
+
+  const getUserDetails = async () => {
+    try {
+      const response = await axios.post("/api/users/profile");
+      console.log("User details response:", response.data.user); // Log response data
+      setUser({
+        ...user,
+        username: response.data.user.username,
+        email: response.data.user.email,
+        courses: response.data.user.courses,
+        number: response.data.user.number
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   const onChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
+
   const makePayment = async (e) => {
     e.preventDefault();
-    const response = axios.post("/api/payment", user);
-    console.log("submit success", response);
 
     if (!user) {
       console.error("User data is not available.");
@@ -74,9 +93,21 @@ const Pay = () => {
       const redirectUrl =
         response.data.data.instrumentResponse.redirectInfo.url;
       router.push(redirectUrl);
+
+      await updateUserProfile();
     } catch (error) {
       console.error("Payment error:", error.message);
       // Handle payment error
+    }
+  };
+  const updateUserProfile = async () => {
+    try {
+      // Update user profile
+      await axios.post("/api/users/payment", user);
+      console.log("User profile updated successfully.");
+    } catch (error) {
+      console.error("Error updating user profile:", error.message);
+      // Handle user profile update error
     }
   };
 
@@ -95,8 +126,8 @@ const Pay = () => {
               <input
                 id="name"
                 name="name"
-                value={user.name}
-                onChange={onChange}
+                readOnly
+                value={user.username}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -113,7 +144,7 @@ const Pay = () => {
                 id="email"
                 name="email"
                 value={user.email}
-                onChange={onChange}
+                readOnly
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -129,6 +160,7 @@ const Pay = () => {
               <input
                 id="number"
                 name="number"
+                value={user.number}
                 onChange={onChange}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -136,23 +168,21 @@ const Pay = () => {
           </div>
           <div>
             <label
-              htmlFor="course"
+              htmlFor="courses"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
-              Course
+              Courses
             </label>
             <div className="mt-2">
               <select
-                id="course"
-                name="course"
+                id="courses"
+                name="courses"
                 onChange={onChange}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                value={user.course} // Set the value attribute to user.course
+                value={user.courses} // Set the value attribute to user.courses
               >
-                <option value="">Select your course</option>
                 <option value="Data Analyst">Data Analyst</option>
                 <option value="Data Scientist">Data Scientist</option>
-
                 {/* Add other options here */}
               </select>
             </div>

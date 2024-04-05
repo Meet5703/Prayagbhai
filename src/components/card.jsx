@@ -43,7 +43,7 @@ const Card = () => {
             data-aos="fade-up"
             data-aos-duration="400"
           >
-            <div className="md:mb-12 md:space-y-4 bg-white">
+            <div className="md:mb-12 md:space-y-4  bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
                 Top-notch Industry Expert Mentors
               </h3>
@@ -56,7 +56,7 @@ const Card = () => {
             </div>
             <Image
               src={img}
-              className="w-2/4 lg:w-2/3 xl:w-2/4 hidden md:block ml-auto -mb-12 absolute bg-transparent -bottom-4"
+              className="w-2/4 lg:w-2/3 xl:w-2/4 hidden md:block ml-auto -mb-12 absolute bg-transparent lg:bottom-4 xl:-bottom-4"
               alt="illustration"
               loading="lazy"
               width={900}
@@ -83,7 +83,7 @@ const Card = () => {
             </div>
             <Image
               src={img2}
-              className="w-2/4 xl:w-2/4 lg:w-2/3 hidden md:block ml-auto -mb-14 absolute bg-transparent -bottom-8"
+              className="w-2/4 xl:w-2/4 lg:w-2/3 hidden md:block ml-auto -mb-14 absolute bg-transparent lg:bottom-8 xl:-bottom-8"
               alt="illustration"
               loading="lazy"
               width={900}
@@ -137,7 +137,7 @@ const Card = () => {
             </div>
             <Image
               src={img4}
-              className="w-2/4 xl:w-[60%] lg:w-2/3 hidden md:block ml-auto -mb-14 absolute bg-transparent -bottom-5"
+              className="w-2/4 xl:w-[60%] lg:w-[70%] hidden md:block ml-auto -mb-14 absolute bg-transparent lg:bottom-5 xl:-bottom-5"
               alt="illustration"
               loading="lazy"
               width={900}

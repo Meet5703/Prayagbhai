@@ -20,21 +20,10 @@ const JournyCard = () => {
           for success with mock interviews and seize your dream job opportunity.
         </p>
       </div>
-      <div className="w-full h-full md:gap-28 flex flex-col md:flex-row mt-20">
-        <div className="left md:w-1/2 h-full">
-          <Image
-            className="w-full"
-            src={img1}
-            alt="img1"
-            width={1000}
-            height={1000}
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          />
-        </div>
-        <div className="ml-4 mr-4 md:mr-0 md:ml-0 md:w-1/2">
-          <div className="bg-[#f7d1a2] rounded-xl shadow-xl shadow-gray-300 md:w-4/5 p-6">
-            <Timeline className="md:w-3/4 bg-transparent">
+      <div className="w-full h-full md:gap-28 flex flex-col  mt-20">
+        <div className="ml-4 mr-4 md:mr-0 md:ml-0 ">
+          <div className="bg-[#e5d4ff] rounded-xl shadow-xl shadow-gray-300 md:w-4/5 md:ml-28 p-6">
+            <Timeline className=" bg-transparent">
               <Timeline.Item className="bg-transparent text-black">
                 <Timeline.Point />
                 <Timeline.Content

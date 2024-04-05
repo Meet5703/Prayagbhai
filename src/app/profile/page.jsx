@@ -11,8 +11,15 @@ const Page = () => {
   const getUserDetails = async () => {
     try {
       const response = await axios.post("/api/users/profile");
-      console.log(response.data);
-      setData(response.data); // Update data with fetched user details
+      console.log(response.data.user);
+      setData({
+        ...data,
+        username: response.data.user.username,
+        email: response.data.user.email,
+        number: response.data.user.number,
+        courses: response.data.user.courses
+      });
+      // Update data with fetched user details
     } catch (error) {
       console.log(error.message);
       toast.error(error.message);
@@ -40,8 +47,10 @@ const Page = () => {
       <h1>Profile</h1>
       {data && (
         <>
-          <p>Username: {data.user.username}</p>
-          <p>Email: {data.user.email}</p>
+          <p>Username: {data.username}</p>
+          <p>Email: {data.email}</p>
+          <p>Number: {data.number}</p>
+          <p>Courses: {data.courses}</p>
         </>
       )}
       <button className="bg-red-500 px-5 py-2" onClick={logout}>

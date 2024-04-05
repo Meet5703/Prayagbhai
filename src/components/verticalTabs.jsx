@@ -113,7 +113,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c]  rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">
@@ -125,7 +125,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">One to One Doubt Session</p>
@@ -135,7 +135,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">
@@ -147,7 +147,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">Support Channel</p>
@@ -177,7 +177,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">Resume Building support</p>
@@ -187,7 +187,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">Placement Training</p>
@@ -197,7 +197,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">
@@ -229,7 +229,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">Interview referance</p>
@@ -239,7 +239,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">Direct Interviews</p>
@@ -269,7 +269,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">
@@ -281,7 +281,7 @@ const VerticalTabs = () => {
                     data-aos="fade-right"
                     data-aos-duration="1000"
                   >
-                    <span className="material-symbols-outlined bg-transparent rounded-full text-purple-950">
+                    <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">Minimum package 5 LPA</p>

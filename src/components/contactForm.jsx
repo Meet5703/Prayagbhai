@@ -48,8 +48,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex items-center md:mx-20 justify-center ">
-      <div className="md:block hidden  w-1/2 ">
+    <div className="  mt-20 grid md:grid-cols-2 ">
+      <div className="md:block hidden col-span-1 ">
+        <h2 className="text-3xl xl:text-5xl bg-transparent pt-16  text-center text-gray-900 ">
+          How can we help you ?
+        </h2>
         <Image
           className=" bg-transparent"
           width={1000}
@@ -58,27 +61,20 @@ const Contact = () => {
           alt="image1"
         />
       </div>
-      <div className="bg-purple-300">
-        <div className="container mx-auto  py-12">
-          <div className="max-w-lg mx-auto px-4 py-2 ">
-            <h2 className="text-5xl bg-transparent  font-[900] text-gray-900 mb-4">
-              How can we help you
-            </h2>
-            <p className="text-gray-700 bg-transparent  mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              sagittis velit eget nisi lobortis dignissim.
-            </p>
+      <div className=" col-span-1 mt-32 md:mr-28">
+        <div className="  py-12">
+          <div className=" w-full px-4 py-2 ">
             <form
               onSubmit={handleSubmit}
-              className="bg-white bg-transparent shadow-purple-500 rounded-lg px-6 py-8 shadow-md"
+              className="bg-white bg-transparent shadow-[#6105bd] rounded-lg px-6 py-8 shadow-md"
             >
-              <h1 className="text-3xl text-center mb-5 text-purple-500 bg-transparent font-[900]">
+              <h1 className="text-5xl  mb-5 text-[#6105bd] bg-transparent font-[700]">
                 Contact Us
               </h1>
               <div className="mb-4 bg-white relative flex">
                 <input
                   name="name"
-                  className="border-2 rounded-md peer py-4 px-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
+                  className="border-2 rounded-md peer py-4 px-2 bg-transparent  w-full focus:border-[#6105bd] focus:outline-none"
                   id="name"
                   type="text"
                   required
@@ -90,7 +86,7 @@ const Contact = () => {
                   className={`absolute cursor-text bg-transparent top-5 ${
                     inputValues.name
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                 >
                   Name
@@ -99,7 +95,7 @@ const Contact = () => {
               <div className="mb-4 relative flex bg-transparent">
                 <input
                   name="number"
-                  className="border-2 pl-10 rounded-md peer py-4 px-2 bg-transparent w-full focus:border-purple-500 focus:outline-none"
+                  className="border-2 pl-10 rounded-md peer py-4 px-2 bg-transparent w-full focus:border-[#6105bd] focus:outline-none"
                   id="number"
                   type="number"
                   required
@@ -120,7 +116,7 @@ const Contact = () => {
                   className={`absolute cursor-text bg-transparent top-[17px] ${
                     inputValues.number
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                 >
                   Mobile Number
@@ -129,7 +125,7 @@ const Contact = () => {
               <div className="mb-4 bg-transparent relative flex ">
                 <input
                   name="email"
-                  className="border-2 rounded-md peer py-4 bg-transparent px-2 w-full focus:border-purple-500 focus:outline-none"
+                  className="border-2 rounded-md peer py-4 bg-transparent px-2 w-full focus:border-[#6105bd] focus:outline-none"
                   id="email"
                   type="email"
                   required
@@ -141,7 +137,7 @@ const Contact = () => {
                   className={`absolute cursor-text bg-transparent top-5 ${
                     inputValues.email
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                 >
                   Email
@@ -150,7 +146,7 @@ const Contact = () => {
               <div className="mb-4 bg-transparent relative flex ">
                 <textarea
                   name="message"
-                  className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-purple-500 focus:outline-none"
+                  className="border-2 rounded-md peer p-2 bg-transparent  w-full focus:border-[#6105bd] focus:outline-none"
                   id="message"
                   rows="6"
                   value={inputValues.message}
@@ -160,7 +156,7 @@ const Contact = () => {
                   className={`absolute cursor-text bg-transparent top-5 ${
                     inputValues.message
                       ? "hidden"
-                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-purple-500 peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                      : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
                   }`}
                   htmlFor="message"
                 >
@@ -169,7 +165,7 @@ const Contact = () => {
               </div>
               <div className="flex bg-transparent  justify-center">
                 <button
-                  className="bg-purple-500   hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-[#6105bd]   hover:bg-purple-700 text-white font-bold py-2 px-44 rounded focus:outline-none focus:shadow-outline text-xl"
                   type="submit"
                 >
                   Send

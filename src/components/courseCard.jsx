@@ -1,5 +1,5 @@
 import React from "react";
-import Img1 from "../assets/10782790_19197315-Photoroom.png-Photoroom.png";
+import Img1 from "../assets/Data_Analysis_asg_01.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,8 +22,11 @@ const CourseCard = () => {
         </div>
       </div>
       <div className="md:w-1/2 md:pl-8 flex flex-col justify-center">
+        <h2 className="text-xl md:text-2xl font-bold text-[rgb(255,168,60)]">
+          Build Your Career With Our
+        </h2>
         <h2
-          className="text-3xl md:text-4xl font-bold text-[rgb(255,168,60)] mb-2"
+          className="text-3xl md:text-4xl font-bold  mb-2"
           data-aos="fade-left"
           data-aos-duration="1000"
         >
@@ -40,11 +43,11 @@ const CourseCard = () => {
         </p>
         <div className="mb-4">
           <h3
-            className="text-xl font-semibold mb-2"
+            className="text-2xl font-bold  mb-2"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            Key Features:
+            Key Features
           </h3>
           <ul className="list-disc list-inside text-lg text-gray-800 ">
             <li data-aos="fade-left" data-aos-duration="1000">
@@ -87,7 +90,7 @@ const CourseCard = () => {
             Enroll Now
           </Link>
         </div>
-        <div className="flex mt-4 gap-8 md:justify-around">
+        <div className="flex mt-4 gap-8 md:ml-28">
           <Link
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -107,7 +110,7 @@ const CourseCard = () => {
             href="#"
             className="ov-btn-slide-left scale-75 md:scale-0 "
           >
-            <div className="flex items-center gap-2 bg-transparent">
+            <div className="flex items-center px-7 gap-2 bg-transparent">
               <span className="bg-transparent">Learn More</span>
               <span className="material-symbols-outlined bg-transparent">
                 keyboard_double_arrow_right

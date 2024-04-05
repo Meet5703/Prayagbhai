@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-
+import Image from "next/image";
+import img1 from "../assets/girl (1).png";
 const Herosection = () => {
   return (
     <main className="flex flex-col md:flex-row mt-10">
@@ -80,7 +81,7 @@ const Herosection = () => {
                   alt="HeroImg"
                 />
               </span>
-              <span className="bg-white w-full xl:w-1/2 lg:ml-1">
+              <span className="bg-white w-full xl:w-1/2 lg:ml-0">
                 <h3 className="text-base md:text-2xl text-center md:text-left bg-white font-bold">
                   35 Lac
                 </h3>
@@ -93,10 +94,12 @@ const Herosection = () => {
         </div>
       </section>
       <section className="w-full lg:w-full md:w-[60%] pt-20 scale-125 hidden md:block">
-        <img
+        <Image
           data-aos="fade-left"
           data-aos-duration="1000"
-          src="https://static-artifacts-assets.skillovilla.com/assets/backgrounds/homepage/md/banner-2x.png?auto=format&q=35&cs=srgb"
+          width={500}
+          height={500}
+          src={img1}
           alt="main-2"
         />
       </section>

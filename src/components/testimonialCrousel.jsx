@@ -85,7 +85,11 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="w-3/4 m-auto">
+    <div className="w-3/4 m-auto mt-20">
+      <h6 className="text-[#ffa83c] -ml-8 md:text-2xl ">TESTIMONIALS</h6>
+      <p className="text-3xl font-semibold w-screen -ml-8 md:text-5xl">
+        Explore Inspiring Alumni Journeys{" "}
+      </p>
       <div className="mt-20">
         <Slider {...settings}>
           {data.map((d) => (

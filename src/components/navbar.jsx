@@ -83,7 +83,7 @@ const NavbarByMe = () => {
               >
                 Home
               </Link>
-              <Link
+              {/* <Link
                 href="/jobs"
                 className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
                   activeTab === "/jobs" && "bg-violet-900 text-white"
@@ -91,7 +91,7 @@ const NavbarByMe = () => {
                 onClick={() => handleSetActiveTab("/jobs")}
               >
                 Jobs
-              </Link>
+              </Link> */}
               <Link
                 href="/explore"
                 className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
@@ -175,12 +175,12 @@ const NavbarByMe = () => {
               >
                 Home
               </Link>
-              <Link
+              {/* <Link
                 href="/jobs"
                 className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
               >
                 Jobs
-              </Link>
+              </Link> */}
               <Link
                 href="/explore"
                 className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "

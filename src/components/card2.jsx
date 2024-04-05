@@ -1,5 +1,5 @@
 import React from "react";
-import masterclassGif from "../assets/screen-shot-2021-03-17-at-10.19.22-pm.webp";
+import masterclassGif from "../assets/deta.png";
 import Image from "next/image";
 import img2 from "../assets/logocarduser.png";
 

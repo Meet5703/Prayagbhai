@@ -1,7 +1,33 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const DataScience = () => {
+  const [data, setData] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    const getUserDetails = async () => {
+      try {
+        const response = await axios.post("/api/users/profile");
+        if (response.data) {
+          setData(response.data);
+          setIsLoggedIn(true);
+        }
+      } catch (error) {
+        console.log(error.message);
+        setData(null);
+        setIsLoggedIn(false);
+        router.push("/login");
+      }
+    };
+
+    getUserDetails();
+  }, []);
+
+  // Empty dependency array to ensure it runs only once
   return (
     <main className="flex flex-col md:flex-row mt-0 relative">
       <section className="lg:mx-20 md:w-[40%] flex flex-col justify-center gap-16 px-8">
@@ -9,7 +35,7 @@ const DataScience = () => {
           <strong
             className=" font-[900] text-center md:text-left"
             data-aos="fade-right"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
           >
             <p
               className="text-2xl lg:text-[40px] xl:text-6xl"
@@ -20,15 +46,19 @@ const DataScience = () => {
             </p>
           </strong>
           <div className="w-16 rounded lg:w-32 h-1 bg-gradient-to-r from-[#530fb8] via-[#7328e3] to-[#8343e3]"></div>
-          <span data-aos="fade-right" data-aos-duration="3000">
+          <span data-aos="fade-right" data-aos-duration="1000">
             <p className="text-lg text-gray-500">
               Welcome to our Data Science and Generative AI Course! Our
               comprehensive course, designed to equip you with cutting-edge
               skills for real-world applications.
             </p>
           </span>
-          <span data-aos="fade-right" data-aos-duration="3000">
-            <p className="text-sm p-1 shadow-xl shadow-gray-200 font-bold text-[#530fb8] bg-white">
+          <span
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="mt-10 animate-bounce shadow-[3px_10px_18px_#c299ff,_-3px_-10px_18px_#c299ff]  "
+          >
+            <p className="text-sm p-1 shadow-2xl  font-bold text-[#530fb8] bg-white">
               No coding skills required
             </p>
           </span>
@@ -36,9 +66,6 @@ const DataScience = () => {
         <div className="flex flex-col mt-4 gap-4">
           <div className="flex justify-evenly">
             <span className="flex flex-col ">
-              <p className="text-base md:text-2xl line-through italic">
-                10000 ₹
-              </p>
               <p className="text-base md:text-2xl">8000 ₹</p>
             </span>
             <span>
@@ -51,8 +78,8 @@ const DataScience = () => {
           <Link
             data-aos="fade-right"
             data-aos-duration="1000"
-            href="/explore"
-            className="ov-btn-slide-left   "
+            href="/pay"
+            className="ov-btn-slide-left"
           >
             <div className=" text-center md:text-base md:px-8 px-0 flex items-center gap-4 bg-transparent">
               <span className="bg-transparent ml-[40%]">Enroll Now</span>
