@@ -32,7 +32,9 @@ const Placement = () => {
                     <ul>
                       <li className="bg-transparent flex items-center">
                         <div className=" rounded-full p-2 fill-current text-green-700">
-                          <span class="material-symbols-outlined">check</span>
+                          <span className="material-symbols-outlined">
+                            check
+                          </span>
                         </div>
                         <span className="text-gray-700 text-lg ml-3">
                           Minimum 5+ LPA
@@ -40,7 +42,9 @@ const Placement = () => {
                       </li>
                       <li className="bg-transparent flex items-center">
                         <div className=" rounded-full p-2 fill-current text-green-700">
-                          <span class="material-symbols-outlined">check</span>
+                          <span className="material-symbols-outlined">
+                            check
+                          </span>
                         </div>
                         <span className="text-gray-700 text-lg ml-3">
                           Repayment in 2 months
@@ -48,7 +52,9 @@ const Placement = () => {
                       </li>
                       <li className="bg-transparent flex items-center">
                         <div className=" rounded-full p-2 fill-current text-green-700">
-                          <span class="material-symbols-outlined">check</span>
+                          <span className="material-symbols-outlined">
+                            check
+                          </span>
                         </div>
                         <span className="text-gray-700 text-lg ml-3">
                           Speed
@@ -83,7 +89,7 @@ const Placement = () => {
                   <ul>
                     <li className="bg-transparent flex items-center">
                       <div className="rounded-full p-2 fill-current text-green-700">
-                        <span class="material-symbols-outlined">check</span>
+                        <span className="material-symbols-outlined">check</span>
                       </div>
                       <span className="text-gray-700 text-lg ml-3">
                         Minimum 8+ LPA
@@ -91,7 +97,7 @@ const Placement = () => {
                     </li>
                     <li className="bg-transparent flex items-center">
                       <div className=" rounded-full p-2 fill-current text-green-700">
-                        <span class="material-symbols-outlined">check</span>
+                        <span className="material-symbols-outlined">check</span>
                       </div>
                       <span className="text-gray-700 text-lg ml-3">
                         Repayment in 3 months
@@ -99,7 +105,7 @@ const Placement = () => {
                     </li>
                     <li className="bg-transparent flex items-center">
                       <div className=" rounded-full p-2 fill-current text-green-700">
-                        <span class="material-symbols-outlined">check</span>
+                        <span className="material-symbols-outlined">check</span>
                       </div>
                       <span className="text-gray-700 text-lg ml-3">
                         Original
@@ -132,7 +138,9 @@ const Placement = () => {
                     <ul>
                       <li className="bg-transparent flex items-center">
                         <div className=" rounded-full p-2 fill-current text-green-700">
-                          <span class="material-symbols-outlined">check</span>
+                          <span className="material-symbols-outlined">
+                            check
+                          </span>
                         </div>
                         <span className="text-gray-700 text-lg ml-3">
                           Minimum 10+ LPA
@@ -140,7 +148,9 @@ const Placement = () => {
                       </li>
                       <li className="bg-transparent flex items-center">
                         <div className=" rounded-full p-2 fill-current text-green-700">
-                          <span class="material-symbols-outlined">check</span>
+                          <span className="material-symbols-outlined">
+                            check
+                          </span>
                         </div>
                         <span className="text-gray-700 text-lg ml-3">
                           Repayment in 3 months
@@ -148,7 +158,9 @@ const Placement = () => {
                       </li>
                       <li className="bg-transparent flex items-center">
                         <div className=" rounded-full p-2 fill-current text-green-700">
-                          <span class="material-symbols-outlined">check</span>
+                          <span className="material-symbols-outlined">
+                            check
+                          </span>
                         </div>
                         <span className="text-gray-700 text-lg ml-3">
                           No setup

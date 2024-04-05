@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
-import CarouselAds from "@/components/Companycrousel/crousel";
+import React, { useEffect, useState } from "react";
+import CarouselAds from "@/components/crousel";
 import Herosection from "@/components/Herosection";
 import Card from "@/components/card";
 import Card2 from "@/components/card2";
@@ -9,41 +9,45 @@ import Testimonial from "@/components/testimonialCrousel";
 import Aos from "aos";
 import ContactForm from "@/components/contactForm";
 import VerticalTabs from "@/components/verticalTabs";
-const testimonials = [
-  {
-    id: 1,
-    text: "I'm extremely satisfied with the service!",
-    author: "John Doe"
-  },
-  {
-    id: 2,
-    text: "Amazing experience! Highly recommended.",
-    author: "Jane Smith"
-  },
-  {
-    id: 3,
-    text: "The best decision I've made for my business!",
-    author: "Michael Johnson"
-  }
-];
+import HeroSkeleton from "@/components/skeletons/heroskele";
+import CarouselSkeleton from "@/components/skeletons/crouselskele";
+import CardSkeleton from "@/components/skeletons/cardskele";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true); // Initialize loading state as true
+
   useEffect(() => {
-    Aos.init(); // Initialize AOS on the client side
+    // Initialize AOS on the client side
+    Aos.init();
+
+    // Simulate loading time (remove setTimeout in actual production)
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading to false after a timeout (simulating loading)
+    }, 2000); // Adjust the timeout duration as needed
+
+    return () => clearTimeout(timer); // Cleanup function
   }, []);
 
   return (
     <main>
-      <div className="overflow-x-hidden">
-        <Herosection />
-        <CarouselAds />
-        <Card />
-        <Card2 />
-        <CourseCard />
-        <VerticalTabs />
-        <Testimonial />
-        <ContactForm />
-      </div>
+      {loading ? (
+        <div>
+          <HeroSkeleton />
+          <CarouselSkeleton />
+          <CardSkeleton />
+        </div> // Render loading indicator while loading is true
+      ) : (
+        <div className="overflow-x-hidden">
+          <Herosection />
+          <CarouselAds />
+          <Card />
+          <Card2 />
+          <CourseCard />
+          <VerticalTabs />
+          <Testimonial />
+          <ContactForm />
+        </div>
+      )}
     </main>
   );
 };

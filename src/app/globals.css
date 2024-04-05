@@ -158,3 +158,9 @@ a {
     transition: all 0.35s;
   }
 }
+
+@media (max-width: 768px) {
+  .carousel {
+    animation: infinite-scroll 30s linear infinite; /* Animation duration for smaller screens */
+  }
+}

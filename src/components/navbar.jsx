@@ -70,7 +70,7 @@ const NavbarByMe = () => {
           <div className="flex items-center justify-between py-4">
             <div>
               <Link href="/">
-                <Image src={img1} alt="logo" width={200} height={200} />
+                <Image src={img1} alt="logo" height={50} />
               </Link>
             </div>
             <div className="hidden sm:flex sm:items-center sm:gap-4 bg-transparent">

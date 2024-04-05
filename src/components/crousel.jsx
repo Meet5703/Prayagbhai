@@ -4,11 +4,11 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
-import image1 from "../../assets/accenture.avif";
-import image2 from "../../assets/amazon.png";
-import image3 from "../../assets/swiggy.avif";
-import image4 from "../../assets/google.png";
-import image5 from "../../assets/adobe.png";
+import image1 from "../assets/accenture.avif";
+import image2 from "../assets/amazon.png";
+import image3 from "../assets/swiggy.avif";
+import image4 from "../assets/google.png";
+import image5 from "../assets/adobe.png";
 
 const CarouselAds = () => {
   const containerRef = useRef(null);

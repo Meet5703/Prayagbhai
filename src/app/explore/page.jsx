@@ -1,4 +1,4 @@
-import JournyCard from "@/components/Companycrousel/journyCard";
+import JournyCard from "@/components/journyCard";
 import Curriculum from "@/components/Curriculum";
 import DataScience from "@/components/DataScience";
 import Card2 from "@/components/card2";

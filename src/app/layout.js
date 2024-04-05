@@ -3,16 +3,20 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarByMe from "@/components/navbar";
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
+import Loading from "@/components/loader/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
+  const [loading, setLoading] = useState(true); // Initialize loading state as true
+
   useEffect(() => {
     Aos.init({ duration: 500, once: false, easing: "ease-in-out" }); // Initialize AOS on the client side
+    setLoading(false); // Set loading to false after AOS initialization
   }, []); // Ensure the useEffect runs only once on component mount
 
   return (
@@ -57,13 +61,22 @@ export default function RootLayout({ children }) {
       <body
         className={` ${inter.className}  bg-[#f7f2f8] scroll-smooth overflow-x-hidden m-0 p-0 box-border`}
       >
-        <NavbarByMe />
-        <ChakraProvider>{children}</ChakraProvider>
-        <Footer />
-        <script
-          src="https://unpkg.com/alpinejs@3.13.7/dist/cdn.min.js"
-          defer
-        ></script>
+        {loading ? (
+          // Render skeleton or loading indicator while loading is true
+          <div>
+            <Loading />
+          </div>
+        ) : (
+          <>
+            <NavbarByMe />
+            <ChakraProvider>{children}</ChakraProvider>
+            <Footer />
+            <script
+              src="https://unpkg.com/alpinejs@3.13.7/dist/cdn.min.js"
+              defer
+            ></script>
+          </>
+        )}
       </body>
     </html>
   );

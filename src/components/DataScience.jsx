@@ -33,27 +33,29 @@ const DataScience = () => {
             </p>
           </span>
         </div>
-        <div className="flex mt-4 gap-4">
+        <div className="flex flex-col mt-4 gap-4">
+          <div className="flex justify-evenly">
+            <span className="flex flex-col ">
+              <p className="text-base md:text-2xl line-through italic">
+                10000 ₹
+              </p>
+              <p className="text-base md:text-2xl">8000 ₹</p>
+            </span>
+            <span>
+              <p className="text-base md:text-2xl">50 seats left</p>
+              <p className="text-base md:text-2xl">
+                Batch Starts From 01-01-2023
+              </p>
+            </span>
+          </div>
           <Link
             data-aos="fade-right"
             data-aos-duration="1000"
             href="/explore"
             className="ov-btn-slide-left   "
           >
-            <div className=" text-center md:text-base md:px-6 px-0 flex items-center gap-4 bg-transparent">
-              <span className="bg-transparent">Enroll Now</span>
-            </div>
-          </Link>
-          <span className="text-sm line-through italic">10000 ₹</span>
-          <span className="text-lg">8000 ₹</span>
-          <Link
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            href="#"
-            className="ov-btn-slide-left scale-75 md:scale-0 "
-          >
-            <div className="px-4 text-center flex items-center gap-2 bg-transparent">
-              <span className="bg-transparent">Try Masterclass</span>
+            <div className=" text-center md:text-base md:px-8 px-0 flex items-center gap-4 bg-transparent">
+              <span className="bg-transparent ml-[40%]">Enroll Now</span>
             </div>
           </Link>
         </div>
