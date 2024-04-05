@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import img1 from "../../assets/8918702_4020769_prev_ui.png";
+import img1 from "../assets/8918702_4020769_prev_ui.png";
 import Image from "next/image";
 import { Button, Timeline } from "flowbite-react";
 import { HiArrowNarrowRight } from "react-icons/hi";
