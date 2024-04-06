@@ -49,28 +49,18 @@ const CourseCard = () => {
           >
             Key Features
           </h3>
-          <ul className="list-disc list-inside text-lg text-gray-800 ">
-            <li data-aos="fade-left" data-aos-duration="1000">
-              Interactive Live Classes
-            </li>
-            <li data-aos="fade-left" data-aos-duration="1000">
-              One to One Doubt Session
-            </li>
-            <li data-aos="fade-left" data-aos-duration="1000">
-              Real-world case studies
-            </li>
-            <li data-aos="fade-left" data-aos-duration="1000">
-              Pay after Placement
-            </li>
-            <li data-aos="fade-left" data-aos-duration="1000">
-              Resume Building
-            </li>
-            <li data-aos="fade-left" data-aos-duration="1000">
-              Interview Mock call Practice
-            </li>
-            <li data-aos="fade-left" data-aos-duration="1000">
-              Support community
-            </li>
+          <ul
+            className="list-disc list-inside text-lg text-gray-800 "
+            data-aos="fade-left"
+            data-aos-duration="500"
+          >
+            <li>Interactive Live Classes</li>
+            <li>One to One Doubt Session</li>
+            <li>Real-world case studies</li>
+            <li>Pay after Placement</li>
+            <li>Resume Building</li>
+            <li>Interview Mock call Practice</li>
+            <li>Support community</li>
           </ul>
         </div>
         <div className="flex justify-center flex-col gap-4">
@@ -90,14 +80,14 @@ const CourseCard = () => {
             Enroll Now
           </Link>
         </div>
-        <div className="flex mt-4 gap-8 md:ml-28">
+        <div className="flex mt-4 md:flex-row flex-col gap-8  xl:ml-28">
           <Link
             data-aos="fade-up"
             data-aos-duration="1000"
             href="#"
             className="ov-btn-slide-left scale-75 md:scale-0"
           >
-            <div className="flex items-center gap-2 bg-transparent">
+            <div className="flex py-2 items-center gap-2 bg-transparent">
               <span className="bg-transparent">Download Brochure</span>
               <span className="material-symbols-outlined bg-transparent">
                 download
@@ -107,10 +97,10 @@ const CourseCard = () => {
           <Link
             data-aos="fade-down"
             data-aos-duration="1000"
-            href="#"
+            href="/explore"
             className="ov-btn-slide-left scale-75 md:scale-0 "
           >
-            <div className="flex items-center px-7 gap-2 bg-transparent">
+            <div className="flex items-center py-2 gap-2 bg-transparent">
               <span className="bg-transparent">Learn More</span>
               <span className="material-symbols-outlined bg-transparent">
                 keyboard_double_arrow_right

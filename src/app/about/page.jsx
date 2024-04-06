@@ -6,12 +6,12 @@ const About3 = () => {
       <p className="font-bold text-base md:text-2xl leading-3 text-[#feba01]  ">
         About Us
       </p>
-      <p className="font-bold text-2xl md:text-4xl leading-9 text-gray-800 md:-mt-1">
+      <p className="font-bold text-2xl md:text-4xl md:mb-4 leading-9 text-gray-800 md:-mt-1">
         Empowering Careers, Fulfilling Dreams
       </p>
       <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
         <div className="w-full lg:w-6/12">
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6">
+          <p className="font-normal text-base text-justify leading-6 text-gray-600 mt-6">
             At Data Skills Hub, we understand the challenges faced by students
             and working professionals in landing their dream jobs. That's why we
             offer a unique Pay after Placement program designed to bridge the
@@ -25,7 +25,7 @@ const About3 = () => {
             aspirations into reality, providing a pathway to success and
             fulfillment in their chosen professions.
           </p>
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6">
+          <p className="font-normal text-base text-justify leading-6 text-gray-600 mt-6">
             Our mission at Data Skills Hub is to empower individuals with the
             knowledge, skills, and opportunities needed to achieve their career
             aspirations. Through innovative education programs, personalized

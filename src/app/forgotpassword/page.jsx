@@ -3,44 +3,33 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const ForgotPasswordPage = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [user, setUser] = useState({
+    email: ""
+  });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSignup = async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
     try {
-      const responseData = await axios.post("/api/users/forgotpass", { email });
-      if (responseData && responseData.data && responseData.data.message) {
-        // Successful response
-        setMessage(responseData.data.message);
-      } else if (responseData && responseData.data && responseData.data.error) {
-        // Error response
-        setMessage(responseData.data.error);
-      } else {
-        // Unexpected response structure
-        setMessage("Unexpected response from the server");
-      }
+      const response = await axios.post("/api/users/forgotpass", user);
+      console.log("data", response);
     } catch (error) {
-      // Error occurred during the request
-      setMessage("An error occurred while processing your request");
-      console.error("Error in forgot password", error);
+      console.log("signup error", error);
+      // Handle error
     }
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center h-screen">
       <h1>Forgot Password</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSignup}>
         <input
-          type="email"
           placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={user.email}
+          onChange={(e) => setUser({ ...user, email: e.target.value })} // Update email property
           required
         />
         <button type="submit">Submit</button>
       </form>
-      <p>{message}</p>
     </div>
   );
 };

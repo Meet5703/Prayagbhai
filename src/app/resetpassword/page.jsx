@@ -1,48 +1,46 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const ResetPasswordPage = () => {
-  const [token, setToken] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const [user, setUser] = useState({
+    password: "",
+    token: ""
+  });
+
+  useEffect(() => {
+    const urlToken = window.location.search.split("=")[1];
+    setUser({ ...user, token: urlToken || "" });
+  }, []);
+  const onReset = async (e) => {
     e.preventDefault();
     try {
-      const responseData = await axios.post("/api/users/resetpass", {
-        token,
-        newPassword
-      });
-      console.log(responseData.data);
-
-      setMessage("Password reset successfully.");
+      const response = await axios.post("/api/users/resetpass", user);
+      console.log("Password reset successfully", response);
+      router.push("/login");
     } catch (error) {
-      setMessage(error.response.data.error);
+      console.log("reset error", error);
+      toast.error(error.message);
     }
   };
 
   return (
-    <div>
+    <div className="flex justify-center items-center h-screen flex-col bg-gray-400">
       <h1>Reset Password</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onReset}>
         <input
-          type="text"
-          placeholder="Enter token"
-          value={token}
-          onChange={(e) => setToken(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Enter new password"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
+          type="password" // Specify input type as password
+          placeholder="Enter your password"
+          value={user.password}
+          onChange={(e) => setUser({ ...user, password: e.target.value })} // Update password property
           required
         />
         <button type="submit">Submit</button>
       </form>
-      <p>{message}</p>
     </div>
   );
 };

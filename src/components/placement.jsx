@@ -8,7 +8,7 @@ const Placement = () => {
           <h1 className="text-center  text-4xl text-black font-bold  leading-snug tracking-wider">
             Pay After Placement
           </h1>
-          <p className="text-center text-lg text-gray-700 mt-2 px-72">
+          <p className="text-center text-lg text-gray-700 mt-2 md:px-72">
             Unlock career opportunities with our professional end-to-end
             service, dedicated to helping you secure your dream job through
             tailored support and expert guidance.

@@ -8,24 +8,20 @@ const DataScience = () => {
   const [data, setData] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
-  useEffect(() => {
-    const getUserDetails = async () => {
-      try {
-        const response = await axios.post("/api/users/profile");
-        if (response.data) {
-          setData(response.data);
-          setIsLoggedIn(true);
-        }
-      } catch (error) {
-        console.log(error.message);
-        setData(null);
-        setIsLoggedIn(false);
-        router.push("/login");
+  const getUserDetails = async () => {
+    try {
+      const response = await axios.post("/api/users/profile");
+      if (response.data) {
+        setData(response.data);
+        setIsLoggedIn(true);
       }
-    };
-
-    getUserDetails();
-  }, []);
+    } catch (error) {
+      console.log(error.message);
+      setData(null);
+      setIsLoggedIn(false);
+      router.push("/login");
+    }
+  };
 
   // Empty dependency array to ensure it runs only once
   return (
@@ -53,38 +49,57 @@ const DataScience = () => {
               skills for real-world applications.
             </p>
           </span>
-          <span
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            className="mt-10 animate-bounce shadow-[3px_10px_18px_#c299ff,_-3px_-10px_18px_#c299ff]  "
-          >
-            <p className="text-sm p-1 shadow-2xl  font-bold text-[#530fb8] bg-white">
-              No coding skills required
-            </p>
-          </span>
         </div>
         <div className="flex flex-col mt-4 gap-4">
-          <div className="flex justify-evenly">
-            <span className="flex flex-col ">
-              <p className="text-base md:text-2xl">8000 ₹</p>
+          <div className="flex w-full md:flex-row flex-col gap-y-4 md:mr-52">
+            <span className="flex flex-col w-full">
+              <p className="text-base md:text-2xl text-[#ffa72d]">Price</p>
+              <p className="text-base md:text-xl text-white bg-[#530fb8] border border-[#530fb8] px-6 py-2 rounded-md text-center">
+                8000 ₹
+              </p>
             </span>
-            <span>
-              <p className="text-base md:text-2xl">50 seats left</p>
-              <p className="text-base md:text-2xl">
-                Batch Starts From 01-01-2023
+            <span className="flex flex-col md:ml-8 lg:ml-6 w-full">
+              <p className="text-base w-full md:text-2xl text-[#ffa72d]">
+                Start Date
+              </p>
+              <p className="text-base md:text-xl text-white bg-[#530fb8] border border-[#530fb8] px-6 py-2 rounded-md text-center">
+                01-01-2023
               </p>
             </span>
           </div>
           <Link
             data-aos="fade-right"
             data-aos-duration="1000"
+            onClick={getUserDetails}
             href="/pay"
             className="ov-btn-slide-left"
           >
-            <div className=" text-center md:text-base md:px-8 px-0 flex items-center gap-4 bg-transparent">
-              <span className="bg-transparent ml-[40%]">Enroll Now</span>
+            <div className=" text-center py-3 md:py-0 md:text-base md:px-8 px-0 flex items-center gap-4 bg-transparent">
+              <span className="bg-transparent ml-[30%]  md:ml-[40%]">
+                Enroll Now
+              </span>
             </div>
           </Link>
+          <div className="flex md:flex-row flex-col w-full ">
+            <span
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              className="mt-10 md:animate-bounce w-fit shadow-[3px_10px_18px_#c299ff,_-3px_-10px_18px_#c299ff]  "
+            >
+              <p className="text-sm px-10 xl:px-10 py-3 xl:py-3 lg:text-center lg:px-0 shadow-2xl w-fit font-bold text-[#530fb8] bg-white">
+                *Only 30 Seats Available
+              </p>
+            </span>
+            <span
+              data-aos="fade-right"
+              data-aos-duration="700"
+              className="mt-10 md:ml-10 md:animate-bounce w-fit shadow-[3px_10px_18px_#c299ff,_-3px_-10px_18px_#c299ff]  "
+            >
+              <p className="text-sm px-9 xl:px-9 xl:py-3  md:px-10 lg:px-0 lg:text-center py-3 w-fit shadow-2xl  font-bold text-[#530fb8] bg-white">
+                No coding skills required
+              </p>
+            </span>
+          </div>
         </div>
       </section>
       <section className="w-full md:w-[36%] pt-20 pl-10 md:pl-20 hidden md:block">

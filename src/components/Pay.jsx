@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 const Pay = () => {
   const router = useRouter();
 
+  const [isDisabled, setIsDisabled] = useState(false);
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -32,6 +33,11 @@ const Pay = () => {
         courses: response.data.user.courses,
         number: response.data.user.number
       });
+      if (user.number >= 10 && user.courses.length > 0) {
+        setIsDisabled(true);
+      } else {
+        setIsDisabled(false);
+      }
     } catch (error) {
       console.log(error.message);
     }
@@ -115,74 +121,87 @@ const Pay = () => {
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form className="space-y-6" action="#" method="POST">
-          <div>
+          <div className="mb-4 bg-white relative flex">
+            <input
+              name="name"
+              className="border-2 rounded-md peer py-4 px-2 bg-transparent  w-full focus:border-[#6105bd] focus:outline-none"
+              id="name"
+              type="text"
+              required
+              value={user.username}
+            />
             <label
               htmlFor="name"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className={`absolute cursor-text bg-transparent top-5 ${
+                user.username
+                  ? "hidden"
+                  : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+              }`}
             >
               Name
             </label>
-            <div className="mt-2">
-              <input
-                id="name"
-                name="name"
-                readOnly
-                value={user.username}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
           </div>
-          <div>
+          <div className="mb-4 bg-white relative flex">
+            <input
+              name="email"
+              className="border-2 rounded-md peer py-4 px-2 bg-transparent  w-full focus:border-[#6105bd] focus:outline-none"
+              id="email"
+              type="text"
+              required
+              value={user.email}
+            />
             <label
               htmlFor="email"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className={`absolute cursor-text bg-transparent top-5 ${
+                user.email
+                  ? "hidden"
+                  : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+              }`}
             >
               Email
             </label>
-            <div className="mt-2">
-              <input
-                id="email"
-                name="email"
-                value={user.email}
-                readOnly
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
           </div>
-          <div>
+          <div className="mb-4 bg-white relative flex">
+            <input
+              name="number"
+              className="border-2 rounded-md peer py-4 px-2 bg-transparent  w-full focus:border-[#6105bd] focus:outline-none"
+              id="number"
+              type="text"
+              required
+              value={user.number}
+            />
             <label
               htmlFor="number"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className={`absolute cursor-text bg-transparent top-5 ${
+                user.number
+                  ? "hidden"
+                  : "peer-focus:text-xs peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+              }`}
             >
               Number
             </label>
-            <div className="mt-2">
-              <input
-                id="number"
-                name="number"
-                value={user.number}
-                onChange={onChange}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
           </div>
           <div>
-            <label
-              htmlFor="courses"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Courses
-            </label>
             <div className="mt-2">
               <select
                 id="courses"
                 name="courses"
                 onChange={onChange}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="w-full px-6 py-4 text-xl border  rounded-md focus:outline-none focus:border-[#6105bd] bg-white sm:text-sm"
                 value={user.courses} // Set the value attribute to user.courses
               >
-                <option value="Data Analyst">Data Analyst</option>
-                <option value="Data Scientist">Data Scientist</option>
+                <option className=" w-full h-full" value="">
+                  {" "}
+                  Select a course
+                </option>
+                <option
+                  className=" w-full h-full"
+                  value="Data Science & Generative AI"
+                >
+                  {" "}
+                  Data Science & Generative AI
+                </option>
+
                 {/* Add other options here */}
               </select>
             </div>
@@ -190,8 +209,10 @@ const Pay = () => {
 
           <div>
             <button
+              type="submit"
+              disabled={isDisabled}
               onClick={(e) => makePayment(e)}
-              className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="flex w-full justify-center rounded-md bg-[#6105bd] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#aa54ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6105bd]"
             >
               Pay
             </button>

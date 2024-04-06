@@ -1,30 +1,39 @@
 "use client";
-import React, { useEffect, useState } from "react";
+// Import necessary modules and functions
 import axios from "axios";
-function page() {
-  const [user, setUser] = useState({
-    username: "",
-    email: "",
-    number: "",
-    courses: [],
-    status: "success"
-  });
+import { useRouter } from "next/navigation"; // Changed from "next/navigation" to "next/router"
+import { useEffect, useState } from "react";
+
+// Define the component
+const SuccessPage = () => {
+  const router = useRouter();
+
+  const [userId, setUserId] = useState(null); // State to store the user ID
 
   useEffect(() => {
+    const getUserDetails = async () => {
+      try {
+        const response = await axios.post(`/api/users/profile`);
+        const userId = response.data.user._id; // Extract user ID from profile data
+        setUserId(userId); // Set user ID in component state
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+
     getUserDetails();
-  }, []);
+  }, []); // Empty dependency array to run only once after component mounts
 
-  const getUserDetails = async () => {
-    try {
-      const response = await axios.put("/api/users/payment");
-      console.log("User details response:", response.data.user); // Log response data
-      console.log("user", user);
-    } catch (error) {
-      console.log(error.message);
+  // Redirect to success page with user ID once it's obtained
+  useEffect(() => {
+    if (userId) {
+      router.push(`/success/${userId}`); // Redirect to success page with user ID
     }
-  };
+  }, [userId]); // Run whenever userId changes
 
-  return <div>{user.status}</div>;
-}
+  // Render loading or redirecting message
+  return <div>Redirecting...</div>;
+};
 
-export default page;
+// Export the component
+export default SuccessPage;

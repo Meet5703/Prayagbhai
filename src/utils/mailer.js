@@ -31,14 +31,24 @@ export const sendEmail = async ({ email, emailType, userId }) => {
       from: "sureshkhetani1111@gmail.com", // sender address
       to: email, // list of receivers
       subject: emailType === "VERIFY" ? "Email Verification" : "Password Reset",
-      html: ` <p>
+      html:
+        emailType === "VERIFY"
+          ? ` <p>
       Click <a href=${
         process.env.DOMAIN
       }/verifyemail?token=${hasedToken}>here</a>
       to ${emailType === "VERIFY" ? "verify" : "reset"} your email
       <br />
       ${process.env.DOMAIN}/verifyemail?token=${hasedToken}
-    </p>` // html body
+    </p>`
+          : ` <p>
+      Click <a href=${
+        process.env.DOMAIN
+      }/resetpassword?token=${hasedToken}>here</a>
+      to ${emailType === "RESET" ? "reset" : "verify"} your password
+      <br />
+      ${process.env.DOMAIN}/resetpassword?token=${hasedToken}
+    </p>`
     };
     const mailResponse = await transporter.sendMail(mailOptions);
   } catch (error) {

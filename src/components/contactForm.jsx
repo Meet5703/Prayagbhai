@@ -48,7 +48,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="  mt-20 grid md:grid-cols-2 ">
+    <div className="  mt-20 grid grid-cols-1 px-3 md:grid-cols-2 ">
       <div className="md:block hidden col-span-1 ">
         <h2 className="text-3xl xl:text-5xl bg-transparent pt-16  text-center text-gray-900 ">
           How can we help you ?
@@ -61,14 +61,14 @@ const Contact = () => {
           alt="image1"
         />
       </div>
-      <div className=" col-span-1 mt-32 md:mr-28">
+      <div className=" col-span-1 md:mt-32 md:mr-28">
         <div className="  py-12">
           <div className=" w-full px-4 py-2 ">
             <form
               onSubmit={handleSubmit}
               className="bg-white bg-transparent shadow-[#6105bd] rounded-lg px-6 py-8 shadow-md"
             >
-              <h1 className="text-5xl  mb-5 text-[#6105bd] bg-transparent font-[700]">
+              <h1 className="text-3xl md:text-5xl  mb-5 text-[#6105bd] bg-transparent font-[700]">
                 Contact Us
               </h1>
               <div className="mb-4 bg-white relative flex">
@@ -165,7 +165,7 @@ const Contact = () => {
               </div>
               <div className="flex bg-transparent  justify-center">
                 <button
-                  className="bg-[#6105bd]   hover:bg-purple-700 text-white font-bold py-2 px-44 rounded focus:outline-none focus:shadow-outline text-xl"
+                  className="bg-[#6105bd]   hover:bg-purple-700 text-white font-bold py-2 xl:px-44 rounded px-24 focus:outline-none focus:shadow-outline text-xl"
                   type="submit"
                 >
                   Send
