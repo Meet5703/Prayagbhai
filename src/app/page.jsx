@@ -12,41 +12,52 @@ import VerticalTabs from "@/components/verticalTabs";
 import HeroSkeleton from "@/components/skeletons/heroskele";
 import CarouselSkeleton from "@/components/skeletons/crouselskele";
 import CardSkeleton from "@/components/skeletons/cardskele";
+import NavbarByMe from "@/components/navbar";
+import NavbarSkeleton from "@/components/skeletons/navbarskele";
+import Card2Skeleton from "@/components/skeletons/card2skele";
+import CourseCardSkeleton from "@/components/skeletons/coursecardSkele";
+import VerticalTabsSkeleton from "@/components/skeletons/verticaltabskele";
+import TestimonialSkeleton from "@/components/skeletons/testimonialsSkele";
+import ContactSkeleton from "@/components/skeletons/contactskele";
 
 const Home = () => {
-  const [loading, setLoading] = useState(true); // Initialize loading state as true
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initialize AOS on the client side
     Aos.init();
 
-    // Simulate loading time (remove setTimeout in actual production)
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading to false after a timeout (simulating loading)
-    }, 2000); // Adjust the timeout duration as needed
+      setLoading(false);
+    }, 1000);
 
-    return () => clearTimeout(timer); // Cleanup function
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <main>
       {loading ? (
         <div>
+          <NavbarSkeleton />
           <HeroSkeleton />
           <CarouselSkeleton />
           <CardSkeleton />
         </div> // Render loading indicator while loading is true
       ) : (
-        <div className="overflow-x-hidden">
-          <Herosection />
-          <CarouselAds />
-          <Card />
-          <Card2 />
-          <CourseCard />
-          <VerticalTabs />
-          <Testimonial />
-          <ContactForm />
-        </div>
+        <>
+          <div className="overflow-x-hidden">
+            <div className="fixed w-full z-50">
+              <NavbarByMe />
+            </div>
+            <Herosection />
+            <CarouselAds />
+            <Card />
+            <Card2 />
+            <CourseCard />
+            <VerticalTabs />
+            <Testimonial />
+            <ContactForm />
+          </div>
+        </>
       )}
     </main>
   );

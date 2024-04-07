@@ -1,7 +1,18 @@
 "use client";
 /* eslint-disable no-unused-vars */
 import React from "react";
-import img1 from "../assets/excel.avif";
+import img1 from "../assets/python.png";
+import img2 from "../assets/dsa.webp";
+import img3 from "../assets/mltoolbox.avif";
+import img4 from "../assets/deeplearning.avif";
+import img5 from "../assets/sql.avif";
+import img6 from "../assets/statistics.png";
+import img7 from "../assets/statistics.png";
+import img8 from "../assets/supervised.png";
+import img9 from "../assets/neural.avif";
+import img10 from "../assets/unsupervised.png";
+import img11 from "../assets/projects.png";
+import img12 from "../assets/generativeai.avif";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,10 +20,12 @@ function Curriculum() {
   return (
     <div className="mt-36">
       <div className="md:ml-28 ml-4">
-        <h1 className="text-[#FFB907] uppercase font-bold ">Syllabus</h1>
+        <h1 className="text-[#FFB907] uppercase font-bold text-3xl">
+          Syllabus
+        </h1>
 
-        <span className="flex w-full md:flex-row flex-col md:space-x-12 xl:space-x-28">
-          <p className="text-3xl font-bold ">
+        <span className="flex w-full md:flex-row  flex-col md:space-x-12 xl:space-x-28">
+          <p className="text-5xl font-bold ">
             Data Skills Hub's world-class curriculum
           </p>
           <Link
@@ -31,12 +44,14 @@ function Curriculum() {
         </span>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 ">
-        <div className="col-span-1 w-full">
+        <div
+          className="col-span-1 w-full"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-28 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -129,8 +144,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-28 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -140,7 +153,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img2}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -233,8 +246,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-28 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -244,7 +255,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img5}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -341,8 +352,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-28 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -352,7 +361,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img3}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -455,8 +464,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-28 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -466,7 +473,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img9}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -566,8 +573,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-28 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -577,7 +582,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img10}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -666,13 +671,75 @@ function Curriculum() {
               </div>
             </div>
           </div>
+          <div
+            x-data="{ open: false }"
+            className="md:h-fit flex w-full flex-col md:ml-28 relative overflow-hidden py-3 "
+          >
+            <div
+              onClick={() => {
+                document.querySelector(".myPopup13").classList.toggle("hidden");
+              }}
+              className="md:px-6 px-3 py-3  bg-white hover:cursor-pointer md:w-4/5 rounded flex justify-between items-center"
+            >
+              <div className="flex items-center gap-2 bg-white">
+                <Image
+                  src={img11}
+                  alt="excel"
+                  className="w-16 h-16 bg-white"
+                  width={1000}
+                  height={1000}
+                />
+                <div className="flex flex-col justify-center gap-3 bg-white">
+                  <h4 className="font-bold text-sm md:text-xl bg-white text-[#5210B6]">
+                    Projects
+                  </h4>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 bg-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <div className="myPopup13 hidden md:w-4/5 bg-white p-4">
+              <div className="flex flex-col gap-4 bg-white">
+                <div className="ml-8 flex px-6 py-2  items-center">
+                  <span class="material-symbols-outlined font-semibold">
+                    arrow_forward_ios
+                  </span>
+                  <p className="font-semibold text-lg  py-1 px-4">
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
+                <div className="ml-8 flex px-6 py-2  items-center">
+                  <span class="material-symbols-outlined font-semibold">
+                    arrow_forward_ios
+                  </span>
+                  <p className="font-semibold text-lg  py-1 px-4">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="col-span-1 w-full">
+        <div
+          className="col-span-1 w-full"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-8 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -729,8 +796,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-8 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -740,7 +805,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img3}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -787,8 +852,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-8 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -798,7 +861,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img6}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -916,8 +979,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-8 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -927,7 +988,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img8}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -935,7 +996,7 @@ function Curriculum() {
                 />
                 <div className="flex flex-col justify-center gap-3 bg-white">
                   <h4 className="font-bold text-sm md:text-xl bg-white text-[#5210B6]">
-                    supervised learning
+                    Supervised Learning
                   </h4>
                 </div>
               </div>
@@ -1017,8 +1078,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-8 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -1028,7 +1087,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img3}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -1191,8 +1250,6 @@ function Curriculum() {
           <div
             x-data="{ open: false }"
             className="md:h-fit flex w-full flex-col md:ml-8 relative overflow-hidden py-3 "
-            data-aos="fade-left"
-            data-aos-duration="1000"
           >
             <div
               onClick={() => {
@@ -1202,7 +1259,7 @@ function Curriculum() {
             >
               <div className="flex items-center gap-2 bg-white">
                 <Image
-                  src={img1}
+                  src={img4}
                   alt="excel"
                   className="w-16 h-16 bg-white"
                   width={1000}
@@ -1210,7 +1267,7 @@ function Curriculum() {
                 />
                 <div className="flex flex-col justify-center gap-3 bg-white">
                   <h4 className="font-bold text-sm md:text-xl bg-white text-[#5210B6]">
-                    pecialization 2: Deep Learning
+                    Specialization 2: Deep Learning
                   </h4>
                 </div>
               </div>
@@ -1310,6 +1367,66 @@ function Curriculum() {
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
                     Hyperparameter Tuning
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            x-data="{ open: false }"
+            className="md:h-fit flex w-full flex-col md:ml-8 relative overflow-hidden py-3 "
+          >
+            <div
+              onClick={() => {
+                document.querySelector(".myPopup12").classList.toggle("hidden");
+              }}
+              className="md:px-6 px-3 py-3  bg-white hover:cursor-pointer md:w-4/5 rounded flex justify-between items-center"
+            >
+              <div className="flex items-center gap-2 bg-white">
+                <Image
+                  src={img12}
+                  alt="excel"
+                  className="w-16 h-16 bg-white"
+                  width={1000}
+                  height={1000}
+                />
+                <div className="flex flex-col justify-center gap-3 bg-white">
+                  <h4 className="font-bold text-sm md:text-xl bg-white text-[#5210B6]">
+                    Generative AI
+                  </h4>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 bg-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <div className="myPopup12 hidden md:w-4/5 bg-white p-4">
+              <div className="flex flex-col gap-4 bg-white">
+                <div className="ml-8 flex px-6 py-2  items-center">
+                  <span class="material-symbols-outlined font-semibold">
+                    arrow_forward_ios
+                  </span>
+                  <p className="font-semibold text-lg  py-1 px-4">
+                    Lorem ipsum dolor, sit
+                  </p>
+                </div>
+                <div className="ml-8 flex px-6 py-2  items-center">
+                  <span class="material-symbols-outlined font-semibold">
+                    arrow_forward_ios
+                  </span>
+                  <p className="font-semibold text-lg  py-1 px-4">
+                    Lorem, ipsum dolor.
                   </p>
                 </div>
               </div>

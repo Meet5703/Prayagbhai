@@ -1,5 +1,5 @@
 import React from "react";
-import masterclassGif from "../assets/deta.png";
+import masterclassGif from "../assets/prayag icon NEW-03.png";
 import Image from "next/image";
 import img2 from "../assets/logocarduser.png";
 
@@ -12,7 +12,7 @@ const Card2 = () => {
         className="cardSection__video col-span-2"
       >
         <Image
-          className="scale-75"
+          className="mt-20"
           src={masterclassGif}
           alt="gif"
           width={1000}
@@ -20,27 +20,19 @@ const Card2 = () => {
         />
       </div>
 
-      <div className="cardSection__content col-span-2 px-4 mt-14">
-        <h2
-          className="md:text-lg font-bold text-[#ffa83c] "
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+      <div
+        className="cardSection__content col-span-2 px-4 mt-14"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
+        <h2 className="md:text-lg font-bold text-[#ffa83c] ">
           LIVE MASTERCLASS
         </h2>
-        <p
-          className="font-bold text-3xl w-full"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <p className="font-bold text-3xl w-full">
           Level up your skills, learn from the best
         </p>
         <br className="md:hidden" />
-        <div
-          className="flex md:grid md:grid-cols-4 items-center"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <div className="flex md:grid md:grid-cols-4 items-center">
           <span className="md:col-span-1">
             <Image
               className="scale-[0.4] p-1  bg-purple-400 rounded-full"
@@ -58,33 +50,21 @@ const Card2 = () => {
         <br className="md:hidden" />
         <br className="md:hidden" />
 
-        <span
-          className="flex items-center gap-2"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <span className="flex items-center gap-2">
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>
           <p>Engage in Real-time Learning Experiences with Live Master Class</p>
         </span>
         <br />
-        <span
-          className="flex items-center gap-2"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <span className="flex items-center gap-2">
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>
           <p>Start from Scratch and Gain In-Demand Industry Skills</p>
         </span>
         <br />
-        <span
-          className="flex items-center gap-2"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <span className="flex items-center gap-2">
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>
@@ -93,11 +73,7 @@ const Card2 = () => {
           </p>
         </span>
         <br />
-        <span
-          className="flex items-center gap-2"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <span className="flex items-center gap-2">
           <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
             arrow_right_alt
           </span>

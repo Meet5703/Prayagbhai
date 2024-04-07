@@ -1,4 +1,5 @@
 "use client";
+import NavbarByMe from "@/components/navbar";
 // Import necessary modules and functions
 import axios from "axios";
 import { useRouter } from "next/navigation"; // Changed from "next/navigation" to "next/router"
@@ -32,7 +33,14 @@ const SuccessPage = () => {
   }, [userId]); // Run whenever userId changes
 
   // Render loading or redirecting message
-  return <div>Redirecting...</div>;
+  return (
+    <>
+      <div className="fixed w-full z-50">
+        <NavbarByMe />
+      </div>
+      <div>Redirecting...</div>;
+    </>
+  );
 };
 
 // Export the component

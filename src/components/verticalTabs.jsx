@@ -107,12 +107,12 @@ const VerticalTabs = () => {
                 Learn from Industry Expert in Live class
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 bg-transparent">
-                <div className="col-span-1 bg-transparent space-y-4">
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
+                <div
+                  className="col-span-1 bg-transparent space-y-4"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                >
+                  <span className="flex items-center gap-2 bg-transparent">
                     <span className="material-symbols-outlined bg-[#ffa83c]  rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
@@ -120,21 +120,13 @@ const VerticalTabs = () => {
                       Specifically designed curriculum by industry experts
                     </p>
                   </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
+                  <span className="flex items-center gap-2 bg-transparent">
                     <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
                     <p className="bg-transparent">One to One Doubt Session</p>
                   </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
+                  <span className="flex items-center gap-2 bg-transparent">
                     <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>
@@ -142,11 +134,7 @@ const VerticalTabs = () => {
                       Hands on Industry Projects cover in Live class
                     </p>
                   </span>
-                  <span
-                    className="flex items-center gap-2 bg-transparent"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                  >
+                  <span className="flex items-center gap-2 bg-transparent">
                     <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
                       arrow_right_alt
                     </span>

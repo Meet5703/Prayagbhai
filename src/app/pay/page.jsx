@@ -1,11 +1,15 @@
 import Pay from "@/components/Pay";
+import NavbarByMe from "@/components/navbar";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
+    <>
+      <div className="fixed w-full z-50">
+        <NavbarByMe />
+      </div>
       <Pay />
-    </div>
+    </>
   );
 };
 

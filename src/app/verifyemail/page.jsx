@@ -8,7 +8,7 @@ const page = () => {
   const [token, setToken] = useState("");
   const [verified, setVerified] = useState(false);
   const [error, setError] = useState(false);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const urlToken = window.location.search.split("=")[1];
     setToken(urlToken || "");
@@ -29,20 +29,30 @@ const page = () => {
     }
   };
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center h-screen ">
-        <h1>Verify Email</h1>
-        <h2>{verified ? "Email verified" : "Email not verified"}</h2>
-        <h2>{error ? "Error" : ""}</h2>
-        <button
-          className="btn btn-primary"
-          onClick={verifyEmail}
-          disabled={verified}
-        >
-          Verify
-        </button>
-      </div>
-    </div>
+    <>
+      {loading ? (
+        <NavbarSkeleton />
+      ) : (
+        <>
+          <div className="fixed w-full z-50">
+            <NavbarByMe />
+          </div>
+
+          <div className="flex flex-col items-center justify-center h-screen ">
+            <h1>Verify Email</h1>
+            <h2>{verified ? "Email verified" : "Email not verified"}</h2>
+            <h2>{error ? "Error" : ""}</h2>
+            <button
+              className="btn btn-primary"
+              onClick={verifyEmail}
+              disabled={verified}
+            >
+              Verify
+            </button>
+          </div>
+        </>
+      )}
+    </>
   );
 };
 

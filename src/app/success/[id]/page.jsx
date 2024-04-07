@@ -2,6 +2,7 @@
 // Import necessary modules and functions
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import NavbarByMe from "@/components/navbar";
 
 // Define the component
 function Page({ params: { id } }) {
@@ -30,9 +31,14 @@ function Page({ params: { id } }) {
   };
 
   return (
-    <div className="text-center flex items-center justify-center w-screen h-screen text-5xl text-green-600 bg-green-200">
-      SUCCESS
-    </div>
+    <>
+      <div className="fixed w-full z-50">
+        <NavbarByMe />
+      </div>
+      <div className="text-center flex items-center justify-center w-screen h-screen text-5xl text-green-600 bg-green-200">
+        SUCCESS
+      </div>
+    </>
   );
 }
 

@@ -68,7 +68,6 @@ export default function RootLayout({ children }) {
           </div>
         ) : (
           <>
-            <NavbarByMe />
             <ChakraProvider>{children}</ChakraProvider>
             <Footer />
             <script

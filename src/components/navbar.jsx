@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,8 +10,10 @@ const NavbarByMe = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [shouldReload, setShouldReload] = useState(false); // Add shouldReload state
-  const [activeTab, setActiveTab] = useState("/");
+  const currentPath = window.location.pathname; // Get the current path
+  const [activeTab, setActiveTab] = useState(currentPath);
+  const [shouldReload, setShouldReload] = useState(false);
+  const [reloadFunction, setReloadFunction] = useState(null);
   const handleSetActiveTab = (tab) => {
     setActiveTab(tab);
   };
@@ -32,29 +35,27 @@ const NavbarByMe = () => {
   };
 
   useEffect(() => {
-    getUserDetails();
-  }, []);
-
-  useEffect(() => {
-    if (!isLoading && shouldReload) {
-      setShouldReload(false); // Reset shouldReload
-      window.location.reload(); // Reload the page
+    if (!isLoggedIn) {
+      return; // No need to reload if the user is not logged in
     }
-  }, [isLoading, shouldReload]);
 
-  const handleLogout = async () => {
-    setIsLoading(true);
-    try {
-      await axios.get("/api/users/logout");
-      setIsLoggedIn(false);
-      setShouldReload(true); // Set shouldReload to true on logout
-    } catch (error) {
-      console.error("Error logging out:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    const handleLogout = async () => {
+      setIsLoading(true);
+      try {
+        await axios.get("/api/users/logout");
+        setIsLoggedIn(false);
+        window.location.reload(); // Reload the page after logout
+      } catch (error) {
+        console.error("Error logging out:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
+    return () => {
+      handleLogout(); // Automatically logout when the component unmounts
+    };
+  }, [isLoggedIn]);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -64,7 +65,7 @@ const NavbarByMe = () => {
   };
 
   return (
-    <nav className="bg-gray-100 font-sans w-full m-0 sticky top-0 z-50">
+    <nav className="bg-gray-100 font-sans w-full m-0 sticky  top-0 z-50">
       <div className="bg-white shadow">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
@@ -147,9 +148,12 @@ const NavbarByMe = () => {
               ) : (
                 <Link
                   href="/login"
-                  className="btn btn-primary"
+                  className="btn btn-primary flex items-center px-4 py-3 justify-around w-full text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-xl"
                   onClick={handleLoginSignup}
                 >
+                  <span className="material-symbols-outlined bg-transparent">
+                    login
+                  </span>
                   Sign up / Login
                 </Link>
               )}

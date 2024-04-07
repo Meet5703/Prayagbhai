@@ -33,7 +33,9 @@ const Pay = () => {
         courses: response.data.user.courses,
         number: response.data.user.number
       });
-      if (user.number >= 10 && user.courses.length > 0) {
+      if (!response) {
+        router.push("/login");
+      } else if (user.number >= 10 && user.courses.length > 0) {
         setIsDisabled(true);
       } else {
         setIsDisabled(false);

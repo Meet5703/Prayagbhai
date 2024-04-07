@@ -1,9 +1,28 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Img1 from "../assets/Data_Analysis_asg_01.png";
 import Image from "next/image";
 import Link from "next/link";
-
+import { useRouter } from "next/navigation";
+import axios from "axios";
 const CourseCard = () => {
+  const [data, setData] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
+  const getUserDetails = async () => {
+    try {
+      const response = await axios.post("/api/users/profile");
+      if (response.data) {
+        setData(response.data);
+        setIsLoggedIn(true);
+      }
+    } catch (error) {
+      console.log(error.message);
+      setData(null);
+      setIsLoggedIn(false);
+      router.push("/login");
+    }
+  };
   return (
     <div className="flex flex-col md:flex-row  p-8 rounded-lg shadow-lg ">
       <div className="md:w-1/2 mb-4 md:mb-0">
@@ -72,6 +91,7 @@ const CourseCard = () => {
             Limited Seats available
           </p>
           <Link
+            onClick={getUserDetails}
             href="/pay"
             className="text-white text-center  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
             data-aos="flip-up"

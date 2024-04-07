@@ -61,7 +61,7 @@ const Contact = () => {
           alt="image1"
         />
       </div>
-      <div className=" col-span-1 md:mt-32 md:mr-28">
+      <div className=" col-span-1 md:mt-28 md:mr-28">
         <div className="  py-12">
           <div className=" w-full px-4 py-2 ">
             <form
