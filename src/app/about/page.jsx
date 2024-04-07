@@ -18,7 +18,7 @@ const About3 = () => {
       {loading ? (
         <>
           <NavbarSkeleton />
-          <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-10 px-4">
+          <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6  py-10 px-4">
             <p className="font-bold text-base md:text-2xl leading-3 text-[#feba01] animate-pulse"></p>
             <p className="font-bold text-2xl md:text-4xl md:mb-4 leading-9 text-gray-800 md:-mt-1 animate-pulse"></p>
             <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
@@ -46,10 +46,10 @@ const About3 = () => {
         </>
       ) : (
         <>
-          <div className="fixed w-full z-50">
+          <div className="sticky top-0">
             <NavbarByMe />
           </div>
-          <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-10 px-4">
+          <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6   py-10 px-4">
             <p className="font-bold text-base md:text-2xl leading-3 text-[#feba01]  ">
               About Us
             </p>

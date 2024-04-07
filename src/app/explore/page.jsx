@@ -45,18 +45,20 @@ const page = () => {
         </>
       ) : (
         <div className="overflow-x-hidden">
-          <div className="fixed w-full z-50">
+          <div className="fixed top-0 w-full z-50">
             <NavbarByMe />
           </div>
-          <DataScience />
-          <CompniesCard />
-          <Placement />
-          <Card2 />
-          <JournyCard />
-          <Curriculum />
-          <Cirtificate />
-          <Testimonial />
-          <FAQ />
+          <div className="mt-28">
+            <DataScience />
+            <CompniesCard />
+            <Placement />
+            <Card2 />
+            <JournyCard />
+            <Curriculum />
+            <Cirtificate />
+            <Testimonial />
+            <FAQ />
+          </div>
         </div>
       )}
     </>

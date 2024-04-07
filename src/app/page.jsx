@@ -48,14 +48,16 @@ const Home = () => {
             <div className="fixed w-full z-50">
               <NavbarByMe />
             </div>
-            <Herosection />
-            <CarouselAds />
-            <Card />
-            <Card2 />
-            <CourseCard />
-            <VerticalTabs />
-            <Testimonial />
-            <ContactForm />
+            <div className="mt-28 md:mt-0">
+              <Herosection />
+              <CarouselAds />
+              <Card />
+              <Card2 />
+              <CourseCard />
+              <VerticalTabs />
+              <Testimonial />
+              <ContactForm />
+            </div>
           </div>
         </>
       )}
