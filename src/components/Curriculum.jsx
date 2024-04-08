@@ -20,12 +20,12 @@ function Curriculum() {
   return (
     <div className="mt-36">
       <div className="md:ml-28 ml-4">
-        <h1 className="text-[#FFB907] uppercase font-bold text-3xl">
+        <h1 className="text-[#FFB907] uppercase font-bold md:text-lg">
           Syllabus
         </h1>
 
         <span className="flex w-full md:flex-row  flex-col md:space-x-12 xl:space-x-28">
-          <p className="text-5xl font-bold ">
+          <p className="text-3xl font-bold ">
             Data Skills Hub's world-class curriculum
           </p>
           <Link

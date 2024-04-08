@@ -3,7 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import img1 from "../assets/wepik-export-202404081730305xPQ.png";
+import Image from "next/image";
 const DataScience = () => {
   const [data, setData] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,8 +26,8 @@ const DataScience = () => {
 
   // Empty dependency array to ensure it runs only once
   return (
-    <main className="flex flex-col md:flex-row mt-0 relative">
-      <section className="lg:mx-20 md:w-[40%] flex flex-col justify-center gap-16 px-8">
+    <main className="flex flex-col md:flex-row mt-0 md:-mt-9 relative">
+      <section className="lg:mx-20 md:w-[40%] z-20 flex flex-col justify-center gap-16 px-8">
         <div className="md:mt-24 items-center md:items-start flex flex-col gap-5">
           <strong
             className=" font-[900] text-center md:text-left"
@@ -34,7 +35,7 @@ const DataScience = () => {
             data-aos-duration="1000"
           >
             <p
-              className="text-2xl lg:text-[40px] xl:text-6xl"
+              className="text-2xl lg:text-[40px] xl:text-5xl"
               style={{ lineHeight: 1.3 }}
             >
               Data Science &{" "}
@@ -102,13 +103,15 @@ const DataScience = () => {
           </div>
         </div>
       </section>
-      <section className="w-full md:w-[36%] pt-20 pl-10 md:pl-20 hidden md:block">
-        <img
+      <section className="w-full md:w-[100%] pt-16 lg:pt-40 xl:pt-24 xl:scale-100 lg:scale-150 hidden md:block">
+        <Image
           data-aos="fade-left"
           data-aos-duration="1000"
-          className="w-full"
-          src="https://images.skillovilla.com/tracks/description-page/2022-10-07_16-21-31_4fyLJaXNsW5TQWwZgKXCTm.png?auto=format&q=35&cs=srgb"
+          className="w-full "
+          src={img1}
           alt="main-2"
+          width={1000}
+          height={1000}
         />
       </section>
     </main>

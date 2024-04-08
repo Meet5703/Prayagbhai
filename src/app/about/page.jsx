@@ -2,6 +2,10 @@
 import NavbarByMe from "@/components/navbar";
 import NavbarSkeleton from "@/components/skeletons/navbarskele";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import img1 from "../../assets/624x316.png";
+import img2 from "../../assets/720.png";
+import img3 from "../../assets/343.png";
 
 const About3 = () => {
   const [loading, setLoading] = useState(true);
@@ -84,19 +88,25 @@ const About3 = () => {
                 </p>
               </div>
               <div className="w-full lg:w-6/12">
-                <img
+                <Image
                   className="lg:block hidden w-full"
-                  src="https://i.ibb.co/RjNH7QB/Rectangle-122-1.png"
+                  src={img1}
+                  width={1000}
+                  height={1000}
                   alt="people discussing on board"
                 />
-                <img
+                <Image
                   className="lg:hidden sm:block hidden w-full"
-                  src="https://i.ibb.co/16fPqrg/Rectangle-122-2.png"
+                  src={img2}
+                  width={1000}
+                  height={1000}
                   alt="people discussing on board"
                 />
-                <img
+                <Image
                   className="sm:hidden block w-full"
-                  src="https://i.ibb.co/Jxhpxh6/Rectangle-122.png"
+                  src={img3}
+                  width={1000}
+                  height={1000}
                   alt="people discussing on board"
                 />
               </div>

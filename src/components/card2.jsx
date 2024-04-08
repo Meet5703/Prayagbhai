@@ -1,5 +1,5 @@
 import React from "react";
-import masterclassGif from "../assets/prayag icon NEW-03.png";
+import masterclassGif from "../assets/prayag-icon.png";
 import Image from "next/image";
 import img2 from "../assets/logocarduser.png";
 

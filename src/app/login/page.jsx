@@ -5,7 +5,8 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-
+import Image from "next/image";
+import img1 from "../../assets/bgsignup.png";
 const page = () => {
   const router = useRouter();
   const [user, setUser] = useState({
@@ -52,13 +53,13 @@ const page = () => {
 
           <div className="h-[100vh] items-center flex justify-center px-5 lg:px-0">
             <div className="max-w-screen-xl bg-white border shadow sm:rounded-lg flex justify-center flex-1">
-              <div className="flex-1 bg-[#6105bd] text-center hidden md:flex">
-                <div
-                  className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat bg-transparent"
-                  style={{
-                    backgroundImage: `url(https://www.tailwindtap.com/assets/common/marketing.svg)`
-                  }}
-                ></div>
+              <div className="flex-1  text-center hidden md:flex">
+                <Image
+                  className="m-12 xl:m-16 w-2/3 bg-contain bg-center bg-no-repeat bg-transparent"
+                  src={img1}
+                  width={1000}
+                  height={1000}
+                />
               </div>
               <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
                 <div className=" flex flex-col items-center">

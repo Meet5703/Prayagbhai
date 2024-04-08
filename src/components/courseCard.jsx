@@ -82,7 +82,11 @@ const CourseCard = () => {
             <li>Support community</li>
           </ul>
         </div>
-        <div className="flex justify-center flex-col gap-4">
+        <div
+          className="flex justify-center flex-col gap-4"
+          data-aos="fade-left"
+          data-aos-duration="500"
+        >
           <p
             data-aos="fade-left"
             data-aos-duration="1000"
@@ -94,8 +98,6 @@ const CourseCard = () => {
             onClick={getUserDetails}
             href="/pay"
             className="text-white text-center  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
-            data-aos="flip-up"
-            data-aos-duration="800"
           >
             Enroll Now
           </Link>
@@ -103,7 +105,7 @@ const CourseCard = () => {
         <div className="flex mt-4 md:flex-row flex-col gap-8  xl:ml-28">
           <Link
             data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             href="#"
             className="ov-btn-slide-left scale-75 md:scale-0"
           >
@@ -116,7 +118,7 @@ const CourseCard = () => {
           </Link>
           <Link
             data-aos="fade-down"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             href="/explore"
             className="ov-btn-slide-left scale-75 md:scale-0 "
           >

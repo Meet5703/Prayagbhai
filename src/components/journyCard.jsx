@@ -8,10 +8,10 @@ const JournyCard = () => {
   return (
     <section>
       <div>
-        <h1 className="text-[#FFB907] font-bold text-3xl ml-4 mr-4 md:ml-28 mt-32">
+        <h1 className="text-[#FFB907] font-bold md:text-lg ml-4 mr-4 md:ml-28 mt-32">
           LEARNING JOURNEY
         </h1>
-        <p className=" font-bold text-5xl ml-4 mr-4  md:ml-28 mt-3">
+        <p className=" font-bold text-3xl ml-4 mr-4  md:ml-28 mt-3">
           Learning journey at Data Skills Hub
         </p>
         <p className="text-[14px] ml-4 mr-4 md:ml-28 mt-10">

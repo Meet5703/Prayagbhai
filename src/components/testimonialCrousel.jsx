@@ -86,8 +86,8 @@ const Testimonial = () => {
 
   return (
     <div className="w-3/4 m-auto mt-20">
-      <h6 className="text-[#ffa83c] -ml-8 md:text-2xl ">TESTIMONIALS</h6>
-      <p className="text-3xl font-semibold w-screen -ml-8 md:text-5xl">
+      <h6 className="text-[#ffa83c] -ml-8 md:text-lg ">TESTIMONIALS</h6>
+      <p className="text-3xl font-semibold w-screen -ml-8 md:text-3xl">
         Explore Inspiring Alumni Journeys{" "}
       </p>
       <div className="mt-20  bg-black">
@@ -106,7 +106,7 @@ const Testimonial = () => {
                   />
                   <span>
                     <p className="bg-white md:text-2xl">{d.name}</p>
-                    <p className="bg-white md:text-xl">@{d.companyName}</p>
+                    <p className="bg-white md:text-lg">@{d.companyName}</p>
                   </span>
                 </div>
                 <div>

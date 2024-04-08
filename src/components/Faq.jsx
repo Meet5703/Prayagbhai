@@ -14,14 +14,14 @@ const FAQ = () => {
   return (
     <div className="flex mt-10 mb-10 p-10 justify-center md:ml-[10%] md:mr-[10%] flex-col">
       <h1
-        className="font-bold text-[#ffa83c] text-3xl"
+        className="font-bold text-[#ffa83c] text-lg"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
         Frequently Asked Questions
       </h1>
       <p
-        className="font-bold text-5xl"
+        className="font-bold text-3xl"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
