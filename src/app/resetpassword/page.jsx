@@ -44,7 +44,9 @@ const ResetPasswordPage = () => {
             onChange={(e) => setUser({ ...user, password: e.target.value })} // Update password property
             required
           />
-          <button type="submit">Submit</button>
+          <button onClick={onReset} type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </>

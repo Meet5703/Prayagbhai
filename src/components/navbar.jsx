@@ -133,7 +133,6 @@ const NavbarByMe = () => {
                         className="bg-violet-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-6"
                         href="/profile"
                       >
-                        {" "}
                         {data.user.username.charAt(0).toUpperCase()}
                       </a>
                     )}
