@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
@@ -10,10 +9,22 @@ const NavbarByMe = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const currentPath = window.location.pathname; // Get the current path
-  const [activeTab, setActiveTab] = useState(currentPath);
   const [shouldReload, setShouldReload] = useState(false);
-  const [reloadFunction, setReloadFunction] = useState(null);
+  const currentPath = window.location.pathname;
+  const [activeTab, setActiveTab] = useState(currentPath);
+  const mobileMenuRef = useRef(null);
+  useEffect(() => {
+    if (
+      currentPath == "/signup" ||
+      currentPath == "/login" ||
+      currentPath == "/profile" ||
+      currentPath == "/resetpassword" ||
+      currentPath == "/forgotpassword" ||
+      currentPath == "verifyemail"
+    ) {
+      setActiveTab("/");
+    }
+  }, [currentPath]);
   const handleSetActiveTab = (tab) => {
     setActiveTab(tab);
   };
@@ -35,37 +46,53 @@ const NavbarByMe = () => {
   };
 
   useEffect(() => {
-    if (!isLoggedIn) {
-      return; // No need to reload if the user is not logged in
+    getUserDetails();
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading && shouldReload) {
+      setShouldReload(false); // Reset shouldReload
+      window.location.reload(); // Reload the page
     }
+  }, [isLoading, shouldReload]);
 
-    const handleLogout = async () => {
-      setIsLoading(true);
-      try {
-        await axios.get("/api/users/logout");
-        setIsLoggedIn(false);
-        window.location.reload(); // Reload the page after logout
-      } catch (error) {
-        console.error("Error logging out:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  const handleLogout = async () => {
+    setIsLoading(true);
+    try {
+      await axios.get("/api/users/logout");
+      setIsLoggedIn(false);
+      setShouldReload(true); // Set shouldReload to true on logout
+    } catch (error) {
+      console.error("Error logging out:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
-    return () => {
-      handleLogout(); // Automatically logout when the component unmounts
-    };
-  }, [isLoggedIn]);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  useEffect(() => {
+    setActiveTab(currentPath);
+    let handleOutsideClick = (event) => {
+      if (mobileMenuRef.current) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    if (isMobileMenuOpen) {
+      document.addEventListener("click", handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  });
 
   const handleLoginSignup = () => {
     getUserDetails();
   };
 
   return (
-    <nav className="bg-gray-100 font-sans w-full m-0 sticky  top-0 z-50">
+    <nav className="bg-gray-100 font-sans w-full m-0 sticky top-0 z-50">
       <div className="bg-white shadow">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
@@ -133,6 +160,7 @@ const NavbarByMe = () => {
                         className="bg-violet-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-6"
                         href="/profile"
                       >
+                        {" "}
                         {data.user.username.charAt(0).toUpperCase()}
                       </a>
                     )}
@@ -147,7 +175,7 @@ const NavbarByMe = () => {
               ) : (
                 <Link
                   href="/login"
-                  className="btn btn-primary flex items-center px-4 py-3 justify-around w-full text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-xl"
+                  className="btn btn-primary  flex items-center px-4 py-3 justify-around w-full text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-xl"
                   onClick={handleLoginSignup}
                 >
                   <span className="material-symbols-outlined bg-transparent">
@@ -167,14 +195,18 @@ const NavbarByMe = () => {
           </div>
 
           <div
+            ref={mobileMenuRef}
             className={`${
               isMobileMenuOpen ? "block" : "hidden"
-            } sm:hidden bg-transparent border-t-2 py-2 transition-all ease-in-out duration-500`}
+            } sm:hidden bg-transparent border-t-2 py-2 transition-all relative ease-in-out duration-500`}
           >
             <div className="flex flex-col gap-y-4 items-center">
               <Link
+                onClick={() => setActiveTab("/")}
                 href="/"
-                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all  ${
+                  activeTab === "/" && "bg-violet-900 text-white"
+                }`}
               >
                 Home
               </Link>
@@ -186,19 +218,28 @@ const NavbarByMe = () => {
               </Link> */}
               <Link
                 href="/explore"
-                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+                onClick={() => setActiveTab("/explore")}
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  activeTab === "/explore" && "bg-violet-900 text-white"
+                } `}
               >
                 Explore
               </Link>
               <Link
                 href="/about"
-                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+                onClick={() => setActiveTab("/about")}
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  activeTab === "/about" && "bg-violet-900 text-white"
+                } `}
               >
                 About
               </Link>
               <Link
+                onClick={() => setActiveTab("/contact")}
                 href="/contact"
-                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all  ${
+                  activeTab === "/contact" && "bg-violet-900 text-white"
+                }`}
               >
                 Contact
               </Link>
@@ -206,9 +247,12 @@ const NavbarByMe = () => {
                 <p>Loading...</p>
               ) : isLoggedIn ? (
                 <div className="flex items-center gap-4">
-                  <div className="flex flex-col items-center">
+                  <div className=" flex-col  bg-violet-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-6 absolute -top-16 right-0">
                     {data && (
-                      <a href="/profile"> {data.user.username.charAt(0)}</a>
+                      <a href="/profile">
+                        {" "}
+                        {data.user.username.charAt(0).toUpperCase()}
+                      </a>
                     )}
                   </div>
                   <button
@@ -221,7 +265,7 @@ const NavbarByMe = () => {
               ) : (
                 <Link
                   href="/login"
-                  className="btn btn-primary"
+                  className="btn btn-primary  flex items-center px-4 py-3 justify-around w-fit text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-lg "
                   onClick={handleLoginSignup}
                 >
                   Sign up / Login
