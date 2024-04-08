@@ -13,18 +13,7 @@ const NavbarByMe = () => {
   const currentPath = window.location.pathname;
   const [activeTab, setActiveTab] = useState(currentPath);
   const mobileMenuRef = useRef(null);
-  useEffect(() => {
-    if (
-      currentPath == "/signup" ||
-      currentPath == "/login" ||
-      currentPath == "/profile" ||
-      currentPath == "/resetpassword" ||
-      currentPath == "/forgotpassword" ||
-      currentPath == "verifyemail"
-    ) {
-      setActiveTab("/");
-    }
-  }, [currentPath]);
+
   const handleSetActiveTab = (tab) => {
     setActiveTab(tab);
   };
@@ -56,6 +45,18 @@ const NavbarByMe = () => {
     }
   }, [isLoading, shouldReload]);
 
+  useEffect(() => {
+    if (
+      currentPath == "/signup" ||
+      currentPath == "/login" ||
+      currentPath == "/profile" ||
+      currentPath == "/resetpassword" ||
+      currentPath == "/forgotpassword" ||
+      currentPath == "verifyemail"
+    ) {
+      setActiveTab("/");
+    }
+  }, [currentPath]);
   const handleLogout = async () => {
     setIsLoading(true);
     try {
@@ -73,7 +74,6 @@ const NavbarByMe = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   useEffect(() => {
-    setActiveTab(currentPath);
     let handleOutsideClick = (event) => {
       if (mobileMenuRef.current) {
         setIsMobileMenuOpen(false);
@@ -175,7 +175,7 @@ const NavbarByMe = () => {
               ) : (
                 <Link
                   href="/login"
-                  className="btn btn-primary  flex items-center px-4 py-3 justify-around w-full text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-xl"
+                  className="btn btn-primary flex items-center px-4 py-3 justify-around w-full text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-xl "
                   onClick={handleLoginSignup}
                 >
                   <span className="material-symbols-outlined bg-transparent">
@@ -204,7 +204,7 @@ const NavbarByMe = () => {
               <Link
                 onClick={() => setActiveTab("/")}
                 href="/"
-                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all  ${
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
                   activeTab === "/" && "bg-violet-900 text-white"
                 }`}
               >
@@ -212,32 +212,31 @@ const NavbarByMe = () => {
               </Link>
               {/* <Link
                 href="/jobs"
-                className="ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all "
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
+                  
+                }`}
               >
                 Jobs
               </Link> */}
               <Link
                 href="/explore"
-                onClick={() => setActiveTab("/explore")}
                 className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
                   activeTab === "/explore" && "bg-violet-900 text-white"
-                } `}
+                }`}
               >
                 Explore
               </Link>
               <Link
                 href="/about"
-                onClick={() => setActiveTab("/about")}
                 className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
                   activeTab === "/about" && "bg-violet-900 text-white"
-                } `}
+                }`}
               >
                 About
               </Link>
               <Link
-                onClick={() => setActiveTab("/contact")}
                 href="/contact"
-                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all  ${
+                className={`ease-in-out hover:bg-violet-900 font-medium px-4 py-2 rounded-lg focus:bg-violet-800 focus:text-white text-violet-700 active:border border-purple-800 hover:border-2 hover:text-lg duration-150 hover:text-white transition-all ${
                   activeTab === "/contact" && "bg-violet-900 text-white"
                 }`}
               >
@@ -265,7 +264,7 @@ const NavbarByMe = () => {
               ) : (
                 <Link
                   href="/login"
-                  className="btn btn-primary  flex items-center px-4 py-3 justify-around w-fit text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-lg "
+                  className="btn btn-primary flex items-center px-4 py-3 justify-around w-fit text-purple-800 hover:text-white border border-purple-800 hover:bg-purple-800 hover:border-purple-500 duration-200 transition-all ease-in-out rounded-xl "
                   onClick={handleLoginSignup}
                 >
                   Sign up / Login
