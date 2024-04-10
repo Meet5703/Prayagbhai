@@ -47,7 +47,7 @@ const Pay = () => {
   };
 
   const onChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    setUser({ ...user, courses: [e.target.value] });
   };
 
   const makePayment = async (e) => {
@@ -193,10 +193,15 @@ const Pay = () => {
                 className="w-full  py-4 text-lg border  rounded-md focus:outline-none focus:border-[#6105bd] bg-white sm:text-sm"
                 value={user.courses} // Set the value attribute to user.courses
               >
+                <option className="w-full h-full" value={"select an option"}>
+                  select an option
+                </option>
                 <option
-                  className=" w-full h-full"
+                  className="w-full h-full"
                   value="Data Science & Generative AI"
-                  selected={user.courses === "Data Science & Generative AI"}
+                  selected={user.courses.includes(
+                    "Data Science & Generative AI"
+                  )}
                 >
                   Data Science & Generative AI
                 </option>
@@ -209,7 +214,11 @@ const Pay = () => {
           <div>
             <button
               type="submit"
-              disabled={isDisabled}
+              disabled={
+                user.courses.length < 1 || user.courses[0] == "select an option"
+                  ? true
+                  : false
+              }
               onClick={(e) => makePayment(e)}
               className="flex w-full justify-center rounded-md bg-[#6105bd] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#aa54ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6105bd]"
             >

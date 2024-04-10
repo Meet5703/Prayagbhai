@@ -19,19 +19,15 @@ export const sendEmail = async ({ email, emailType, userId }) => {
         }
       });
     }
+
     const transporter = nodemailer.createTransport({
       host: "smtpout.secureserver.net",
-      secure: true,
-      secureConnection: false, // TLS requires secureConnection to be false
-      tls: {
-        ciphers: "SSLv3"
-      },
-      requireTLS: true,
       port: 465,
-      debug: true,
+      secure: true,
+      secureConnection: false,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
+        user: "support@dataskillshub.com",
+        pass: "WelcomePP@78"
       }
     });
     const mailOptions = {
