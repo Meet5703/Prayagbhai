@@ -24,7 +24,7 @@ export const sendEmail = async ({ email, emailType, userId }) => {
       host: "smtpout.secureserver.net",
       port: 465,
       secure: true,
-      secureConnection: false,
+      secureConnection: true,
       auth: {
         user: "support@dataskillshub.com",
         pass: "WelcomePP@78"
