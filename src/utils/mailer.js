@@ -19,7 +19,6 @@ export const sendEmail = async ({ email, emailType, userId }) => {
         }
       });
     }
-
     const transporter = nodemailer.createTransport({
       host: "smtpout.secureserver.net",
       port: 465,
