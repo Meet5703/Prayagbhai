@@ -32,7 +32,7 @@ const DataScience = () => {
           <strong
             className=" font-[900] text-center md:text-left"
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             <p
               className="text-2xl lg:text-[40px] xl:text-5xl"
@@ -43,7 +43,7 @@ const DataScience = () => {
             </p>
           </strong>
           <div className="w-16 rounded lg:w-32 h-1 bg-gradient-to-r from-[#530fb8] via-[#7328e3] to-[#8343e3]"></div>
-          <span data-aos="fade-right" data-aos-duration="1000">
+          <span data-aos="fade-right" data-aos-duration="500">
             <p className="text-lg text-gray-500">
               Welcome to our Data Science and Generative AI Course! Our
               comprehensive course, designed to equip you with cutting-edge
@@ -64,19 +64,19 @@ const DataScience = () => {
                 Start Date
               </p>
               <p className="text-base md:text-xl text-white bg-[#530fb8] border border-[#530fb8] px-6 py-2 rounded-md text-center">
-                01-01-2023
+                15-05-2024
               </p>
             </span>
           </div>
           <Link
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             onClick={getUserDetails}
             href="/pay"
             className="ov-btn-slide-left"
           >
             <div className=" text-center py-3 md:py-0 md:text-base md:px-8 px-0 flex items-center gap-4 bg-transparent">
-              <span className="bg-transparent ml-[30%]  md:ml-[40%]">
+              <span className="bg-transparent ml-[30%]  md:ml-[35%]">
                 Enroll Now
               </span>
             </div>
@@ -84,7 +84,7 @@ const DataScience = () => {
           <div className="flex md:flex-row flex-col w-full ">
             <span
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               className="mt-10 md:animate-bounce w-fit shadow-[3px_10px_18px_#c299ff,_-3px_-10px_18px_#c299ff]  "
             >
               <p className="text-sm px-10 xl:px-10 py-3 xl:py-3 lg:text-center lg:px-0 shadow-2xl w-fit font-bold text-[#530fb8] bg-white">
@@ -93,7 +93,7 @@ const DataScience = () => {
             </span>
             <span
               data-aos="fade-right"
-              data-aos-duration="700"
+              data-aos-duration="500"
               className="mt-10 md:ml-10 md:animate-bounce w-fit shadow-[3px_10px_18px_#c299ff,_-3px_-10px_18px_#c299ff]  "
             >
               <p className="text-sm px-9 xl:px-9 xl:py-3  md:px-10 lg:px-0 lg:text-center py-3 w-fit shadow-2xl  font-bold text-[#530fb8] bg-white">
@@ -103,11 +103,11 @@ const DataScience = () => {
           </div>
         </div>
       </section>
-      <section className="w-full md:w-[100%] pt-16 lg:pt-40 xl:pt-24 xl:scale-100 lg:scale-150 hidden md:block">
+      <section className="w-full md:w-[100%] pt-16 lg:pt-40 xl:pt-24 xl:scale-100 lg:scale-150 2xl:scale-75 hidden md:block">
         <Image
           data-aos="fade-left"
-          data-aos-duration="1000"
-          className="w-full "
+          data-aos-duration="500"
+          className="w-full"
           src={img1}
           alt="main-2"
           width={1000}

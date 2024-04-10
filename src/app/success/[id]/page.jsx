@@ -35,8 +35,11 @@ function Page({ params: { id } }) {
       <div className="fixed w-full z-50">
         <NavbarByMe />
       </div>
-      <div className="text-center flex items-center justify-center w-screen h-screen text-5xl text-green-600 bg-green-200">
-        SUCCESS
+      <div className="text-center flex flex-col items-center justify-center w-screen h-screen text-2xl md:text-5xl text-green-600 bg-green-200">
+        PAYMENT SUCCESSFULL
+        <p className=" text-sm md:text-3xl bg-transparent">
+          Welcome To Data Skills Hub
+        </p>
       </div>
     </>
   );

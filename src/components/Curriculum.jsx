@@ -30,7 +30,7 @@ function Curriculum() {
           </p>
           <Link
             data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             href="#"
             className="ov-btn-slide-left w-4/5 md:w-fit mt-6 md:mt-0  scale-75 md:scale-0"
           >
@@ -47,7 +47,7 @@ function Curriculum() {
         <div
           className="col-span-1 w-full"
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           <div
             x-data="{ open: false }"
@@ -62,7 +62,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img1}
-                  alt="excel"
+                  alt="python"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -91,7 +91,7 @@ function Curriculum() {
             <div className="myPopup1 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -99,19 +99,19 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Data Type</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Operators</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -119,7 +119,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -127,13 +127,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Condition</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Loop</p>
@@ -154,7 +154,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img2}
-                  alt="excel"
+                  alt="dsa"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -183,13 +183,13 @@ function Curriculum() {
             <div className="myPopup2 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Arrays</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -197,7 +197,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -205,13 +205,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Trees</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -219,7 +219,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -227,13 +227,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Recursion</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -256,7 +256,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img5}
-                  alt="excel"
+                  alt="SQL"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -285,7 +285,7 @@ function Curriculum() {
             <div className="myPopup3 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -293,7 +293,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -301,7 +301,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -309,13 +309,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Joins</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -323,7 +323,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -331,7 +331,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -339,7 +339,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -362,7 +362,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img3}
-                  alt="excel"
+                  alt="Math for machine learning"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -391,7 +391,7 @@ function Curriculum() {
             <div className="myPopup4 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -399,7 +399,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -407,13 +407,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Halfspaces</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -421,7 +421,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -429,13 +429,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Calculus</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -443,7 +443,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -451,7 +451,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -474,7 +474,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img9}
-                  alt="excel"
+                  alt="Introduction to Neural Networks & Machine Learning"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -503,7 +503,7 @@ function Curriculum() {
             <div className="myPopup5 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -511,7 +511,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -519,7 +519,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -528,7 +528,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -536,7 +536,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -544,7 +544,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -552,7 +552,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -560,7 +560,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -583,7 +583,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img10}
-                  alt="excel"
+                  alt="Unsupervised learning & Recommender Systems"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -612,7 +612,7 @@ function Curriculum() {
             <div className="myPopup11 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -620,7 +620,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -628,7 +628,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -636,7 +636,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -644,7 +644,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -653,7 +653,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -661,7 +661,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -684,7 +684,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img11}
-                  alt="excel"
+                  alt="Projects"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -713,7 +713,7 @@ function Curriculum() {
             <div className="myPopup13 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -721,7 +721,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -735,7 +735,7 @@ function Curriculum() {
         <div
           className="col-span-1 w-full"
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           <div
             x-data="{ open: false }"
@@ -750,7 +750,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img1}
-                  alt="excel"
+                  alt="Advance Python"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -779,13 +779,13 @@ function Curriculum() {
             <div className="myPopup6 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">OOPS</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Function</p>
@@ -806,7 +806,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img3}
-                  alt="excel"
+                  alt="ML tool box"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -835,13 +835,13 @@ function Curriculum() {
             <div className="myPopup7 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Pandas</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Numpy</p>
@@ -862,7 +862,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img6}
-                  alt="excel"
+                  alt="Statistics"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -891,7 +891,7 @@ function Curriculum() {
             <div className="myPopup8 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -899,7 +899,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -908,7 +908,7 @@ function Curriculum() {
                 </div>
 
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -916,7 +916,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -925,7 +925,7 @@ function Curriculum() {
                 </div>
 
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -933,7 +933,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -942,7 +942,7 @@ function Curriculum() {
                 </div>
 
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -950,14 +950,14 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">ANOVA</p>
                 </div>
 
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -965,7 +965,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -989,7 +989,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img8}
-                  alt="excel"
+                  alt="Supervised Learning"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -1018,7 +1018,7 @@ function Curriculum() {
             <div className="myPopup9 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1027,7 +1027,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1035,7 +1035,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1043,7 +1043,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1051,13 +1051,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Bagging</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1065,7 +1065,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1088,7 +1088,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img3}
-                  alt="excel"
+                  alt="NLP"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -1117,7 +1117,7 @@ function Curriculum() {
             <div className="myPopup10 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1125,7 +1125,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1133,7 +1133,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1141,7 +1141,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1149,7 +1149,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1158,7 +1158,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1166,7 +1166,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1175,7 +1175,7 @@ function Curriculum() {
                 </div>
 
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1183,13 +1183,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Word2Vec</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1197,7 +1197,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1205,7 +1205,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1213,7 +1213,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1221,7 +1221,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1229,7 +1229,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1237,7 +1237,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1260,7 +1260,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img4}
-                  alt="excel"
+                  alt="Specialization 2: Deep Learning"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -1289,7 +1289,7 @@ function Curriculum() {
             <div className="myPopup12 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1297,13 +1297,13 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Perceptron</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1311,19 +1311,19 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">TensorFlow</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Keras</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1331,7 +1331,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1340,13 +1340,13 @@ function Curriculum() {
                 </div>
 
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">Callbacks</p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1354,7 +1354,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1362,7 +1362,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1385,7 +1385,7 @@ function Curriculum() {
               <div className="flex items-center gap-2 bg-white">
                 <Image
                   src={img12}
-                  alt="excel"
+                  alt="Generative AI"
                   className="w-16 h-16 bg-white"
                   width={1000}
                   height={1000}
@@ -1414,7 +1414,7 @@ function Curriculum() {
             <div className="myPopup12 hidden md:w-4/5 bg-white p-4">
               <div className="flex flex-col gap-4 bg-white">
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">
@@ -1422,7 +1422,7 @@ function Curriculum() {
                   </p>
                 </div>
                 <div className="ml-8 flex px-6 py-2  items-center">
-                  <span class="material-symbols-outlined font-semibold">
+                  <span className="material-symbols-outlined font-semibold">
                     arrow_forward_ios
                   </span>
                   <p className="font-semibold text-lg  py-1 px-4">

@@ -34,14 +34,14 @@ const PriceCard = () => {
             <h2
               className="bg-transparent ml-1 md:text-lg font-bold text-[#ffa83c] "
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
             >
               PROGRAM FEE
             </h2>
             <p
               className="bg-transparent text-white font-[900] text-4xl w-4/5"
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
             >
               Let's enroll!
             </p>
@@ -81,7 +81,7 @@ const PriceCard = () => {
 
           <Link
             data-aos="fade-down"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             href={isLoggedIn ? "/pay" : "/login"} // Redirect based on login state
             className="ov-btn-slide-left scale-75 md:scale-0 "
           >
@@ -95,7 +95,7 @@ const PriceCard = () => {
         </div>
         <div
           data-aos="fade-right"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className="cardSection__video hidden md:block col-span-2 bg-transparent"
         >
           <Image

@@ -10,19 +10,19 @@ const Herosection = () => {
           <strong className="flex items-center text-lg md:text-2xl gap-4 text-green-500">
             <span
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               className="material-symbols-outlined scale-150"
             >
               check_circle
             </span>
-            <span data-aos="fade-right" data-aos-duration="1000">
+            <span data-aos="fade-right" data-aos-duration="500">
               Your Upskilling Partner
             </span>
           </strong>
           <strong
             className="text-3xl md:text-5xl font-semibold"
             data-aos="fade-right"
-            data-aos-duration="2000"
+            data-aos-duration="500"
           >
             <h1>
               Your
@@ -30,7 +30,7 @@ const Herosection = () => {
               Awaits: Let's Make It Happen
             </h1>
           </strong>
-          <span data-aos="fade-right" data-aos-duration="3000">
+          <span data-aos="fade-right" data-aos-duration="500">
             <p className="w-4/5 text-lg text-gray-500">
               Discover new skills outside the classroom, with guidance from
               India's most accomplished industry mentors.
@@ -42,7 +42,7 @@ const Herosection = () => {
             href="/explore"
             className="text-white  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
             data-aos="flip-up"
-            data-aos-duration="800"
+            data-aos-duration="500"
           >
             Explore Programmes
           </Link>
@@ -51,7 +51,7 @@ const Herosection = () => {
           <section className="w-full bg-white  flex">
             <div
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               className="flex w-full justify-center md:w-1/2 bg-white py-6 px-2 items-center gap-4 border-r border-gray-600 lg:ml-1"
             >
               <span>
@@ -71,7 +71,7 @@ const Herosection = () => {
             </div>
             <div
               data-aos="fade-left"
-              data-aos-duration="600"
+              data-aos-duration="500"
               className="flex w-full lg:ml-3 justify-center md:w-1/2 bg-white py-6 px-3 items-center gap-4"
             >
               <span>
@@ -96,7 +96,7 @@ const Herosection = () => {
       <section className="w-full lg:w-full md:w-[60%] pt-20 scale-125 hidden md:block">
         <Image
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           width={500}
           height={500}
           src={img1}

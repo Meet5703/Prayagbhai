@@ -45,12 +45,13 @@ const Page = () => {
       <div className="fixed w-full z-50">
         <NavbarByMe />
       </div>
-      <div className="h-[100vh] items-center flex justify-center px-5 lg:px-0">
-        <div className="max-w-screen-xl bg-white border shadow sm:rounded-lg flex justify-center flex-1">
+      <div className="h-[100vh] items-center flex justify-center px-5 pt-40 lg:px-0">
+        <div className="xl:max-w-screen-xl bg-white border shadow sm:rounded-lg flex justify-center flex-1">
           <div className="flex-1  text-center hidden md:flex">
             <Image
-              className="m-12 xl:m-16 w-2/3 bg-contain bg-center bg-no-repeat bg-transparent"
+              className="mt-12 xl:m-16 xl:w-2/3 xl:scale-100 lg:scale-75 lg:pb-24 bg-contain bg-center bg-no-repeat bg-transparent"
               src={img1}
+              alt="signup"
               width={1000}
               height={1000}
             />
@@ -159,9 +160,12 @@ const Page = () => {
                   />
                   <label
                     htmlFor="password"
-                    className={`absolute peer-focus:text-xs cursor-text bg-transparent top-5 ${user.password}
-                      ? "hidden"
-                      : " peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                    className={`absolute peer-focus:text-xs cursor-text bg-transparent top-5 ${
+                      user.password
+                        ? "hidden"
+                        : " peer-focus:-top-2 peer-focus:uppercase peer-focus:tracking-[2px]  peer-focus:bg-[#6105bd] peer-focus:px-1 peer-focus:text-white left-2 text-gray-400 transition-all duration-150"
+                    }
+                     
                   }`}
                   >
                     Password

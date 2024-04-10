@@ -16,14 +16,14 @@ const FAQ = () => {
       <h1
         className="font-bold text-[#ffa83c] text-lg"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="500"
       >
         Frequently Asked Questions
       </h1>
       <p
         className="font-bold text-3xl"
         data-aos="fade-up"
-        data-aos-duration="1000"
+        data-aos-duration="500"
       >
         Read more to know more
       </p>
@@ -32,7 +32,7 @@ const FAQ = () => {
           w={"full"}
           mt={4}
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           <h2 className=" hover:bg-[#d79ff2] bg-[#f6ebfb] border border-[#510b71]">
             <AccordionButton
@@ -69,7 +69,7 @@ const FAQ = () => {
           </AccordionPanel>
         </AccordionItem>
 
-        <AccordionItem mt={4} data-aos="fade-right" data-aos-duration="1000">
+        <AccordionItem mt={4} data-aos="fade-right" data-aos-duration="500">
           <h2 className=" hover:bg-[#d79ff2] bg-[#f6ebfb] border border-[#510b71]">
             <AccordionButton
               backgroundColor={"transparent"}
@@ -102,7 +102,7 @@ const FAQ = () => {
             dynamic discussions for optimal understanding and skill development.
           </AccordionPanel>
         </AccordionItem>
-        <AccordionItem mt={4} data-aos="fade-right" data-aos-duration="1000">
+        <AccordionItem mt={4} data-aos="fade-right" data-aos-duration="500">
           <h2 className=" hover:bg-[#d79ff2] bg-[#f6ebfb] border border-[#510b71]">
             <AccordionButton
               backgroundColor={"transparent"}
@@ -134,7 +134,7 @@ const FAQ = () => {
             certification.
           </AccordionPanel>
         </AccordionItem>
-        <AccordionItem mt={4} data-aos="fade-right" data-aos-duration="1000">
+        <AccordionItem mt={4} data-aos="fade-right" data-aos-duration="500">
           <h2 className=" hover:bg-[#d79ff2] bg-[#f6ebfb] border border-[#510b71]">
             <AccordionButton
               backgroundColor={"transparent"}

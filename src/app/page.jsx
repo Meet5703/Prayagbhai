@@ -28,7 +28,7 @@ const Home = () => {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -45,7 +45,7 @@ const Home = () => {
       ) : (
         <>
           <div className="overflow-x-hidden">
-            <div className="fixed w-screen  z-50">
+            <div className="fixed w-full  z-50">
               <NavbarByMe />
             </div>
             <div className="mt-28 md:mt-0">

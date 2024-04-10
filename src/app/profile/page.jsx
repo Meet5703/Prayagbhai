@@ -55,7 +55,7 @@ const ProfilePage = () => {
 
           {userData && (
             <>
-              <div className="flex  items-center justify-center w-24 h-24 bg-violet-500 text-white text-4xl font-bold rounded-full mb-8">
+              <div className="flex  items-center justify-center w-14 h-14  bg-violet-500 text-white text-2xl font-bold rounded-full mb-8">
                 {userData.username.charAt(0).toUpperCase()}
               </div>
               <p className="text-lg md:text-xl bg-transparent flex flex-col md:flex-row gap-4 md:items-center mb-4">

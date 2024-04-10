@@ -20,16 +20,22 @@ export const sendEmail = async ({ email, emailType, userId }) => {
       });
     }
     const transporter = nodemailer.createTransport({
-      service: "gmail",
-      host: "smtp.gmail.com",
-      port: 587,
+      host: "smtpout.secureserver.net",
+      secure: true,
+      secureConnection: false, // TLS requires secureConnection to be false
+      tls: {
+        ciphers: "SSLv3"
+      },
+      requireTLS: true,
+      port: 465,
+      debug: true,
       auth: {
-        user: "sureshkhetani1111@gmail.com",
-        pass: "zknc nllf rlim xtmz"
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
       }
     });
     const mailOptions = {
-      from: "sureshkhetani1111@gmail.com", // sender address
+      from: "support@dataskillshub.com", // sender address
       to: email, // list of receivers
       subject: emailType === "VERIFY" ? "Email Verification" : "Password Reset",
       html:

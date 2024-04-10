@@ -9,12 +9,12 @@ const HighlightedFeatures = () => {
             <span
               className="text-lg uppercase text-orange-400"
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
             >
               Career Growth
             </span>
             <br />
-            <span data-aos="fade-left" data-aos-duration="1000">
+            <span data-aos="fade-left" data-aos-duration="500">
               Industry Insights
             </span>
             <br />
@@ -22,7 +22,7 @@ const HighlightedFeatures = () => {
             <span
               className="text-base font-normal"
               data-aos="zoom-in"
-              data-aos-duration="1000"
+              data-aos-duration="500"
             >
               Insights on Data Analytics Industry
             </span>
@@ -33,7 +33,7 @@ const HighlightedFeatures = () => {
           <div className="md:hidden block mr-0 md:mr-8 xl:mr-8 lg:mr-0 mb-6 md:mb-0 w-full">
             <img
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               className="w-full md:w-full mx-auto"
               src="https://images.skillovilla.com/tracks/description-page/2024-02-06_10-45-07_qs2UssdmM3CBAK762sY21T.png?auto=format&q=35&cs=srgb"
               alt="can_help_banner"
@@ -44,21 +44,21 @@ const HighlightedFeatures = () => {
               <div className="h-full py-4 px-6 border border-green-500 border-t-0 border-l-0 rounded-br-xl">
                 <span
                   data-aos="fade-left"
-                  data-aos-duration="1000"
+                  data-aos-duration="500"
                   className="mb-7 material-symbols-sharp bg-[#5012b4] text-white p-1 rounded-md"
                 >
                   build
                 </span>
                 <h3
                   data-aos="fade-right"
-                  data-aos-duration="1000"
+                  data-aos-duration="500"
                   className="text-2xl font-bold text-md mb-6"
                 >
                   Created by experts
                 </h3>
                 <p
                   data-aos="fade-right"
-                  data-aos-duration="1000"
+                  data-aos-duration="500"
                   className="text-sm"
                 >
                   World class curriculum designed by experts, adjusted to
@@ -70,7 +70,7 @@ const HighlightedFeatures = () => {
               <div
                 className="h-full py-4 px-6 border border-green-500 border-t-0 border-l-0 rounded-br-xl"
                 data-aos="fade-left"
-                data-aos-duration="1000"
+                data-aos-duration="500"
               >
                 <span className="mb-7 material-symbols-sharp bg-green-500 text-white p-1 rounded-md">
                   keyboard_double_arrow_right
@@ -88,7 +88,7 @@ const HighlightedFeatures = () => {
             <div
               className="w-full sm:w-1/2 mb-4 px-2 "
               data-aos="fade-right"
-              data-aos-duration="1000"
+              data-aos-duration="500"
             >
               <div className="h-full py-4 px-6 border border-green-500 border-t-0 border-l-0 rounded-br-xl">
                 <span className="mb-7 material-symbols-sharp bg-green-500 text-white p-1 rounded-md">
@@ -107,7 +107,7 @@ const HighlightedFeatures = () => {
             <div
               className="w-full sm:w-1/2 mb-4 px-2 "
               data-aos="fade-left"
-              data-aos-duration="1000"
+              data-aos-duration="500"
             >
               <div className="h-full py-4 px-6 border border-green-500 border-t-0 border-l-0 rounded-br-xl">
                 <span className="mb-7 material-symbols-sharp bg-[#5012b4] text-white p-1 rounded-md">
@@ -126,7 +126,7 @@ const HighlightedFeatures = () => {
           <div
             className="md:block hidden mr-0 md:mr-8 mb-6 md:mb-0 w-1/2"
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             <img
               className="w-1/2 md:w-full mx-auto"
@@ -140,7 +140,7 @@ const HighlightedFeatures = () => {
         <div
           className="flex border-2 md:border-0 border-gray-400 py-4 lg:py-2 px-6 md:px-0 md:ml-12 lg:-ml-1 lg:mb-3  lg:mr-4 lg:items-center gap-4 bg-white col-span-1"
           data-aos="fade-right"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           <img
             className="ml-4 md:w-1/5 lg:w-1/5 md:ml-0 bg-transparent"
@@ -155,7 +155,7 @@ const HighlightedFeatures = () => {
         </div>
         <div
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className="flex py-4 lg:px-4 lg:py-2  gap-4 bg-white col-span-1 border-x-2 md:border-y-0 border-y-2 md:border-x-2 border-gray-400 px-6 "
         >
           <img
@@ -172,7 +172,7 @@ const HighlightedFeatures = () => {
         <div
           className="flex border-2 md:border-0 border-gray-400 py-4 lg:py-2 px-6 md:px-0 md:ml-12 lg:-mr-4  lg:mb-3 lg:items-center gap-4 bg-white col-span-1"
           data-aos="fade-right"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           <img
             className="ml-4 md:w-1/5 lg:w-1/5 md:ml-0 bg-transparent"

@@ -27,197 +27,85 @@ const Footer = () => {
                 Company
               </span>
             </a>
-            <div className="mt-4 lg:max-w-sm">
-              <p className="text-sm text-deep-purple-50">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
-              </p>
-              <p className="mt-4 text-sm text-deep-purple-50">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
-              </p>
+            <div className="mt-4 lg:max-w-sm space-y-5">
+              <span className="flex items-center space-x-6 ">
+                <span className="material-symbols-outlined bg-transparent text-xl text-purple-700">
+                  call
+                </span>
+                <p className=" text-deep-purple-50 text-lg md:text-xl">
+                  7990433908
+                </p>
+              </span>
+              <span className="flex items-center space-x-6 ">
+                <span className="material-symbols-outlined bg-transparent text-xl text-purple-700">
+                  mail
+                </span>
+                <p className=" text-deep-purple-50 text-lg md:text-xl">
+                  support@dataskillshub.com
+                </p>
+              </span>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Category
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    News
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    World
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Games
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    References
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Cherry
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Web
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    eCommerce
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Entertainment
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Portfolio
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Apples
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Media
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Brochure
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Nonprofit
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Educational
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Projects
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
-                Business
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Infopreneur
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Personal
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Wiki
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Forum
-                  </a>
-                </li>
-              </ul>
-            </div>
+
+          <div className="">
+            <ul className="ml-5   grid grid-cols-2 gap-5 row-gap-8 lg:flex lg:space-x-16 md:grid-cols-4 text-xl md:text-2xl">
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/explore"
+                  className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                >
+                  Explore
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-          <p className="text-sm text-gray-100">
-            © Copyright 2020 Lorem Inc. All rights reserved.
+          <p className="text-sm text-purple-800">
+            © Copyright 2024 Data Skills Hub Inc. All rights reserved.
           </p>
           <div className="flex items-center mt-4 space-x-4 sm:mt-0">
+            {/* <a
+              href="/"
+              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400 pl-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="scale-[0.25] ml-4"
+              >
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+              </svg>
+            </a> */}
             <a
               href="/"
               className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"

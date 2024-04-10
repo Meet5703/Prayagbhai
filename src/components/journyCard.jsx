@@ -29,7 +29,7 @@ const JournyCard = () => {
                 <Timeline.Content
                   className="bg-transparent"
                   data-aos="fade-left"
-                  data-aos-duration="700"
+                  data-aos-duration="500"
                 >
                   <Timeline.Title className="bg-transparent text-black">
                     <span className="bg-transparent text-[#530fb8] font-bold">
@@ -51,7 +51,7 @@ const JournyCard = () => {
                 <Timeline.Content
                   className="bg-transparent"
                   data-aos="fade-left"
-                  data-aos-duration="700"
+                  data-aos-duration="500"
                 >
                   <Timeline.Title className="bg-transparent text-black">
                     <span className="bg-transparent text-[#530fb8] font-bold">
@@ -73,7 +73,7 @@ const JournyCard = () => {
                 <Timeline.Content
                   className="bg-transparent"
                   data-aos="fade-left"
-                  data-aos-duration="700"
+                  data-aos-duration="500"
                 >
                   <Timeline.Title className="bg-transparent text-black">
                     <span className="bg-transparent text-[#530fb8] font-bold">
@@ -96,7 +96,7 @@ const JournyCard = () => {
                 <Timeline.Content
                   className="bg-transparent"
                   data-aos="fade-left"
-                  data-aos-duration="700"
+                  data-aos-duration="500"
                 >
                   <Timeline.Title className="bg-transparent text-black">
                     <span className="bg-transparent text-[#530fb8] font-bold">
@@ -118,7 +118,7 @@ const JournyCard = () => {
                 <Timeline.Content
                   className="bg-transparent"
                   data-aos="fade-left"
-                  data-aos-duration="700"
+                  data-aos-duration="500"
                 >
                   <Timeline.Title className="bg-transparent text-black">
                     <span className="bg-transparent text-[#530fb8] font-bold">

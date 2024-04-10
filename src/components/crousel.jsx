@@ -49,31 +49,31 @@ const CarouselAds = () => {
           {logos.map((image, index) => (
             <Image
               key={index}
-              className="grayscale hover:grayscale-0"
+              className="grayscale hover:grayscale-0 md:w-auto md:h-auto"
               src={image}
               alt={`Logo ${index}`}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
             />
           ))}
           {logos.map((image, index) => (
             <Image
               key={index + logos.length}
-              className="grayscale hover:grayscale-0"
+              className="grayscale hover:grayscale-0 md:w-auto md:h-auto"
               src={image}
               alt={`Logo ${index}`}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
             />
           ))}
           {logos.map((image, index) => (
             <Image
               key={index + 2 * logos.length}
-              className="grayscale hover:grayscale-0"
+              className="grayscale hover:grayscale-0 md:w-auto md:h-auto"
               src={image}
               alt={`Logo ${index}`}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
             />
           ))}
         </div>

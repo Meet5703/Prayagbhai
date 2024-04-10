@@ -29,7 +29,7 @@ const CourseCard = () => {
         <div
           className="w-full h-full rounded-lg overflow-hidden "
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           <Image
             src={Img1}
@@ -47,14 +47,14 @@ const CourseCard = () => {
         <h2
           className="text-3xl md:text-4xl font-bold  mb-2"
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           Data Science and Generative AI course
         </h2>
         <p
           className="text-lg text-gray-800  mb-4"
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           Welcome to our Data Science and Generative AI Course! Our
           comprehensive course, designed to equip you with cutting-edge skills
@@ -64,7 +64,7 @@ const CourseCard = () => {
           <h3
             className="text-2xl font-bold  mb-2"
             data-aos="fade-left"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             Key Features
           </h3>
@@ -89,7 +89,7 @@ const CourseCard = () => {
         >
           <p
             data-aos="fade-left"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             className="text-white w-fit p-2 bg-yellow-500 font-semibold text-lg"
           >
             Limited Seats available

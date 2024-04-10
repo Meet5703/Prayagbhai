@@ -45,7 +45,7 @@ const page = () => {
         </>
       ) : (
         <div className="overflow-x-hidden">
-          <div className="fixed top-0 w-full z-50">
+          <div className="fixed  w-full z-50">
             <NavbarByMe />
           </div>
           <div className="mt-28">

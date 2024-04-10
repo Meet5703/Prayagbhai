@@ -18,42 +18,42 @@ const CompniesCard = () => {
         <div className="grid grid-cols-2 md:ml-14 md:mr-14 bg-white gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400 md:py-3">
           <Image
             src={img2}
-            alt="logo"
+            alt="ntflx"
             width={200}
             height={200}
             className="bg-transparent grayscale hover:cursor-pointer  hover:grayscale-0 flex items-center lg:justify-center"
           />
           <Image
             src={img3}
-            alt="logo"
+            alt="ibm"
             width={200}
             height={200}
             className="bg-transparent grayscale hover:cursor-pointer  hover:grayscale-0 flex items-center lg:justify-center"
           />
           <Image
             src={img4}
-            alt="logo"
+            alt="microsoft"
             width={200}
             height={200}
             className="bg-transparent grayscale hover:cursor-pointer  hover:grayscale-0 flex items-center lg:justify-center"
           />
           <Image
             src={img5}
-            alt="logo"
+            alt="google"
             width={200}
             height={200}
             className="bg-transparent grayscale hover:cursor-pointer  hover:grayscale-0 flex items-center lg:justify-center"
           />
           <Image
             src={img6}
-            alt="logo"
+            alt="amazon"
             width={200}
             height={200}
             className="bg-transparent grayscale hover:cursor-pointer  hover:grayscale-0 flex items-center lg:justify-center"
           />
           <Image
             src={img7}
-            alt="logo"
+            alt="adobe"
             width={200}
             height={200}
             className="bg-transparent grayscale hover:cursor-pointer  hover:grayscale-0 flex items-center lg:justify-center"

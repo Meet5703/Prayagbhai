@@ -40,11 +40,13 @@ const page = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center h-screen ">
-            <h1>Verify Email</h1>
+            <h1 className="text-3xl font-bold mb-4 text-center text-[#ffa72d] ">
+              Verify Email
+            </h1>
             <h2>{verified ? "Email verified" : "Email not verified"}</h2>
             <h2>{error ? "Error" : ""}</h2>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary px-6 py-2 rounded-md mt-4 bg-purple-800 text-white"
               onClick={verifyEmail}
               disabled={verified}
             >

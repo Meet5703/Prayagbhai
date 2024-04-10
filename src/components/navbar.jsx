@@ -93,13 +93,19 @@ const NavbarByMe = () => {
   };
 
   return (
-    <nav className=" font- z-50">
-      <div className=" shadow">
-        <div className="container mx-auto px-4">
+    <nav className="z-50 ">
+      <div className="pt-4">
+        <div className="container px-4">
           <div className="flex items-center justify-between py-4">
             <div>
               <Link href="/">
-                <Image src={img1} alt="logo" height={50} />
+                <Image
+                  src={img1}
+                  alt="logo"
+                  height={120}
+                  priority
+                  width={120}
+                />
               </Link>
             </div>
             <div className="hidden sm:flex sm:items-center sm:gap-4 bg-transparent">

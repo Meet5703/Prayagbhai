@@ -1,5 +1,5 @@
 import React from "react";
-import masterclassGif from "../assets/cirti.avif";
+import masterclassGif from "../assets/cirti.jpeg";
 import Image from "next/image";
 import img2 from "../assets/logocarduser.png";
 
@@ -11,14 +11,14 @@ const Cirtificate = () => {
           <h2
             className="md:text-lg font-bold text-[#ffa83c] "
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             CERTIFICATION
           </h2>
           <p
             className="font-bold text-3xl w-4/5"
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             Get certified to become a pro!
           </p>
@@ -28,7 +28,7 @@ const Cirtificate = () => {
           <span
             className="flex items-center gap-2"
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
               arrow_right_alt
@@ -39,7 +39,7 @@ const Cirtificate = () => {
           <span
             className="flex items-center gap-2"
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
               arrow_right_alt
@@ -51,7 +51,7 @@ const Cirtificate = () => {
           <span
             className="flex items-center gap-2"
             data-aos="fade-right"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           >
             <span className="material-symbols-outlined bg-[#ffa83c] rounded-full text-purple-950">
               arrow_right_alt
@@ -62,11 +62,11 @@ const Cirtificate = () => {
       </div>
       <div
         data-aos="fade-right"
-        data-aos-duration="1000"
+        data-aos-duration="500"
         className="cardSection__video col-span-2 "
       >
         <Image
-          className="w-4/5 ml-6 md:ml-0 md:w-1/2 mt-12"
+          className="w-4/5 ml-6 md:ml-0 md:w-1/2 mt-12 shadow-lg border border-gray-600 "
           src={masterclassGif}
           alt="gif"
           width={1000}

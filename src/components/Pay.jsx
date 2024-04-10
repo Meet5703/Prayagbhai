@@ -9,13 +9,14 @@ import { v4 as uuidv4 } from "uuid";
 const Pay = () => {
   const router = useRouter();
 
-  const [isDisabled, setIsDisabled] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
   const [user, setUser] = useState({
     username: "",
     email: "",
     number: "",
     courses: [],
-    status: "failed"
+    status: "failed",
+    price: 0
   });
 
   useEffect(() => {
@@ -63,7 +64,7 @@ const Pay = () => {
       merchantId: "PGTESTPAYUAT",
       merchantTransactionId: transactionId,
       merchantUserId: user.sub, // Use user's unique identifier
-      amount: 10000,
+      amount: 800000,
       redirectUrl: `http://localhost:3000/api/status/${transactionId}`,
       redirectMode: "POST",
       callbackUrl: `http://localhost:3000/api/status/${transactionId}`,
@@ -189,18 +190,14 @@ const Pay = () => {
                 id="courses"
                 name="courses"
                 onChange={onChange}
-                className="w-full px-6 py-4 text-xl border  rounded-md focus:outline-none focus:border-[#6105bd] bg-white sm:text-sm"
+                className="w-full  py-4 text-lg border  rounded-md focus:outline-none focus:border-[#6105bd] bg-white sm:text-sm"
                 value={user.courses} // Set the value attribute to user.courses
               >
-                <option className=" w-full h-full" value="">
-                  {" "}
-                  Select a course
-                </option>
                 <option
                   className=" w-full h-full"
                   value="Data Science & Generative AI"
+                  selected={user.courses === "Data Science & Generative AI"}
                 >
-                  {" "}
                   Data Science & Generative AI
                 </option>
 

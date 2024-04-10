@@ -14,7 +14,7 @@ const Card = () => {
       <h1
         className="text-center  text-[#ffa83c] font-bold uppercase"
         data-aos="fade-down"
-        data-aos-duration="1200"
+        data-aos-duration="500"
       >
         Why Data Skills Hub
       </h1>
@@ -22,7 +22,7 @@ const Card = () => {
       <h1
         className="text-center text-2xl md:text-4xl font-bold"
         data-aos="fade-down"
-        data-aos-duration="800"
+        data-aos-duration="500"
       >
         From learning to earning With Our{" "}
         <span className="text-[#ffa83c] font-bold">Pay After Placement</span>
@@ -31,7 +31,7 @@ const Card = () => {
       <p
         className="text-center  text-sm text-gray-500"
         data-aos="fade-down"
-        data-aos-duration="400"
+        data-aos-duration="500"
       >
         Join us, learn, get hired, and pay later!
       </p>
@@ -41,7 +41,7 @@ const Card = () => {
           <div
             className="row-span-1 col-span-1 px-4  bg-white rounded-2xl shadow-xl py-12 sm:px-12 lg:px-3 xl:px-8 md:mb-20 relative h-full"
             data-aos="fade-up"
-            data-aos-duration="400"
+            data-aos-duration="500"
           >
             <div className="md:mb-12 md:space-y-4  bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
@@ -62,13 +62,13 @@ const Card = () => {
               width={900}
               height={600}
               data-aos="fade-right"
-              data-aos-duration="800"
+              data-aos-duration="500"
             />
           </div>
           <div
             className="row-span-1 col-span-1  bg-white rounded-2xl shadow-xl px-4 xl:px-8 py-12 sm:px-12 lg:px-3 md:mt-20 relative h-full"
             data-aos="fade-down"
-            data-aos-duration="400"
+            data-aos-duration="500"
           >
             <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
@@ -89,13 +89,13 @@ const Card = () => {
               width={900}
               height={600}
               data-aos="fade-up"
-              data-aos-duration="800"
+              data-aos-duration="500"
             />
           </div>
           <div
             className="row-span-1 col-span-1  bg-white rounded-2xl shadow-xl px-4 xl:px-8 py-12 sm:px-12 lg:px-3 md:mb-20 relative h-full"
             data-aos="fade-up"
-            data-aos-duration="400"
+            data-aos-duration="500"
           >
             <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
@@ -116,13 +116,13 @@ const Card = () => {
               width={900}
               height={600}
               data-aos="fade-down"
-              data-aos-duration="800"
+              data-aos-duration="500"
             />
           </div>
           <div
             className="row-span-1 col-span-1  bg-white rounded-2xl shadow-xl px-4 xl:px-8 py-12 sm:px-12 lg:px-3 md:mt-20 relative h-full"
             data-aos="fade-down"
-            data-aos-duration="400"
+            data-aos-duration="500"
           >
             <div className="md:mb-12 md:space-y-4 bg-white">
               <h3 className="text-2xl font-semibold bg-white text-purple-900">
@@ -143,7 +143,7 @@ const Card = () => {
               width={900}
               height={600}
               data-aos="fade-left"
-              data-aos-duration="800"
+              data-aos-duration="500"
             />
           </div>
         </div>
@@ -154,7 +154,7 @@ const Card = () => {
             href="/explore"
             className="text-white  text-sm font-semibold border  bg-[rgb(83,15,184)] px-6 py-3 rounded-lg hover:text-[rgb(83,15,184)] hover:border-[rgb(83,15,184)] hover:bg-white ease-in-out duration-300"
             data-aos="flip-up"
-            data-aos-duration="800"
+            data-aos-duration="500"
           >
             Explore Programmes
           </Link>

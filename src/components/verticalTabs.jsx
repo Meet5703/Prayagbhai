@@ -29,8 +29,10 @@ const VerticalTabs = () => {
         <div className="w-full bg-transparent col-span-1 ">
           <div className=" flex overflow-x-scroll w-full md:overflow-x-hidden h-full  md:flex-col gap-6 whitespace-nowrap md:whitespace-normal my-3 md:my-0 ">
             <button
-              className={`focus:border md:focus:border-l-8 border-purple-600 md:py-8  shadow-xl shadow-gray-200 px-4 md:px-8 bg-white cursor-pointer rounded-md flex items-center gap-4 py-2 md:gap-6 ${
-                activeTab === 0 ? " text-purple-900" : ""
+              className={`focus:border md:focus:border-l-8 border-purple-600 md:py-8  shadow-xl shadow-gray-200 px-4 md:px-8 bg-white cursor-pointer rounded-md flex items-center gap-1 py-2 md:gap-6 ${
+                activeTab === 0
+                  ? " text-purple-900 border-2 border-purple-600"
+                  : ""
               }`}
               onClick={() => handleTabClick(0)}
             >
@@ -42,7 +44,8 @@ const VerticalTabs = () => {
                 height={100}
               />
               <h2 className="text-sm md:text-lg font-bold bg-transparent">
-                Learn from Industry Expert in Live class
+                Learn from Industry <br className="md:hidden" />
+                Expert in Live class
               </h2>
             </button>
             <button
